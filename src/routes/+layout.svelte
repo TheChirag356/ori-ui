@@ -8,6 +8,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>Ori UI</title>
 </svelte:head>
 
 <ModeWatcher />
