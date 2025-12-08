@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 132 149" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-27.888295,-296.54544)">
+        <g id="Dark-Logo" serif:id="Dark Logo" transform="matrix(0.514782,0,0,0.514782,-35.289527,238.983424)">
+            <g transform="matrix(1.470588,0,0,1.470588,-174.331576,-133.679157)">
+                <circle cx="288.545" cy="276.727" r="86.545" style="fill:rgb(235,235,235);"/>
+            </g>
+            <g transform="matrix(1.378151,0,0,1.378151,-147.659297,-116.09932)">
+                <circle cx="288.545" cy="276.727" r="86.545"/>
+            </g>
+            <g transform="matrix(1.470588,0,0,1.470588,-174.331576,-167.860967)">
+                <circle cx="288.545" cy="276.727" r="86.545" style="fill:rgb(235,235,235);"/>
+            </g>
+        </g>
+    </g>
+</svg>

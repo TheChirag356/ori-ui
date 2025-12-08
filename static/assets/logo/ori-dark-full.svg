@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 446 149" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-27.888295,-296.54544)">
+        <g id="Dark-Logo" serif:id="Dark Logo" transform="matrix(0.514782,0,0,0.514782,-35.289527,238.983424)">
+            <g transform="matrix(1.470588,0,0,1.470588,-174.331576,-133.679157)">
+                <circle cx="288.545" cy="276.727" r="86.545" style="fill:rgb(235,235,235);"/>
+            </g>
+            <g transform="matrix(1.378151,0,0,1.378151,-147.659297,-116.09932)">
+                <circle cx="288.545" cy="276.727" r="86.545"/>
+            </g>
+            <g transform="matrix(1.470588,0,0,1.470588,-174.331576,-167.860967)">
+                <circle cx="288.545" cy="276.727" r="86.545" style="fill:rgb(235,235,235);"/>
+            </g>
+        </g>
+        <g id="Ori-Dark" serif:id="Ori Dark" transform="matrix(1,0,0,1,-11.590885,269.741558)">
+            <g transform="matrix(140.88271,0,0,140.88271,384.809305,147.446309)">
+            </g>
+            <text x="183.041px" y="147.446px" style="font-family:'Inter-SemiBold', 'Inter';font-weight:600;font-size:140.883px;fill:rgb(235,235,235);">Ori</text>
+        </g>
+        <g id="Dark" transform="matrix(0.830565,0,0,0.830565,74.052839,275.342712)">
+            <g transform="matrix(0.58479,0,0,0.58479,160.414745,65.414448)">
+                <g transform="matrix(119.701186,0,0,119.701186,517.058468,113.809964)">
+                </g>
+                <text x="396.677px" y="113.81px" style="font-family:'Inter-Regular', 'Inter';font-size:119.701px;fill:rgb(235,235,235);">UI</text>
+            </g>
+            <path d="M477.586,88.113L477.586,125.811C477.586,136.214 469.14,144.66 458.737,144.66L396.435,144.66C386.032,144.66 377.586,136.214 377.586,125.811L377.586,88.113C377.586,77.71 386.032,69.265 396.435,69.265L458.737,69.265C469.14,69.265 477.586,77.71 477.586,88.113Z" style="fill:none;stroke:rgb(235,235,235);stroke-width:7.34px;"/>
+        </g>
+    </g>
+</svg>
