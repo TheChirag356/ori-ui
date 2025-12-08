@@ -39,6 +39,7 @@
 		"vitest-browser-svelte": "^2.0.1"
 	},
 	"dependencies": {
+		"@sveltejs/adapter-vercel": "^6.2.0",
 		"@tabler/icons-svelte": "^3.35.0",
 		"mode-watcher": "^1.1.0"
 	}
