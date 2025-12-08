@@ -22,14 +22,22 @@
 	/>
 	<!-- Fallback (optional) -->
 	<link rel="icon" href="/assets/logo/ori-dark.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<title>Ori UI</title>
 	<meta
 		name="description"
 		content="Beautiful, professional, and customizable Svelte, TailwindCSS and Framer Motion components."
 	/>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<meta property="og:title" content="Ori UI" />
+	<meta
+		property="og:description"
+		content="Beautiful, professional, and customizable Svelte, TailwindCSS and Framer Motion components."
+	/>
 	<meta property="og:image" content="/assets/ogImage.png" />
+	<meta property="og:url" content="https://ori-ui.vercel.app" />
+	<meta property="og:site_name" content="Ori UI" />
 </svelte:head>
 
 <ModeWatcher />
