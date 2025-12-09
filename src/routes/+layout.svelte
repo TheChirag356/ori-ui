@@ -1,6 +1,9 @@
 <script lang="ts">
 	import './layout.css';
 	import { ModeWatcher } from 'mode-watcher';
+	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
+		import Navbar from '$lib/components/navbar.svelte';
+	import Footer from '$lib/components/footer.svelte';
 
 	let { children } = $props();
 </script>
@@ -41,4 +44,8 @@
 </svelte:head>
 
 <ModeWatcher />
-{@render children()}
+<Tooltip.Provider delayDuration={150}>
+	<Navbar />
+	{@render children()}
+	<Footer />
+</Tooltip.Provider>
