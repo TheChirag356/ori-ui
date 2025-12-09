@@ -11,19 +11,29 @@
 			.then((data) => data.stargazers_count)
 			.then((count) => (stargazersCount = count));
 	});
+
+	import { page } from '$app/state';
+	const navbarItems = [
+		{ label: 'Docs', href: '/docs' },
+		{ label: 'Components', href: '/components' },
+		{ label: 'Blocks', href: '/blocks' }
+	];
 </script>
 
 <header class="bg-background sticky top-0 z-50 w-full">
 	<div class="container-wrapper 3xl:fixed:px-0 px-6">
 		<div class="3xl:fixed:container h-14 flex items-center gap-2">
-			<Button href="/" variant="ghost" class="p-4">
+			<a href="/">
 				<OriLogoFull class="size-7 p-0" />
-			</Button>
+			</a>
 			<nav class="items-center gap-0.5 hidden lg:flex">
-				<Button variant="ghost" href="/docs">Docs</Button>
-				<Button variant="ghost" href="/components">Components</Button>
-				<Button variant="ghost" href="/blocks">Blocks</Button>
-				<ModeToggle />
+				{#each navbarItems as item}
+					<Button
+						variant="ghost"
+						href={item.href}
+						class={page.url.pathname === item.href ? '' : 'text-foreground/70'}>{item.label}</Button
+					>
+				{/each}
 			</nav>
 			<div class="ms-auto flex items-center gap-2 md:flex-1 md:justify-end divide-x">
 				<Button href="https://github.com/TheChirag356/ori-ui" target="_blank" variant="ghost"
