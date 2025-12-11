@@ -30,7 +30,7 @@
 		navMain: [
 			{
 				title: 'Getting Started',
-				url: '#',
+				url: '/docs',
 				items: [
 					{
 						title: 'Introduction',
@@ -50,30 +50,12 @@
 				url: '/components',
 				items: [
 					{
-						title: 'Actions',
-						url: '/components/actions',
+						title: 'Calendar',
+						url: '/components/calendar',
 						badge: 'New'
-					},
-					{
-						title: 'Artifact',
-						url: '/components/artifact'
 					}
 				]
 			},
-			{
-				title: 'Guides',
-				url: '/guides',
-				items: [
-					{
-						title: 'Basic Setup Guide',
-						url: '/guides/basic-setup'
-					},
-					{
-						title: 'Svelte 5 + AI SDK Integration',
-						url: '/guides/svelte-5-ai-sdk-integration'
-					}
-				]
-			}
 		]
 	});
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Calendar } from "bits-ui";
+  import * as Calendar from "bits-ui";
 </script>
 
 <Calendar.Root>
