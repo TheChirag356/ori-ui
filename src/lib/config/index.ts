@@ -1,1 +1,1 @@
-export * from "./site.ts";
+export * from "./site";
