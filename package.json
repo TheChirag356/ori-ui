@@ -17,14 +17,13 @@
 		"registry:build": "bunx shadcn-svelte registry build"
 	},
 	"devDependencies": {
-		"@internationalized/date": "^3.8.1",
 		"@lucide/svelte": "^0.544.0",
 		"@sveltejs/adapter-auto": "^7.0.0",
 		"@sveltejs/kit": "^2.48.5",
 		"@sveltejs/vite-plugin-svelte": "^6.2.1",
 		"@tailwindcss/vite": "^4.1.17",
 		"@vitest/browser-playwright": "^4.0.10",
-		"bits-ui": "^2.11.0",
+		"bits-ui": "^2.14.4",
 		"clsx": "^2.1.1",
 		"mdsvex": "^0.12.6",
 		"playwright": "^1.56.1",
