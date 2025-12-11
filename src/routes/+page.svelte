@@ -8,8 +8,8 @@
 	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
 </script>
 
-<div class="min-h-screen flex flex-col justify-between">
-	<div class="h-dvh mx-auto font-sans text-center items-center justify-center flex flex-col">
+<div class="h-[85vh] flex flex-col justify-between">
+	<div class="h-full mx-auto font-sans text-center items-center justify-center flex flex-col">
 		<h1 class="text-5xl max-w-3xl font-bold">
 			Animation-ready UI components for builders and designers.
 		</h1>
@@ -19,8 +19,7 @@
 		</p>
 		<div class="flex gap-6">
 			<Button href="/components" class="font-mono cursor-pointer">Browse Components</Button>
-			<Button href="/docs" class="font-mono cursor-pointer" variant="secondary">Get Started</Button
-			>
+			<Button href="/docs" class="font-mono cursor-pointer" variant="secondary">Get Started</Button>
 		</div>
 		<div class="flex gap-2 text-neutral-foreground/70 mt-10">
 			<Tooltip.Root>
