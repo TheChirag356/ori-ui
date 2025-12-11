@@ -1,24 +1,38 @@
 {
 	"$schema": "https://shadcn-svelte.com/schema/registry.json",
-	"name": "ori-ui",
+	"name": "Ori UI",
 	"homepage": "https://ori-ui.vercel.app",
+	"aliases": {
+		"lib": "$lib",
+		"components": "$lib/components",
+		"utils": "$lib/utils/utils",
+		"ui": "$lib/components/ui",
+		"hooks": "$lib/hooks"
+	},
 	"items": [
 		{
-			"name": "calendar",
-			"type": "registry:component",
-			"title": "Calendar",
-			"description": "A customizable calendar component for Svelte applications.",
+			"name": "shimmer-button",
+			"type": "registry:block",
+			"title": "Shimmer Button",
+			"description": "A customizable shimmer button component for Svelte applications.",
+			"registryDependencies": ["button"],
 			"files": [
 				{
-					"path": "./src/lib/registry/calendar/calendar.svelte",
-					"type": "registry:component"
+					"path": "src/lib/registry/buttons/shimmer-button/shimmer-button.svelte",
+					"type": "registry:file",
+					"target": "ori/shimmer-button/shimmer-button.svelte"
+				},
+				{
+					"path": "src/lib/registry/buttons/shimmer-button/index.ts",
+					"type": "registry:file",
+					"target": "ori/shimmer-button/index.ts"
 				}
 			],
 			"author": "Chirag Arora <arorachirag12005@gmail.com>",
 			"meta": {
-				"author": "Chirag Arora",
+				"author": "TheChirag356",
 				"version": "1.0.0",
-				"documentation": "https://ori-ui.vercel.app/docs/installation",
+				"documentation": "https://ori-ui.vercel.app/components/shimmer-button",
 				"repository": "https://github.com/TheChirag356/ori-ui"
 			}
 		}
