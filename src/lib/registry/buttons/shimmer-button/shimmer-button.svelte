@@ -9,12 +9,21 @@
         shimmerDuration?: string;
         background?: string;
         class?: string;
-        children: any;
+        children?: () => any;
     }
 
-    let { class: className = "", children, shimmerColor = "#ffffff", shimmerSize = "0.05em", shimmerDuration = "3s", borderRadius = "100px", background = "rgba(0,0,0,1)" }: ShimmerButtonProps = $props();
+    let {
+        class: className = "",
+        children,
+        shimmerColor = "#ffffff",
+        shimmerSize = "0.05em",
+        shimmerDuration = "3s",
+        borderRadius = "100px",
+        background = "rgba(0,0,0,1)",
+        ...restProps
+    }: ShimmerButtonProps = $props();
 </script>
 
-<Button class={cn('', className)}>
+<Button class={cn('', className)} {...restProps}>
 	{@render children?.()}
 </Button>
