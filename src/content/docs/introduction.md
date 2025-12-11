@@ -9,13 +9,13 @@ Ori UI is a headless component library for Svelte focused on developer experienc
 
 ## Why Ori UI?
 
-<img src="/img/bring-own-style.png" alt="Switch customization UI: Edit toggle style, color, and theme using Tailwind or CSS tools." class="h-full w-full mt-6 -mb-6 rounded-xl md:rounded-2xl" />
+<!-- <img src="/img/bring-own-style.png" alt="Switch customization UI: Edit toggle style, color, and theme using Tailwind or CSS tools." class="h-full w-full mt-6 -mb-6 rounded-xl md:rounded-2xl" /> -->
 
 ### Bring Your Own Styles
 
-Most components ship completely unstyled, with the exception of those required for core functionality. No CSS resets, no design system assumptions. You bring the styles using standard `class` props or `data-*` attributes. [See the styling guide](/docs/styling).
+Most components ship completely unstyled, with the exception of those required for core functionality. No CSS resets, no design system assumptions. You bring the styles using standard `class` props or `data-*` attributes. [See the styling guide].
 
-<img src="/img/developer-exp.png" alt="Accordion builder UI: Easily compose accessible accordion components with Ori UI." class="h-full w-full mt-16 -mb-6 rounded-xl md:rounded-2xl border" />
+<!-- <img src="/img/developer-exp.png" alt="Accordion builder UI: Easily compose accessible accordion components with Ori UI." class="h-full w-full mt-16 -mb-6 rounded-xl md:rounded-2xl border" /> -->
 
 ### Building for Developer Experience
 
@@ -27,7 +27,7 @@ Everything is designed to stay out of your way:
 - Great defaults, easily overridden
 - Comprehensive documentation and examples
 
-<img src="/img/accessibility.png" alt="Production-Ready Accessibility" class="h-full w-full mt-16 -mb-6 rounded-xl md:rounded-2xl border" />
+<!-- <img src="/img/accessibility.png" alt="Production-Ready Accessibility" class="h-full w-full mt-16 -mb-6 rounded-xl md:rounded-2xl border" /> -->
 
 ### Production-Ready Accessibility
 
@@ -38,13 +38,13 @@ Accessibility isn't just an afterthought - it's baked in:
 - Focus management handled for you
 - Screen reader support built-in
 
-<img src="/img/composable2.png" alt="Composable by Design" class="h-full w-full mt-16 -mb-6 rounded-xl md:rounded-2xl border" />
+<!-- <img src="/img/composable2.png" alt="Composable by Design" class="h-full w-full mt-16 -mb-6 rounded-xl md:rounded-2xl border" /> -->
 
 ### Composable by Design
 
 Components are primitives, not black boxes. They compose cleanly and play well together:
 
-- [Render Delegation](/docs/child-snippet) for total flexibility
+- [Render Delegation] for total flexibility
 - Chainable events and callbacks
 - Override-friendly defaults
 - Minimal dependencies
