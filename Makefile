@@ -6,3 +6,6 @@ registry:
 
 run: registry
 	bun run dev
+
+build: registry
+	bun run build

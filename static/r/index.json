@@ -1,0 +1,19 @@
+[
+	{
+		"name": "shimmer-button",
+		"title": "Shimmer Button",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "A customizable shimmer button component for Svelte applications.",
+		"registryDependencies": [
+			"button"
+		],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://ori-ui.vercel.app/components/shimmer-button",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "shimmer-button.json"
+	}
+]

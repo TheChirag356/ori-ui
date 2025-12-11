@@ -1,0 +1,29 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "shimmer-button",
+	"title": "Shimmer Button",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "A customizable shimmer button component for Svelte applications.",
+	"registryDependencies": [
+		"button"
+	],
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://ori-ui.vercel.app/components/shimmer-button",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n\timport Button from \"$COMPONENTS$/ui/button/button.svelte\";\r\n\timport { cn } from \"$LIB$/utils\";\r\n\r\n    interface ShimmerButtonProps {\r\n        shimmerColor?: string;\r\n        shimmerSize?: string;\r\n        borderRadius?: string;\r\n        shimmerDuration?: string;\r\n        background?: string;\r\n        class?: string;\r\n        children: any;\r\n    }\r\n\r\n    let { class: className = \"\", children, shimmerColor = \"#ffffff\", shimmerSize = \"0.05em\", shimmerDuration = \"3s\", borderRadius = \"100px\", background = \"rgba(0,0,0,1)\" }: ShimmerButtonProps = $props();\r\n</script>\r\n\r\n<Button class={cn('', className)}>\r\n\t{@render children?.()}\r\n</Button>\r\n",
+			"type": "registry:file",
+			"target": "ori/shimmer-button/shimmer-button.svelte"
+		},
+		{
+			"content": "import ShimmerButton from './shimmer-button.svelte';\r\n\r\nexport { ShimmerButton };",
+			"type": "registry:file",
+			"target": "ori/shimmer-button/index.ts"
+		}
+	]
+}
