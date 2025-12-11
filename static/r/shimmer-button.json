@@ -16,7 +16,7 @@
 	},
 	"files": [
 		{
-			"content": "<script lang=\"ts\">\r\n\timport Button from \"$COMPONENTS$/ui/button/button.svelte\";\r\n\timport { cn } from \"$LIB$/utils\";\r\n\r\n    interface ShimmerButtonProps {\r\n        shimmerColor?: string;\r\n        shimmerSize?: string;\r\n        borderRadius?: string;\r\n        shimmerDuration?: string;\r\n        background?: string;\r\n        class?: string;\r\n        children: any;\r\n    }\r\n\r\n    let { class: className = \"\", children, shimmerColor = \"#ffffff\", shimmerSize = \"0.05em\", shimmerDuration = \"3s\", borderRadius = \"100px\", background = \"rgba(0,0,0,1)\" }: ShimmerButtonProps = $props();\r\n</script>\r\n\r\n<Button class={cn('', className)}>\r\n\t{@render children?.()}\r\n</Button>\r\n",
+			"content": "<script lang=\"ts\">\r\n\timport Button from \"$COMPONENTS$/ui/button/button.svelte\";\r\n\timport { cn } from \"$LIB$/utils\";\r\n\r\n    interface ShimmerButtonProps {\r\n        shimmerColor?: string;\r\n        shimmerSize?: string;\r\n        borderRadius?: string;\r\n        shimmerDuration?: string;\r\n        background?: string;\r\n        class?: string;\r\n        children?: () => any;\r\n    }\r\n\r\n    let {\r\n        class: className = \"\",\r\n        children,\r\n        shimmerColor = \"#ffffff\",\r\n        shimmerSize = \"0.05em\",\r\n        shimmerDuration = \"3s\",\r\n        borderRadius = \"100px\",\r\n        background = \"rgba(0,0,0,1)\",\r\n        ...restProps\r\n    }: ShimmerButtonProps = $props();\r\n</script>\r\n\r\n<Button class={cn('', className)} {...restProps}>\r\n\t{@render children?.()}\r\n</Button>\r\n",
 			"type": "registry:file",
 			"target": "ori/shimmer-button/shimmer-button.svelte"
 		},
