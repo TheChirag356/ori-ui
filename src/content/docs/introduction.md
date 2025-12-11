@@ -1,65 +1,64 @@
 ---
 title: Introduction
-description: The headless components for Svelte.
+description: A Shadcn based UI Library for Svelte.
 ---
 
-Ori UI is a headless component library for Svelte focused on developer experience, accessibility, and full creative control. Use it to build high-quality, accessible UIs without giving up styling freedom or performance.
+Ori UI is a collection of re-usable components that you can copy and paste into your web apps. It focuses on components, blocks, and templates that help you build landing pages, marketing sites, and polished user-facing interfaces quickly.
 
-<a href="/docs/introduction"><img src="/assets/ogImage.png" alt='A webpage promoting learning to build custom components. The left side has a dark background with the text "Documentation" at the top, and a large heading "Learn how to build own components" with a "Get started" button below. The right side shows a stylized mobile app interface with a dark gray background. Inside the app is a light pink card displaying "Total distance" and "312 km". Below this are bar graphs for "Mon" to "Sun", with activity shown for Monday through Thursday and dotted outlines for Friday through Sunday. At the bottom of the card is a horizontal slider with a circle indicating a selection. A small, dark purple label with "Dev" written on it points to this slider.' class="h-full w-full mt-6 rounded-xl md:rounded-2xl border" /></a>
+It is built on top of [shadcn-svelte](https://shadcn-svelte.com).
+
+<a href="/docs/introduction">
+  <img 
+    src="/assets/ogImage.png" 
+    alt="Ori UI hero preview showing a dark layout on the left with documentation text and a mobile analytics card on the right." 
+    class="h-full w-full mt-6 rounded-xl md:rounded-2xl border"
+  />
+</a>
 
 ## Why Ori UI?
 
-<!-- <img src="/img/bring-own-style.png" alt="Switch customization UI: Edit toggle style, color, and theme using Tailwind or CSS tools." class="h-full w-full mt-6 -mb-6 rounded-xl md:rounded-2xl" /> -->
-
-### Bring Your Own Styles
-
-Most components ship completely unstyled, with the exception of those required for core functionality. No CSS resets, no design system assumptions. You bring the styles using standard `class` props or `data-*` attributes. [See the styling guide].
-
-<!-- <img src="/img/developer-exp.png" alt="Accordion builder UI: Easily compose accessible accordion components with Ori UI." class="h-full w-full mt-16 -mb-6 rounded-xl md:rounded-2xl border" /> -->
+<img 
+  src="/assets/ori-introduction.png" 
+  alt="Preview of Ori UI’s component philosophy showing an example accordion interface with customizable, composable elements." 
+  class="h-full w-full mt-16 -mb-6 rounded-xl md:rounded-2xl border" 
+/>
 
 ### Building for Developer Experience
 
-Everything is designed to stay out of your way:
+Every API in Ori UI is designed to be predictable and ergonomic, helping you stay in flow while shipping fast:
 
 - Full TypeScript coverage
-- Stable, predictable APIs
+- Stable and intuitive component APIs
 - Flexible event override system
-- Great defaults, easily overridden
-- Comprehensive documentation and examples
+- Great defaults with easy extensibility
+- Clear documentation and practical examples
 
-<!-- <img src="/img/accessibility.png" alt="Production-Ready Accessibility" class="h-full w-full mt-16 -mb-6 rounded-xl md:rounded-2xl border" /> -->
+<!-- <img 
+  src="/img/accessibility.png" 
+  alt="Illustration representing accessibility features, including keyboard navigation and screen reader support." 
+  class="h-full w-full mt-16 -mb-6 rounded-xl md:rounded-2xl border" 
+/> -->
 
 ### Production-Ready Accessibility
 
-Accessibility isn't just an afterthought - it's baked in:
+Accessibility is deeply integrated into every component — not added as an afterthought:
 
-- WAI-ARIA compliance
-- Keyboard navigation by default
-- Focus management handled for you
-- Screen reader support built-in
-
-<!-- <img src="/img/composable2.png" alt="Composable by Design" class="h-full w-full mt-16 -mb-6 rounded-xl md:rounded-2xl border" /> -->
-
-### Composable by Design
-
-Components are primitives, not black boxes. They compose cleanly and play well together:
-
-- [Render Delegation] for total flexibility
-- Chainable events and callbacks
-- Override-friendly defaults
-- Minimal dependencies
+- WAI-ARIA compliant behavior
+- Keyboard navigation built-in
+- Automatic focus management
+- Robust screen reader support
 
 ## Community
 
-Ori UI was built and is maintained by [Hunter Johnston](https://x.com/huntabyte) with design support from [Pavel Stianko](https://x.com/pavel_stianko) and his team at [Bitworks Studio](https://bitworks.cz) and tooling support from [Adrian Gonz](https://github.com/AdrianGonz97). Contributions, issues, and feedback are always welcome.
+Ori UI is built and maintained by [Chirag Arora](https://x.com/chiragkun).  
+Contributions, issues, and feedback are always welcome.
 
-Found an issue? [Open one](https://github.com/huntabyte/bits-ui/issues/new).
-Have a feature request? [Let's discuss](https://github.com/huntabyte/bits-ui/discussions/new?category=feature-requests-ideas)
+Found an issue? [Open one](https://github.com/chiragkun/ori-ui/issues/new).  
+Have a feature request? [Let's discuss](https://github.com/chiragkun/ori-ui/discussions/new?category=feature-requests-ideas)
 
 ## Acknowledgments
 
 Built on the shoulders of giants:
 
-- [Melt UI](https://melt-ui.com) - inspired the internal architecture
-- [Radix UI](https://radix-ui.com) - API design inspiration
-- [React Spectrum](https://react-spectrum.adobe.com) - inspiration for the date/time components and excellence in accessibility
+- [Aceternity UI](https://ui.aceternity.com) — inspired the internal architecture
+- [Magic UI](https://magic-ui.com) — inspired the component designs
