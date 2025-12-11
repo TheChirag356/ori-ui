@@ -17,7 +17,7 @@
 		title={title}
 		width={width}
 		height={height}
-		loading="lazy"
+		loading="eager"
 		class={`rounded-xl shadow-md w-full h-auto object-cover ${className}`}
 	/>
 
