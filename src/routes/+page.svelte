@@ -9,18 +9,18 @@
 </script>
 
 <div class="min-h-screen flex flex-col justify-between">
-	<div
-		class="h-dvh mx-auto font-sans max-w-3xl text-center items-center justify-center flex flex-col"
-	>
-		<h1 class="text-5xl font-semibold max-w-2xl">
+	<div class="h-dvh mx-auto font-sans text-center items-center justify-center flex flex-col">
+		<h1 class="text-5xl max-w-3xl font-bold">
 			Animation-ready UI components for builders and designers.
 		</h1>
-		<p class="mt-4 mb-8 text-lg">
+		<p class="mt-4 mb-8 text-lg font-serif max-w-3xl text-neutral-foreground/70">
 			Free and open-source animated components and effects built with Svelte, Typescript, Tailwind
 			CSS, and Motion. Perfect companion for svelte-shadcn/ui.
 		</p>
-		<div class="flex">
+		<div class="flex gap-6">
 			<Button href="/components" class="font-mono cursor-pointer">Browse Components</Button>
+			<Button href="/docs" class="font-mono cursor-pointer" variant="secondary">Get Started</Button
+			>
 		</div>
 		<div class="flex gap-2 text-neutral-foreground/70 mt-10">
 			<Tooltip.Root>
