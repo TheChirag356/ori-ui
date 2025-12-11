@@ -56,6 +56,20 @@
 					}
 				]
 			},
+			{
+				title: "Buttons",
+				url: '/components',
+				items: [
+					{
+						title: 'Rainbow Button',
+						url: '/components/rainbow-button',
+					},
+					{
+						title: 'Shimmer Button',
+						url: '/components/shimmer-button',
+					}
+				]
+			}
 		]
 	});
 
