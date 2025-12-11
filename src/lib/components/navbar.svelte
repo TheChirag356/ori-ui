@@ -3,16 +3,34 @@
 	import OriLogoFull from '$lib/assets/ori.svelte';
 	import { Button } from './ui/button';
 	import { IconBrandGithub } from '@tabler/icons-svelte';
+	import {onMount} from 'svelte';
 
-	let stargazersCount = $state<Number>(0);
-	$effect(() => {
-		fetch('https://api.github.com/repos/TheChirag356/ori-ui')
-			.then((res) => res.json())
-			.then((data) => data.stargazers_count)
-			.then((count) => (stargazersCount = count));
-	});
+	let stargazersCount = $state(0);
+	const CACHE_KEY = 'ORI-UI-GITHUB-STARS';
+	const CACHE_DURATION = 1000 * 60 * 60; // 1 hour
+
+	onMount(() => {
+		const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
+		if (cached && Date.now() - cached.timestamp < CACHE_DURATION) {
+			stargazersCount = cached.stars;
+		} else {
+			fetch('https://api.github.com/repos/TheChirag356/ori-ui')
+				.then((res) => res.json())
+				.then((data) => {
+					stargazersCount = data.stargazers_count;
+					localStorage.setItem(
+						CACHE_KEY,
+						JSON.stringify({ stars: data.stargazers_count, timestamp: Date.now() })
+					);
+				})
+				.catch(() => {
+					stargazersCount = 0;
+				});
+		}
+	})
 
 	import { page } from '$app/state';
+	import { cn } from '$lib/utils';
 	const navbarItems = [
 		{ label: 'Docs', href: '/docs' },
 		{ label: 'Components', href: '/components' },
@@ -20,7 +38,7 @@
 	];
 </script>
 
-<header class="bg-background sticky top-0 z-50 w-full">
+<header class="bg-background sticky top-0 z-50 w-full border-b border-border">
 	<div class="container-wrapper 3xl:fixed:px-0 px-6">
 		<div class="3xl:fixed:container h-14 flex items-center gap-2">
 			<a href="/">
@@ -31,7 +49,8 @@
 					<Button
 						variant="ghost"
 						href={item.href}
-						class={page.url.pathname === item.href ? '' : 'text-foreground/70'}>{item.label}</Button
+						class={cn(page.url.pathname === item.href ? '' : 'text-foreground/70', 'font-mono')}
+						>{item.label}</Button
 					>
 				{/each}
 			</nav>
