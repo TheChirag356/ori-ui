@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
     import "$lib/styles/markdown.css";
 	let { data } = $props();
 
@@ -7,7 +6,7 @@
 </script>
 
 {#key data?.meta.title}
-	<article class="max-w-3xl mx-auto" in:fade out:fade>
+	<article class="max-w-3xl mx-auto">
 		<hgroup class="mt-8">
 			<h1 class="text-5xl font-semibold">{data?.meta.title}</h1>
 			{#if data?.meta.description}
