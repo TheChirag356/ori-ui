@@ -44,7 +44,7 @@
 			<a href="/">
 				<OriLogoFull class="size-7 p-0" />
 			</a>
-			<nav class="items-center gap-0.5 hidden lg:flex">
+			<nav class="items-center gap-0.5 flex">
 				{#each navbarItems as item}
 					<Button
 						variant="ghost"

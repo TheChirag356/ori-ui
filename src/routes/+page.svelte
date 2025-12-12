@@ -10,10 +10,14 @@
 
 <div class="h-[85vh] flex flex-col justify-between">
 	<div class="h-full mx-auto font-sans text-center items-center justify-center flex flex-col">
-		<h1 class="text-5xl max-w-3xl font-bold">
-			Animation-ready UI components for builders and designers.
+		<h1
+			class="md:text-5xl sm:text-3xl text-xl lg:max-w-4xl md:max-w-2xl max-w-xl font-bartle font-semibold"
+		>
+			Animated UI components for Svelte.
 		</h1>
-		<p class="mt-4 mb-8 text-lg font-serif max-w-3xl text-neutral-foreground/70">
+		<p
+			class="mt-4 mb-8 md:text-lg sm:text-base font-serif md:max-w-3xl sm:max-w-lg max-w-xs text-[14px] text-neutral-foreground/70"
+		>
 			Free and open-source animated components and effects built with Svelte, Typescript, Tailwind
 			CSS, and Motion. Perfect companion for svelte-shadcn/ui.
 		</p>
