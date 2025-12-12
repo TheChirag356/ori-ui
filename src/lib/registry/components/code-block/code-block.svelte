@@ -2,6 +2,7 @@
 	import { cn } from "$lib/utils";
 	import { createHighlighter } from "shiki";
 	import { onMount } from "svelte";
+	import { escapeSvelte } from "mdsvex";
 
 	interface CodeBlockProps {
 		class?: string;
@@ -36,13 +37,17 @@
 	async function updateHtml() {
 		if (!highlighter) return;
 
-		html = await highlighter.codeToHtml(text, {
+		html = escapeSvelte(await highlighter.codeToHtml(text, {
 			lang,
 			theme: "vitesse-dark"
-		});
+		}));
 	}
 </script>
 
 <div class={cn('border border-border rounded-md px-4 py-4', className)}>
-	{html}
+	{#if html}
+		{@html html}
+	{:else}
+		<pre>{text}</pre>
+	{/if}
 </div>
