@@ -18,9 +18,7 @@ const shiki = await createHighlighter({
 
 async function highlighter(code, lang = "javascript") {
     const html = escapeSvelte(shiki.codeToHtml(code, { lang, theme: 'vitesse-dark' }))
-    return `{@html \`
-    <div class="shiki">${html}</div>
-    \` }`
+    return `{@html \`${html}\` }`
 }
 
 /** @type {import('mdsvex').MdsvexOptions} */

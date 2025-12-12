@@ -33,15 +33,7 @@
 	$effect(() => {if (code.length > 0) updateHtml()});
 
 	async function updateHtml() {
-        const highlighter = await createHighlighter({
-            themes: ['vitesse-dark'],
-            langs: ['javascript'],
-        });
-
-		html = await highlighter.codeToHtml(code[selectedTab].text, {
-			lang: code[selectedTab].lang,
-			theme: "vitesse-dark"
-		});
+		html = code[selectedTab].text
 	}
 </script>
 
@@ -65,7 +57,7 @@
 		{/each}
 	</div>
 
-	<div class="px-4 py-4">
+	<div class="px-4 py-4 border-none">
 		{@html html}
 	</div>
 </div>

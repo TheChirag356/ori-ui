@@ -189,7 +189,7 @@ body {
 		color: var(--foreground);
 		text-shadow: 0 0 10px var(--color-primary);
 	}
-  .shiki {
-    @apply px-4 py-5 border border-border rounded-md;
+  pre.shiki {
+    @apply px-4 py-5 border rounded-md;
   }
 }

@@ -87,6 +87,13 @@
 		currentPath = page.url.pathname;
 		updateIsActive(currentPath);
 	});
+
+	$effect(() => {
+		if (currentPath !== page.url.pathname) {
+			currentPath = page.url.pathname;
+			updateIsActive(currentPath);
+		}
+	})
 </script>
 
 <Sidebar.Root class="mt-16 h-[calc(100vh-4rem)] pr-2 pl-6" {...restProps} bind:ref>
