@@ -12,7 +12,6 @@ import Hr from './hr.svelte';
 import Li from './li.svelte';
 import Ol from './ol.svelte';
 import P from './p.svelte';
-import Pre from './pre.svelte';
 import Span from './span.svelte';
 import Stong from './stong.svelte';
 import Ul from './ul.svelte';
@@ -39,7 +38,6 @@ export {
 	Li as li,
 	Ol as ol,
 	P as p,
-	Pre as pre,
 	Span as span,
 	Stong as strong,
 	Ul as ul,
