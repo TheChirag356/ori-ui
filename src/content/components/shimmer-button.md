@@ -4,18 +4,29 @@ description: A button with a shimmering light which travels around the perimeter
 ---
 
 <script>
-    import { CodeBlock } from "$lib/registry/components/code-block";
+    import ShimmerButton from '$lib/registry/buttons/shimmer-button/shimmer-button.svelte';
+    import CodePreview from '$lib/components/code-preview.svelte';
 </script>
+
+<CodePreview>
+    <ShimmerButton>Shimmer Button</ShimmerButton>
+</CodePreview>
 
 # Installation
 
-<CodeBlock text="bun x shadcn-svelte@latest add @ori/shimmer-button" lang="bash" />
+```bash
+bun x shadcn-svelte@latest add @ori/shimmer-button
+```
 
 # Usage
 
-<CodeBlock text="import {ShimmerButton} from '$lib/components/shimmer-button';" lang="svelte" />
+```svelte
+import {ShimmerButton} from '$lib/components/shimmer-button';
+```
 
-<CodeBlock text="<ShimmerButton>Shimmer Button</ShimmerButton>" lang="svelte" />
+```svelte
+<ShimmerButton>Shimmer Button</ShimmerButton>
+```
 
 # Props
 
