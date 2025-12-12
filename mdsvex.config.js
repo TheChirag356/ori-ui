@@ -17,7 +17,13 @@ const shiki = await createHighlighter({
 })
 
 async function highlighter(code, lang = "javascript") {
-    const html = escapeSvelte(shiki.codeToHtml(code, { lang, theme: 'vitesse-dark' }))
+    const html = escapeSvelte(shiki.codeToHtml(code,
+        {
+            lang,
+            theme: 'vitesse-dark',
+            wrap: true,
+        })
+    )
     return `{@html \`${html}\` }`
 }
 

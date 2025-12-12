@@ -193,3 +193,20 @@ body {
     @apply px-4 py-5 border rounded-md;
   }
 }
+
+/* add line numbers in code blocks */
+/* code {
+  counter-reset: step;
+  counter-increment: step 0;
+}
+
+code .line::before {
+  display: inline-block;
+  content: counter(step);
+  counter-increment: step;
+  width: var(--spacing-6);
+  margin-right: var(--spacing-6);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--colour-line-numbers);
+} */
