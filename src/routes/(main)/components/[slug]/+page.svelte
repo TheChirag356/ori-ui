@@ -1,10 +1,14 @@
 <script lang="ts">
     import "$lib/styles/markdown.css";
 	let { data } = $props();
+	import * as Sidebar from '$lib/components/ui/sidebar';
 
     const Content = $derived(data?.content);
 </script>
 
+<div class="md:hidden flex">
+	<Sidebar.Trigger class="mt-4" />
+</div>
 {#key data?.meta.title}
 	<article class="max-w-3xl mx-auto">
 		<hgroup class="mt-8">
