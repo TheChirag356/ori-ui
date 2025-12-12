@@ -33,10 +33,10 @@ Every API in Ori UI is designed to be predictable and ergonomic, helping you sta
 - Great defaults with easy extensibility
 - Clear documentation and practical examples
 
-<!-- <img 
-  src="/img/accessibility.png" 
-  alt="Illustration representing accessibility features, including keyboard navigation and screen reader support." 
-  class="h-full w-full mt-16 -mb-6 rounded-xl md:rounded-2xl border" 
+<!-- <img
+  src="/img/accessibility.png"
+  alt="Illustration representing accessibility features, including keyboard navigation and screen reader support."
+  class="h-full w-full mt-16 -mb-6 rounded-xl md:rounded-2xl border"
 /> -->
 
 ### Production-Ready Accessibility
@@ -53,12 +53,12 @@ Accessibility is deeply integrated into every component — not added as an afte
 Ori UI is built and maintained by [Chirag Arora](https://x.com/chiragkun).  
 Contributions, issues, and feedback are always welcome.
 
-Found an issue? [Open one](https://github.com/chiragkun/ori-ui/issues/new).  
-Have a feature request? [Let's discuss](https://github.com/chiragkun/ori-ui/discussions/new?category=feature-requests-ideas)
+Found an issue? [Open one](https://github.com/TheChirag356/ori-ui/issues/new).  
+Have a feature request? [Let's discuss](https://github.com/TheChirag356/ori-ui/discussions/new?category=feature-requests-ideas)
 
 ## Acknowledgments
 
 Built on the shoulders of giants:
 
 - [Aceternity UI](https://ui.aceternity.com) — inspired the internal architecture
-- [Magic UI](https://magic-ui.com) — inspired the component designs
+- [Magic UI](https://magicui.design) — inspired the component designs
