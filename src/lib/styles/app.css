@@ -190,7 +190,7 @@ body {
 		text-shadow: 0 0 10px var(--color-primary);
 	}
   pre.shiki {
-    @apply px-4 py-5 border rounded-md;
+    @apply px-4 py-5 border rounded-md overflow-x-auto overflow-y-visible relative my-4;
   }
 }
 

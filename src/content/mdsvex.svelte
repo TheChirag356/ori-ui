@@ -1,4 +1,5 @@
 <script lang="ts" module>
+	import { codeCopyButton } from '$lib/actions/codeCopyButton';
 	import {
 		a,
 		blockquote,
@@ -57,6 +58,6 @@
 	let { children } = $props();
 </script>
 
-<div>
+<div use:codeCopyButton>
 	{@render children?.()}
 </div>
