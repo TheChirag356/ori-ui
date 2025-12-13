@@ -67,6 +67,10 @@
 					{
 						title: 'Shimmer Button',
 						url: '/components/shimmer-button',
+					},
+					{
+						title: 'Slide Text Button',
+						url: '/components/slide-text-button',
 					}
 				]
 			}

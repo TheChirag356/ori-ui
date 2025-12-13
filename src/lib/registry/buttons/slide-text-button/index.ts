@@ -1,0 +1,1 @@
+export { default as SlideTextButton } from "./slide-text-button.svelte";
