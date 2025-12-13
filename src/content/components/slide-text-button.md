@@ -18,7 +18,7 @@ description: An animated button with vertical slide text transition effect
 ### Installation
 
 ```bash
-    bun x svelte-shadcn@latest https://ori-ui.vercel.app/r/slide-text-button.json
+    bun x shadcn-svelte@latest add https://ori-ui.vercel.app/r/slide-text-button.json
 ```
 
 ### Usage
