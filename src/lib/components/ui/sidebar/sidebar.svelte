@@ -22,10 +22,10 @@
 	const sidebar = useSidebar();
 </script>
 
-{#if collapsible === "none"}
+{#if collapsible === 'none'}
 	<div
 		class={cn(
-			"bg-sidebar text-sidebar-foreground w-(--sidebar-width) flex h-full flex-col",
+			'bg-sidebar text-sidebar-foreground w-(--sidebar-width) flex h-full flex-col',
 			className
 		)}
 		bind:this={ref}
@@ -34,10 +34,7 @@
 		{@render children?.()}
 	</div>
 {:else if sidebar.isMobile}
-	<Sheet.Root
-		bind:open={() => sidebar.openMobile, (v) => sidebar.setOpenMobile(v)}
-		{...restProps}
-	>
+	<Sheet.Root bind:open={() => sidebar.openMobile, (v) => sidebar.setOpenMobile(v)} {...restProps}>
 		<Sheet.Content
 			data-sidebar="sidebar"
 			data-slot="sidebar"
@@ -60,7 +57,7 @@
 		bind:this={ref}
 		class="text-sidebar-foreground group peer hidden md:block"
 		data-state={sidebar.state}
-		data-collapsible={sidebar.state === "collapsed" ? collapsible : ""}
+		data-collapsible={sidebar.state === 'collapsed' ? collapsible : ''}
 		data-variant={variant}
 		data-side={side}
 		data-slot="sidebar"
@@ -69,25 +66,25 @@
 		<div
 			data-slot="sidebar-gap"
 			class={cn(
-				"w-(--sidebar-width) relative bg-transparent transition-[width] duration-200 ease-linear",
-				"group-data-[collapsible=offcanvas]:w-0",
-				"group-data-[side=right]:rotate-180",
-				variant === "floating" || variant === "inset"
-					? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]"
-					: "group-data-[collapsible=icon]:w-(--sidebar-width-icon)"
+				'w-(--sidebar-width) relative bg-transparent transition-[width] duration-200 ease-linear',
+				'group-data-[collapsible=offcanvas]:w-0',
+				'group-data-[side=right]:rotate-180',
+				variant === 'floating' || variant === 'inset'
+					? 'group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]'
+					: 'group-data-[collapsible=icon]:w-(--sidebar-width-icon)'
 			)}
 		></div>
 		<div
 			data-slot="sidebar-container"
 			class={cn(
-				"w-(--sidebar-width) fixed inset-y-0 z-10 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex",
-				side === "left"
-					? "start-0 group-data-[collapsible=offcanvas]:start-[calc(var(--sidebar-width)*-1)]"
-					: "end-0 group-data-[collapsible=offcanvas]:end-[calc(var(--sidebar-width)*-1)]",
+				'w-(--sidebar-width) fixed inset-y-0 z-10 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex',
+				side === 'left'
+					? 'start-0 group-data-[collapsible=offcanvas]:start-[calc(var(--sidebar-width)*-1)]'
+					: 'end-0 group-data-[collapsible=offcanvas]:end-[calc(var(--sidebar-width)*-1)]',
 				// Adjust the padding for floating and inset variants.
-				variant === "floating" || variant === "inset"
-					? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]"
-					: "group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-e group-data-[side=right]:border-s",
+				variant === 'floating' || variant === 'inset'
+					? 'p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]'
+					: 'group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-e group-data-[side=right]:border-s',
 				className
 			)}
 			{...restProps}

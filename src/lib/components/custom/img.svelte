@@ -12,11 +12,11 @@
 
 <figure class="my-6">
 	<img
-		src={src}
-		alt={alt}
-		title={title}
-		width={width}
-		height={height}
+		{src}
+		{alt}
+		{title}
+		{width}
+		{height}
 		loading="eager"
 		class={`rounded-xl shadow-md w-full h-auto object-cover ${className}`}
 	/>

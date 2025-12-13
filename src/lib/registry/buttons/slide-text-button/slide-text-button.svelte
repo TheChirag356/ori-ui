@@ -21,7 +21,7 @@
 	onmouseleave={() => (isHovering = false)}
 	onfocus={() => (isHovering = true)}
 	onblur={() => (isHovering = false)}
-    aria-label={isHovering ? slideText : mainText}
+	aria-label={isHovering ? slideText : mainText}
 	{...restProps}
 >
 	<span class="invisible whitespace-nowrap">
