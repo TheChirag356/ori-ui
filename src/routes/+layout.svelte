@@ -2,7 +2,7 @@
 	import '$lib/styles/app.css';
 	import { ModeWatcher } from 'mode-watcher';
 	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
-		import Navbar from '$lib/components/navbar.svelte';
+	import Navbar from '$lib/components/navbar.svelte';
 	import Footer from '$lib/components/footer.svelte';
 
 	let { children } = $props();
