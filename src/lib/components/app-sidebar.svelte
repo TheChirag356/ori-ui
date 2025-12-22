@@ -50,9 +50,13 @@
 				url: '/components',
 				items: [
 					{
-						title: 'Calendar',
-						url: '/components/calendar',
+						title: 'Marquee',
+						url: '/components/marquee',
 						badge: 'New'
+					},
+					{
+						title: 'File Upload',
+						url: '/components/file-upload'
 					}
 				]
 			},
@@ -71,6 +75,18 @@
 					{
 						title: 'Slide Text Button',
 						url: '/components/slide-text-button',
+					},
+					{
+						title: 'Copy Button',
+						url: '/components/copy-button',
+					},
+					{
+						title: 'Liquid Button',
+						url: '/components/liquid-button',
+					},
+					{
+						title: 'Flip Button',
+						url: '/components/flip-button',
 					}
 				]
 			}
