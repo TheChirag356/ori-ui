@@ -1,14 +1,73 @@
 <script lang="ts">
-    type MarqueeProps = {
-        class?: string;
-        reverse: boolean;
-        pauseOnHover: boolean;
-        vertical: boolean;
-        children: () => any;
-        repeat: number;
-    }
+  import { cn } from "$lib/utils";
+  import type { Snippet } from "svelte";
 
-    let {class: className, reverse = false, pauseOnHover = false, vertical = false, children, repeat = 4, ...restProps}: MarqueeProps = $props();
+  type MarqueeProps = {
+    pauseOnHover?: boolean;
+    vertical?: boolean;
+    repeat?: number;
+    reverse?: boolean;
+    class?: string;
+    children?: Snippet;
+  };
+  let {
+    pauseOnHover = false,
+    vertical = false,
+    repeat = 4,
+    reverse = false,
+    class: _class = "",
+    children,
+  }: MarqueeProps = $props();
 </script>
 
-<div></div>
+<div
+  class={cn(
+    "group flex overflow-hidden p-2 [--duration:16s] [--gap:3rem] [gap:var(--gap)]",
+    {
+      "flex-row": !vertical,
+      "flex-col": vertical,
+    },
+    _class
+  )}
+>
+  {#each { length: repeat } as _, i (i)}
+    <div
+      class={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
+        "animate-marquee flex-row": !vertical,
+        "animate-marquee-vertical flex-col": vertical,
+        "group-hover:[animation-play-state:paused]": pauseOnHover,
+        "[animation-direction:reverse]": reverse,
+      })}
+    >
+      {@render children?.()}
+    </div>
+  {/each}
+</div>
+
+<style>
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes marquee-vertical {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee var(--duration) linear infinite;
+  }
+
+  .animate-marquee-vertical {
+    animation: marquee-vertical var(--duration) linear infinite;
+  }
+</style>
