@@ -8,11 +8,13 @@ description: Learn how to get started using Ori in your app.
     let installation = [
         {
             name: "bun",
-            text: "bun x shadcn-svelte@latest add ori-ui"
+            text: "bun x shadcn-svelte@latest add ori-ui",
+            lang: "bash"
         },
         {
             name: "pnpm",
-            text: "pnpm add shadcn-svelte@latest add ori-ui"
+            text: "pnpm add shadcn-svelte@latest add ori-ui",
+            lang: "bash"
         }
     ]
 </script>
