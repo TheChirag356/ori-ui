@@ -41,7 +41,7 @@
 	}
 </script>
 
-<div class={cn('border border-border rounded-md', className)}>
+<div class={cn('border border-border rounded-md overflow-x-hidden', className)}>
 	<div class="flex justify-between items-center bg-muted/30 rounded-t-md pr-4">
 		<div class="flex gap-3">
 			{#each code as lang, index}
@@ -64,7 +64,9 @@
 		<CopyButton variant="ghost" content={code[selectedTab].text} />
 	</div>
 
-	<div class="px-4 py-4 border-none">
-		{@html html}
-	</div>
+	{#key html}
+		<div class="px-4 py-4 border-none">
+			{@html html}
+		</div>
+	{/key}
 </div>
