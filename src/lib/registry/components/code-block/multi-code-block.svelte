@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { cn } from "$lib/utils";
-	import { createHighlighter } from "shiki";
-	import { onMount } from "svelte";
+	import { codeToHtml } from "shiki";
+	import CopyButton from "$lib/registry/buttons/copy-button/copy-button.svelte";
 
 	type Code = {
 		name: string;
@@ -14,47 +14,54 @@
 		code?: Code[];
 	}
 
-	let selectedTab = $state(0);
-
 	let {
 		class: className = "",
 		code = []
 	}: CodeBlockProps = $props();
-
+	
 	// holds generated HTML
-	let html = $state<string>("");
+	let html = $state("");
+	let selectedTab = $state(0);
 
-	// Load initial code block
-	onMount(() => {
-		updateHtml();
+	$effect(() => {
+		if (!code.length) return;
+
+		updateCode(code[selectedTab]).then((newCode) => {
+			html = newCode;
+		});
 	});
 
-	// Update HTML whenever selectedTab changes
-	$effect(() => {if (code.length > 0) updateHtml()});
-
-	async function updateHtml() {
-		html = code[selectedTab].text
+	async function updateCode(code: Code) {
+		const newCode = await codeToHtml(code.text, {
+			lang: code.lang,
+			theme: 'vitesse-dark'
+		})
+		const match = newCode.match(/<code[^>]*>[\s\S]*?<\/code>/); // strips the surrounding <pre> tags
+		return match?.[0] ?? newCode;
 	}
 </script>
 
 <div class={cn('border border-border rounded-md', className)}>
-	<div class="flex gap-3 bg-muted/30 rounded-t-md">
-		{#each code as lang, index}
-			<button
-				class={cn(
-					'h-full font-medium relative py-3 px-4 overflow-hidden',
-					selectedTab === index
-						? 'border-b-primary border-b text-accent-foreground'
-						: 'text-muted-foreground hover:bg-accent/10'
-				)}
-				onclick={() => (selectedTab = index)}
-			>
-				<span>{lang.name}</span>
-				{#if selectedTab === index}
-					<span class="absolute bottom-0 left-0 w-full h-1 blur-md bg-primary"></span>
-				{/if}
-			</button>
-		{/each}
+	<div class="flex justify-between items-center bg-muted/30 rounded-t-md pr-4">
+		<div class="flex gap-3">
+			{#each code as lang, index}
+				<button
+					class={cn(
+						'h-full font-medium relative py-3 px-4 overflow-hidden',
+						selectedTab === index
+							? 'border-b-primary border-b text-accent-foreground'
+							: 'text-muted-foreground hover:bg-accent/10'
+					)}
+					onclick={() => (selectedTab = index)}
+				>
+					<span>{lang.name}</span>
+					{#if selectedTab === index}
+						<span class="absolute bottom-0 left-0 w-full h-1 blur-md bg-primary"></span>
+					{/if}
+				</button>
+			{/each}
+		</div>
+		<CopyButton variant="ghost" content={code[selectedTab].text} />
 	</div>
 
 	<div class="px-4 py-4 border-none">
