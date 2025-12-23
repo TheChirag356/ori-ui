@@ -56,7 +56,18 @@
 					},
 					{
 						title: 'File Upload',
-						url: '/components/file-upload'
+						url: '/components/file-upload',
+						badge: 'New'
+					},
+					{
+						title: 'Glare Hover',
+						url: '/components/glare-hover',
+						badge: 'New'
+					},
+					{
+						title: 'Morphic Navbar',
+						url: '/components/morphic-navbar',
+						badge: 'New'
 					}
 				]
 			},
@@ -87,6 +98,10 @@
 					{
 						title: 'Flip Button',
 						url: '/components/flip-button',
+					},
+					{
+						title: 'Moving Border Button',
+						url: '/components/moving-border-button',
 					}
 				]
 			}

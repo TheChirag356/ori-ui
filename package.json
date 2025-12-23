@@ -47,6 +47,7 @@
 		"mode-watcher": "^1.1.0",
 		"rehype-slug": "^6.0.0",
 		"remark-toc": "^9.0.0",
-		"shiki": "^3.19.0"
+		"shiki": "^3.19.0",
+		"svelte-meta-tags": "^4.5.0"
 	}
 }
