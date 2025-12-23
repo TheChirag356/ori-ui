@@ -1,6 +1,7 @@
 <script lang="ts" module>
     import { cn } from "$lib/utils";
     import { IconLoader, IconUpload, IconX, IconXboxXFilled } from '@tabler/icons-svelte';
+	import { fly } from "svelte/transition";
 
     export type FileUploadProps = {
         class?: string;
@@ -115,6 +116,7 @@
 					'opacity-0 pointer-events-none': isDragActive
 				}
 			)}
+			in:fly={{ delay: 150, y: 20, duration: 300 }}
 		>
 			<div class="my-2">
 				{#if isPending}
