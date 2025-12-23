@@ -16,9 +16,11 @@
 	})
 </script>
 
-<div class="h-[85vh] flex flex-col justify-between">
+<div class="h-[85vh] w-full flex flex-col justify-between relative bg-background">
 	{#if mounted}
-		<div class="h-full mx-auto font-sans text-center items-center justify-center flex flex-col">
+		<div
+			class="h-full z-10 relative mx-auto font-sans text-center items-center justify-center flex flex-col"
+		>
 			<h1
 				class="md:text-5xl sm:text-3xl text-2xl lg:max-w-4xl md:max-w-3xl max-w-2xl font-bartle font-semibold"
 				in:fly={{ y: 20, delay: 100, easing: cubicInOut }}
@@ -89,4 +91,16 @@
 			</div>
 		</div>
 	{/if}
+	<!-- <div
+			class="absolute bottom-0 left-0 right-0 top-0 inset-0 bg-[linear-gradient(to_right,#ffffff2e_1px,transparent_1px),linear-gradient(to_bottom,#ffffff2e_1px,transparent_1px)] bg-size[14px_24px] z-0"
+		></div> -->
+	<!-- <div
+		class="absolute inset-0 opacity-30"
+		style="
+		background-image: 
+		  linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+		  linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+		background-size: 60px 60px;
+	  "
+	></div> -->
 </div>
