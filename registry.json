@@ -103,6 +103,28 @@
 				"documentation": "https://ori-ui.vercel.app/components/morphic-navbar",
 				"repository": "https://github.com/TheChirag356/ori-ui"
 			}
+		},
+		{
+			"name": "split-text",
+			"type": "registry:block",
+			"title": "Split Text",
+			"description": "A component that animates text by splitting it into words and applying staggered animations.",
+			"dependencies": ["animejs"],
+			"registryDependencies": [],
+			"files": [
+				{
+					"path": "src/lib/registry/text/split-text/split-text.svelte",
+					"type": "registry:file",
+					"target": "ori/split-text/split-text.svelte"
+				}
+			],
+			"author": "Chirag Arora <arorachirag12005@gmail.com>",
+			"meta": {
+				"author": "TheChirag356",
+				"version": "1.0.0",
+				"documentation": "https://ori-ui.vercel.app/docs/installation",
+				"repository": "https://github.com/TheChirag356/ori-ui"
+			}
 		}
 	]
 }

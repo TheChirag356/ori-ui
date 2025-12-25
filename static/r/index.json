@@ -64,5 +64,23 @@
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "ios-toggle-button.json"
+	},
+	{
+		"name": "split-text",
+		"title": "Split Text",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "A component that animates text by splitting it into words and applying staggered animations.",
+		"dependencies": [
+			"animejs"
+		],
+		"registryDependencies": [],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://ori-ui.vercel.app/docs/installation",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "split-text.json"
 	}
 ]

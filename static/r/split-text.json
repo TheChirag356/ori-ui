@@ -1,0 +1,24 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "split-text",
+	"title": "Split Text",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "A component that animates text by splitting it into words and applying staggered animations.",
+	"dependencies": [
+		"animejs"
+	],
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://ori-ui.vercel.app/docs/installation",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "<script lang=\"ts\" module>\r\n    export type SplitTextProps = { tag?: string; text?: string; class?: string; delay?: number; duration?: number; ease?: string; splitType?: string; from?: object; to?: object; textAlign?: string; rootMargin?: string; loop?: boolean; onAnimationCompletion?: () => void; [key: string]: any; }\r\n</script>\r\n\r\n<script lang=\"ts\">\r\n\timport { onMount, onDestroy } from 'svelte';\r\n\timport { animate } from 'animejs/animation';\r\n\timport { splitText } from 'animejs/text';\r\n\timport { stagger } from 'animejs/utils';\r\n\timport { cn } from '$LIB$/utils';\r\n\r\n\tlet {\r\n\t\ttag = 'p',\r\n\t\ttext = '',\r\n\t\tclass: className = '',\r\n\t\tdelay = 100,\r\n\t\tduration = 600,\r\n\t\tease = 'easeOutExpo',\r\n\t\tsplitType = 'chars',\r\n\t\tloop = false,\r\n\t\tonAnimationCompletion = () => {},\r\n\t\t...restProps\r\n\t}: SplitTextProps = $props();\r\n\r\n\tlet el: HTMLElement;\r\n\tlet animation: any;\r\n\r\n\tonMount(() => {\r\n\t\tconst { chars, words } = splitText(el, {\r\n\t\t\tchars: splitType.includes('chars'),\r\n\t\t\twords: splitType.includes('words')\r\n\t\t});\r\n\r\n\t\tconst targets = chars || words;\r\n\t\tif (!targets?.length) return;\r\n\r\n\t\tanimation = animate(targets, {\r\n\t\t\topacity: [0, 1],\r\n\t\t\ttranslateY: [40, -10, 5, -2, 0],\r\n\t\t\tdelay: stagger(delay),\r\n\t\t\tduration,\r\n\t\t\teasing: ease,\r\n\t\t\tloop,\r\n\t\t\tcomplete: onAnimationCompletion\r\n\t\t});\r\n\t});\r\n\r\n\tonDestroy(() => {\r\n\t\tanimation?.pause();\r\n\t\tanimation = null;\r\n\t});\r\n</script>\r\n\r\n<svelte:element this={tag} bind:this={el} class={cn('split-text', className)} {...restProps}>\r\n\t{text}\r\n</svelte:element>\r\n",
+			"type": "registry:file",
+			"target": "ori/split-text/split-text.svelte"
+		}
+	]
+}

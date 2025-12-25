@@ -108,6 +108,17 @@
 						url: '/components/ios-toggle-button',
 					}
 				]
+			},
+			{
+				title: 'Text Animations',
+				url: '/components',
+				items: [
+					{
+						title: 'Split Text',
+						url: '/components/split-text',
+						badge: "New",
+					}
+				]
 			}
 		]
 	});
