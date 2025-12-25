@@ -10,9 +10,9 @@
 
     let items = [
         { href: "#", name: "home" },
-        { href: "#works", name: "works" },
-        { href: "#blog", name: "blog" },
-        { href: "#about", name: "about" },
+        { href: "#", name: "works" },
+        { href: "#", name: "blog" },
+        { href: "#", name: "about" },
     ] satisfies { href: string; name: string }[];
 
     let activePath = $state("#");
