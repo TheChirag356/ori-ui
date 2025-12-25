@@ -12,8 +12,8 @@ description: A component that animates text by splitting it into words and apply
     <SplitText
 	text="This is Ori UI"
 	splitType="chars"
-	delay={60}
-	duration={800}
+	delay=60
+	duration=800
     class="text-2xl font-semibold text-center"
 />
 </CodePreview>
@@ -34,8 +34,8 @@ import SplitText from '$lib/components/ori/split-text/split-text.svelte';
 <SplitText
 	text="This is Ori UI"
 	splitType="chars"
-	delay={60}
-	duration={800}
+	delay=60
+	duration=800
 	class="text-2xl font-semibold text-center"
 />
 ```
@@ -52,4 +52,4 @@ import SplitText from '$lib/components/ori/split-text/split-text.svelte';
 | ease                  | string     | 'easeOutExpo' | Easing function for the animation          |
 | splitType             | string     | 'chars'       | How to split the text: 'chars' or 'words'  |
 | loop                  | boolean    | false         | Whether the animation should loop          |
-| onAnimationCompletion | () => void | () => {}      | Callback function when animation completes |
+| onAnimationCompletion | `() => void` | `() => {}`      | Callback function when animation completes |
