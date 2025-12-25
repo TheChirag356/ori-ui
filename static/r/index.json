@@ -49,5 +49,20 @@
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "morphic-navbar.json"
+	},
+	{
+		"name": "ios-toggle-button",
+		"title": "iOS Toggle Button",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "A sleek iOS-style toggle button with smooth animations and customizable options.",
+		"registryDependencies": [],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://ori-ui.vercel.app/components/morphic-navbar",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "ios-toggle-button.json"
 	}
 ]
