@@ -18,8 +18,8 @@
     let activePath = $state("#");
 
     function isActivePath(path: string) {
-        if (path === "#") {
-            return activePath === "#";
+        if (path === "#" || path === "/") {
+            return activePath === "#" || activePath === "/";
         }
         return activePath.startsWith(path);
     }
