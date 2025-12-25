@@ -6,6 +6,9 @@ import { mdsvexOptions } from './mdsvex.config.js';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
+		// prerender: {
+		// 	handleMissingId: 'ignore'
+		// },
 		adapter: adapter()
 	},
 	extensions: ['.svelte', ...mdsvexOptions.extensions],
