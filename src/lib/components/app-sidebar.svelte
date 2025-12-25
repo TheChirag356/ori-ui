@@ -102,6 +102,10 @@
 					{
 						title: 'Moving Border Button',
 						url: '/components/moving-border-button',
+					},
+					{
+						title: 'IOS Toggle Button',
+						url: '/components/ios-toggle-button',
 					}
 				]
 			}
