@@ -7,5 +7,8 @@ registry:
 run: registry
 	bun run dev
 
-build: registry
+build: generate registry
 	bun run build
+
+generate:
+	bun run registry:generate

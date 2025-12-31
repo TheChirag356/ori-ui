@@ -9,7 +9,7 @@ node_modules
 /build
 /src/lib/data/sidebar-component-data.generated.ts
 /static/r
-registry.json
+/registry.json
 
 # OS
 .DS_Store
