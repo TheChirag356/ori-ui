@@ -7,6 +7,8 @@ node_modules
 .wrangler
 /.svelte-kit
 /build
+/src/lib/data/sidebar-component-data.generated.ts
+/static/r
 
 # OS
 .DS_Store
