@@ -16,12 +16,69 @@
 
 <Button
 	class={cn(
-		'relative cursor-pointer group transition-all bg-black text-white dark:bg-white dark:text-black',
+		'rainbow-button relative cursor-pointer overflow-hidden',
 		'inline-flex items-center justify-center gap-2 shrink-0',
-		'border-0 bg-[linear-gradient(#121213,#121213),linear-gradient(#121213_50%,rgba(18,18,19,0.6)_80%,rgba(18,18,19,0)),linear-gradient(90deg,var(--color-1),var(--color-5),var(--color-3),var(--color-4),var(--color-2))] bg-[length:200%] text-primary-foreground [background-clip:padding-box,border-box,border-box] [background-origin:border-box] [border:calc(0.125rem)_solid_transparent] before:absolute before:bottom-[-20%] before:left-1/2 before:z-0 before:h-1/5 before:w-3/5 before:-translate-x-1/2 before:animate-rainbow before:bg-[linear-gradient(90deg,var(--color-1),var(--color-5),var(--color-3),var(--color-4),var(--color-2))] before:[filter:blur(0.75rem)] dark:bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,var(--color-1),var(--color-5),var(--color-3),var(--color-4),var(--color-2))]',
+		'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900',
+		'px-6 py-3 rounded-lg font-medium',
+		'hover:scale-[1.02] active:scale-[0.98] transition-transform duration-200',
 		className
 	)}
 	{...restProps}
 >
 	{@render children?.()}
+
+	<!-- Rainbow border at the bottom -->
+	<span class="rainbow-border"></span>
 </Button>
+
+<style>
+	:global(.rainbow-button) {
+		--rainbow-gradient: linear-gradient(
+			90deg,
+			#ff0000,
+			#ff7f00,
+			#ffff00,
+			#00ff00,
+			#0000ff,
+			#4b0082,
+			#9400d3,
+			#ff0000
+		);
+	}
+
+	.rainbow-border {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: var(--rainbow-gradient);
+		background-size: 200% 100%;
+		animation: rainbow-flow 2s linear infinite;
+		border-radius: 0 0 0.5rem 0.5rem;
+	}
+
+	/* Glow effect underneath */
+	.rainbow-border::after {
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: var(--rainbow-gradient);
+		background-size: 200% 100%;
+		animation: rainbow-flow 2s linear infinite;
+		filter: blur(8px);
+		opacity: 0.7;
+	}
+
+	@keyframes rainbow-flow {
+		0% {
+			background-position: 0% 50%;
+		}
+		100% {
+			background-position: 200% 50%;
+		}
+	}
+</style>

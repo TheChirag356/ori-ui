@@ -25,7 +25,7 @@
 </script>
 
 <Button
-	class={cn('relative backdrop-blur-xs stroke-foreground', className)}
+	class={cn('relative cursor-pointer backdrop-blur-xs', className)}
 	{...restProps}
 	onclick={handleClick}
 	disabled={isClicked}
@@ -43,7 +43,7 @@
 			stroke-width="2"
 			stroke-linecap="round"
 			stroke-linejoin="round"
-			class="absolute stroke-1"
+			class="absolute stroke-current"
 			><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
 				d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z"
 			/><path
@@ -63,7 +63,7 @@
 			stroke-width="2"
 			stroke-linecap="round"
 			stroke-linejoin="round"
-			class="absolute stroke-1"
+			class="absolute stroke-current"
 			><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 12l5 5l10 -10" /></svg
 		>
 	{/if}

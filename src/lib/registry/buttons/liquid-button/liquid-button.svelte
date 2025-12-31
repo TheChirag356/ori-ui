@@ -68,6 +68,6 @@
 		{@render children?.()}
 	</div>
 	<div
-		class="absolute inset-0 w-1/2 rounded-full translate-x-1/2 group-hover:-translate-x-3 bg-primary translate-y-[110%] group-hover:translate-y-0 group-hover:w-28 transition-all duration-300 ease-in-out pointer-events-none group-hover:rounded-none z-5"
+		class="absolute inset-0 w-1/2 rounded-full translate-x-1/2 group-hover:-translate-x-3 bg-accent translate-y-[110%] group-hover:translate-y-0 group-hover:w-28 transition-all duration-300 ease-in-out pointer-events-none group-hover:rounded-none z-5"
 	></div>
 </Button>

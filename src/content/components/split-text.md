@@ -4,7 +4,7 @@ description: A component that animates text by splitting it into words and apply
 ---
 
 <script>
-    import SplitText from '$lib/registry/text/split-text/split-text.svelte';
+    import SplitText from '$lib/registry/text-animations/split-text/split-text.svelte';
     import CodePreview from '$lib/components/code-preview.svelte';
 </script>
 

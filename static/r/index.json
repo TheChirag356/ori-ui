@@ -1,17 +1,160 @@
 [
 	{
-		"name": "shimmer-button",
-		"title": "Shimmer Button",
+		"name": "copy-button",
+		"title": "Copy Button",
 		"type": "registry:block",
 		"author": "Chirag Arora <arorachirag12005@gmail.com>",
-		"description": "A customizable shimmer button component for Svelte applications.",
+		"description": "",
+		"dependencies": [],
 		"registryDependencies": [
 			"button"
 		],
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://ori-ui.vercel.app/components/shimmer-button",
+			"documentation": "https://www.oriui.app/components/copy-button",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "copy-button.json"
+	},
+	{
+		"name": "flip-button",
+		"title": "Flip Button",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [],
+		"registryDependencies": [
+			"button"
+		],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://www.oriui.app/components/flip-button",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "flip-button.json"
+	},
+	{
+		"name": "hover-border-button",
+		"title": "Hover Border Button",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [],
+		"registryDependencies": [],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://www.oriui.app/components/hover-border-button",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "hover-border-button.json"
+	},
+	{
+		"name": "ios-toggle-button",
+		"title": "Ios Toggle Button",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [],
+		"registryDependencies": [],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://www.oriui.app/components/ios-toggle-button",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "ios-toggle-button.json"
+	},
+	{
+		"name": "liquid-button",
+		"title": "Liquid Button",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [
+			"tailwind-variants"
+		],
+		"registryDependencies": [
+			"button"
+		],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://www.oriui.app/components/liquid-button",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "liquid-button.json"
+	},
+	{
+		"name": "moving-border-button",
+		"title": "Moving Border Button",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [],
+		"registryDependencies": [
+			"button"
+		],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://www.oriui.app/components/moving-border-button",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "moving-border-button.json"
+	},
+	{
+		"name": "rainbow-button",
+		"title": "Rainbow Button",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [],
+		"registryDependencies": [
+			"button"
+		],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://www.oriui.app/components/rainbow-button",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "rainbow-button.json"
+	},
+	{
+		"name": "ripple-button",
+		"title": "Ripple Button",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [],
+		"registryDependencies": [
+			"button"
+		],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://www.oriui.app/components/ripple-button",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "ripple-button.json"
+	},
+	{
+		"name": "shimmer-button",
+		"title": "Shimmer Button",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [],
+		"registryDependencies": [
+			"button"
+		],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://www.oriui.app/components/shimmer-button",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "shimmer-button.json"
@@ -21,56 +164,144 @@
 		"title": "Slide Text Button",
 		"type": "registry:block",
 		"author": "Chirag Arora <arorachirag12005@gmail.com>",
-		"description": "An animated button with vertical slide text transition effect",
+		"description": "",
+		"dependencies": [],
 		"registryDependencies": [
 			"button"
 		],
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://ori-ui.vercel.app/components/shimmer-button",
+			"documentation": "https://www.oriui.app/components/slide-text-button",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "slide-text-button.json"
+	},
+	{
+		"name": "code-block",
+		"title": "Code Block",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [
+			"shiki"
+		],
+		"registryDependencies": [],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://www.oriui.app/components/code-block",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "code-block.json"
+	},
+	{
+		"name": "file-upload",
+		"title": "File Upload",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [
+			"@tabler/icons-svelte"
+		],
+		"registryDependencies": [],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://www.oriui.app/components/file-upload",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "file-upload.json"
+	},
+	{
+		"name": "glare-hover",
+		"title": "Glare Hover",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [],
+		"registryDependencies": [],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://www.oriui.app/components/glare-hover",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "glare-hover.json"
+	},
+	{
+		"name": "marquee",
+		"title": "Marquee",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [],
+		"registryDependencies": [],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://www.oriui.app/components/marquee",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "marquee.json"
 	},
 	{
 		"name": "morphic-navbar",
 		"title": "Morphic Navbar",
 		"type": "registry:block",
 		"author": "Chirag Arora <arorachirag12005@gmail.com>",
-		"description": "A dynamic navbar with morphing animation effects between active states.",
-		"registryDependencies": [
-			"navbar"
-		],
+		"description": "",
+		"dependencies": [],
+		"registryDependencies": [],
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://ori-ui.vercel.app/components/morphic-navbar",
+			"documentation": "https://www.oriui.app/components/morphic-navbar",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "morphic-navbar.json"
 	},
 	{
-		"name": "ios-toggle-button",
-		"title": "iOS Toggle Button",
+		"name": "pdf-viewer",
+		"title": "Pdf Viewer",
 		"type": "registry:block",
 		"author": "Chirag Arora <arorachirag12005@gmail.com>",
-		"description": "A sleek iOS-style toggle button with smooth animations and customizable options.",
+		"description": "",
+		"dependencies": [
+			"@tabler/icons-svelte",
+			"pdfjs-dist"
+		],
 		"registryDependencies": [],
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://ori-ui.vercel.app/components/morphic-navbar",
+			"documentation": "https://www.oriui.app/components/pdf-viewer",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
-		"relativeUrl": "ios-toggle-button.json"
+		"relativeUrl": "pdf-viewer.json"
+	},
+	{
+		"name": "blur-text",
+		"title": "Blur Text",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [],
+		"registryDependencies": [],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://www.oriui.app/components/blur-text",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "blur-text.json"
 	},
 	{
 		"name": "split-text",
 		"title": "Split Text",
 		"type": "registry:block",
 		"author": "Chirag Arora <arorachirag12005@gmail.com>",
-		"description": "A component that animates text by splitting it into words and applying staggered animations.",
+		"description": "",
 		"dependencies": [
 			"animejs"
 		],
@@ -78,7 +309,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://ori-ui.vercel.app/docs/installation",
+			"documentation": "https://www.oriui.app/components/split-text",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "split-text.json"
