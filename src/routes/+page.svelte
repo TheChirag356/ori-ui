@@ -35,13 +35,13 @@
 				CSS, and Motion. Perfect companion for svelte-shadcn/ui.
 			</p>
 			<div class="flex gap-6" in:fly={{ y: 20, delay: 700, easing: cubicInOut }}>
-				<Button href="/components" class="font-mono cursor-pointer">Browse Components</Button>
-				<Button href="/docs" class="font-mono cursor-pointer" variant="secondary"
+				<Button href="/components" class="font-mono cursor-pointer" variant="secondary">Browse Components</Button>
+				<Button href="/docs" class="font-mono cursor-pointer" variant="outline"
 					>Get Started</Button
 				>
 			</div>
 			<div
-				class="flex gap-2 text-neutral-foreground/70 mt-10"
+				class="flex gap-2 text-accent-foreground/70 mt-10"
 				in:fly={{ y: 20, delay: 900, easing: cubicInOut }}
 			>
 				<Tooltip.Root>
@@ -91,16 +91,4 @@
 			</div>
 		</div>
 	{/if}
-	<!-- <div
-			class="absolute bottom-0 left-0 right-0 top-0 inset-0 bg-[linear-gradient(to_right,#ffffff2e_1px,transparent_1px),linear-gradient(to_bottom,#ffffff2e_1px,transparent_1px)] bg-size[14px_24px] z-0"
-		></div> -->
-	<!-- <div
-		class="absolute inset-0 opacity-30"
-		style="
-		background-image: 
-		  linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-		  linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-		background-size: 60px 60px;
-	  "
-	></div> -->
 </div>
