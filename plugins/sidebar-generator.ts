@@ -67,6 +67,9 @@ export function sidebarGenerator() {
                 "src/lib/data/sidebar-component-data.generated.ts"
             );
 
+            // Ensure the directory exists (fixes Vercel deployment)
+            fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+
             fs.writeFileSync(
                 outputPath,
                 `export const SidebarComponentData = ${JSON.stringify(sidebar, null, 2)};`
