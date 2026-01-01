@@ -6,6 +6,10 @@ description: A border that moves around the container. Perfect for making your b
 <script>
     import MovingBorderButton from '$lib/registry/buttons/moving-border-button/moving-border-button.svelte';
     import CodePreview from '$lib/components/code-preview.svelte';
+
+    import MultiCodeBlock from '$lib/registry/components/code-block/multi-code-block.svelte';
+    import { multiInstallScriptUtil} from "$lib/utils";
+    const scripts = multiInstallScriptUtil("moving-border-button");
 </script>
 
 <CodePreview>
@@ -14,9 +18,7 @@ description: A border that moves around the container. Perfect for making your b
 
 ### Installation
 
-```bash
-    bun x shadcn-svelte@latest add https://ori-ui.vercel.app/r/moving-border-button.json
-```
+<MultiCodeBlock code={scripts}>
 
 ### Usage
 

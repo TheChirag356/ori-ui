@@ -6,6 +6,10 @@ description: A component that animates text by blurring it.
 <script>
     import BlurText from '$lib/registry/text-animations/blur-text/blur-text.svelte';
     import CodePreview from '$lib/components/code-preview.svelte';
+
+	import MultiCodeBlock from '$lib/registry/components/code-block/multi-code-block.svelte';
+    import { multiInstallScriptUtil} from "$lib/utils";
+    const scripts = multiInstallScriptUtil("blur-text");
 </script>
 
 <CodePreview>
@@ -20,9 +24,7 @@ description: A component that animates text by blurring it.
 
 ### Installation
 
-```bash
-    bun x shadcn-svelte@latest add https://ori-ui.vercel.app/r/blur-text.json
-```
+<MultiCodeBlock code={scripts} />
 
 ### Usage
 

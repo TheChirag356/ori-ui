@@ -6,6 +6,10 @@ description: A sleek glare effect on hover.
 <script>
     import GlareHover from '$lib/registry/components/glare-hover/glare-hover.svelte';
     import CodePreview from '$lib/components/code-preview.svelte';
+
+    import MultiCodeBlock from '$lib/registry/components/code-block/multi-code-block.svelte';
+    import { multiInstallScriptUtil} from "$lib/utils";
+    const scripts = multiInstallScriptUtil("file-upload");
 </script>
 
 <CodePreview>
@@ -28,9 +32,7 @@ description: A sleek glare effect on hover.
 
 ### Installation
 
-```bash
-    bun x shadcn-svelte@latest add https://ori-ui.vercel.app/r/glare-hover.json
-```
+<MultiCodeBlock code={scripts} />
 
 ### Usage
 

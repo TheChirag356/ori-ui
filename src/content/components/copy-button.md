@@ -6,6 +6,10 @@ description: A copy button component with a variety of styles and animations.
 <script>
     import CopyButton from '$lib/registry/buttons/copy-button/copy-button.svelte';
     import CodePreview from '$lib/components/code-preview.svelte';
+    
+    import MultiCodeBlock from '$lib/registry/components/code-block/multi-code-block.svelte';
+    import { multiInstallScriptUtil} from "$lib/utils";
+    const scripts = multiInstallScriptUtil("copy-button");
 </script>
 
 <CodePreview>
@@ -14,9 +18,7 @@ description: A copy button component with a variety of styles and animations.
 
 ### Installation
 
-```bash
-    bun x shadcn-svelte@latest add https://ori-ui.vercel.app/r/copy-button.json
-```
+<MultiCodeBlock code={scripts} />
 
 ### Usage
 

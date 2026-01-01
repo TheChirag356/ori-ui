@@ -6,6 +6,10 @@ description: An animated flip button component with a variety of styles.
 <script>
     import FlipButton from '$lib/registry/buttons/flip-button/flip-button.svelte';
     import CodePreview from '$lib/components/code-preview.svelte';
+
+    import MultiCodeBlock from '$lib/registry/components/code-block/multi-code-block.svelte';
+    import { multiInstallScriptUtil} from "$lib/utils";
+    const scripts = multiInstallScriptUtil("flip-button");
 </script>
 
 <CodePreview>
@@ -14,9 +18,7 @@ description: An animated flip button component with a variety of styles.
 
 ### Installation
 
-```bash
-    bun x shadcn-svelte@latest add https://ori-ui.vercel.app/r/flip-button.json
-```
+<MultiCodeBlock code={scripts} />
 
 ### Usage
 

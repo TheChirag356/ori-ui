@@ -8,10 +8,13 @@ description: A beautiful syntax-highlighted code block with tabbed multi-file su
     import CodePreview from '$lib/components/code-preview.svelte';
 
     let code = [{
-            name: 'index.ts',
+        name: 'index.ts',
             text: 'console.log("Hello World");',
             lang: 'typescript'
         }]
+
+    import { multiInstallScriptUtil} from "$lib/utils";
+    const scripts = multiInstallScriptUtil("code-block");
 </script>
 
 <CodePreview>
@@ -23,9 +26,7 @@ description: A beautiful syntax-highlighted code block with tabbed multi-file su
 
 ### Installation
 
-```bash
-    bun x shadcn-svelte@latest add https://ori-ui.vercel.app/r/code-block.json
-```
+<MultiCodeBlock code={scripts} />
 
 ### Usage
 

@@ -6,6 +6,10 @@ description: An animated button with a rainbow effect.
 <script>
     import RainbowButton from '$lib/registry/buttons/rainbow-button/rainbow-button.svelte';
     import CodePreview from '$lib/components/code-preview.svelte';
+
+    import MultiCodeBlock from '$lib/registry/components/code-block/multi-code-block.svelte';
+    import { multiInstallScriptUtil} from "$lib/utils";
+    const scripts = multiInstallScriptUtil("rainbow-button");
 </script>
 
 <CodePreview>
@@ -14,9 +18,7 @@ description: An animated button with a rainbow effect.
 
 ### Installation
 
-```bash
-    bun x shadcn-svelte@latest add https://ori-ui.vercel.app/r/rainbow-button.json
-```
+<MultiCodeBlock code={scripts}>
 
 ### Usage
 

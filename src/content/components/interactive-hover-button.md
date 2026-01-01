@@ -6,6 +6,10 @@ description: A button with an interactive hover effect where an expanding circle
 <script>
     import InteractiveHoverButton from '$lib/registry/buttons/interactive-hover-button/interactive-hover-button.svelte';
     import CodePreview from '$lib/components/code-preview.svelte';
+
+    import MultiCodeBlock from '$lib/registry/components/code-block/multi-code-block.svelte';
+    import { multiInstallScriptUtil} from "$lib/utils";
+    const scripts = multiInstallScriptUtil("interactive-hover-button");
 </script>
 
 <CodePreview>
@@ -16,9 +20,7 @@ description: A button with an interactive hover effect where an expanding circle
 
 ### Installation
 
-```bash
-    bun x shadcn-svelte@latest add https://ori-ui.vercel.app/r/interactive-hover-button.json
-```
+<MultiCodeBlock code={scripts} />
 
 ### Usage
 

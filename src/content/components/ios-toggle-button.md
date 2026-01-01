@@ -6,6 +6,10 @@ description: A sleek iOS-style toggle button with smooth animations and customiz
 <script>
     import IosToggleButton from '$lib/registry/buttons/ios-toggle-button/ios-toggle-button.svelte';
     import CodePreview from '$lib/components/code-preview.svelte';
+
+    import MultiCodeBlock from '$lib/registry/components/code-block/multi-code-block.svelte';
+    import { multiInstallScriptUtil} from "$lib/utils";
+    const scripts = multiInstallScriptUtil("ios-toggle-button");
 </script>
 
 <CodePreview>
@@ -14,9 +18,7 @@ description: A sleek iOS-style toggle button with smooth animations and customiz
 
 ### Installation
 
-```bash
-    bun x shadcn-svelte@latest add https://ori-ui.vercel.app/r/ios-toggle-button.json
-```
+<MultiCodeBlock code={scripts}>
 
 ### Usage
 

@@ -6,6 +6,10 @@ description: An animated pulsating button useful for capturing attention of user
 <script>
     import { PulsatingButton } from "$lib/registry/buttons/pulsating-button"
     import CodePreview from "$lib/components/code-preview.svelte"
+
+    import MultiCodeBlock from '$lib/registry/components/code-block/multi-code-block.svelte';
+    import { multiInstallScriptUtil} from "$lib/utils";
+    const scripts = multiInstallScriptUtil("pulsating-button");
 </script>
 
 <CodePreview>
@@ -14,9 +18,7 @@ description: An animated pulsating button useful for capturing attention of user
 
 ### Installation
 
-```bash
-    bun x shadcn-svelte@latest add https://oriui.app/r/pulsating-button.json
-```
+<MultiCodeBlock code={scripts}>
 
 ### Usage
 

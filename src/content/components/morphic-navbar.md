@@ -6,6 +6,10 @@ description: A dynamic navbar with morphing animation effects between active sta
 <script>
     import MorphicNavbar from '$lib/registry/components/morphic-navbar/morphic-navbar.svelte';
     import CodePreview from '$lib/components/code-preview.svelte';
+
+    import MultiCodeBlock from '$lib/registry/components/code-block/multi-code-block.svelte';
+    import { multiInstallScriptUtil} from "$lib/utils";
+    const scripts = multiInstallScriptUtil("morphic-navbar");
 </script>
 
 <CodePreview>
@@ -14,9 +18,7 @@ description: A dynamic navbar with morphing animation effects between active sta
 
 ### Installation
 
-```bash
-    bun x shadcn-svelte@latest add https://ori-ui.vercel.app/r/morphic-navbar.json
-```
+<MultiCodeBlock code={scripts}>
 
 ### Usage
 

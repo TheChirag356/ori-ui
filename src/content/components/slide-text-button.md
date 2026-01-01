@@ -6,9 +6,10 @@ description: An animated button with vertical slide text transition effect
 <script>
     import SlideTextButton from '$lib/registry/buttons/slide-text-button/slide-text-button.svelte';
     import CodePreview from '$lib/components/code-preview.svelte';
-    import { installScriptUtil } from '$lib/utils';
-
-    let installScript = installScriptUtil("slide-text-button");
+    
+    import MultiCodeBlock from '$lib/registry/components/code-block/multi-code-block.svelte';
+    import { multiInstallScriptUtil} from "$lib/utils";
+    const scripts = multiInstallScriptUtil("liquid-button");
 </script>
 
 <CodePreview>
@@ -17,9 +18,7 @@ description: An animated button with vertical slide text transition effect
 
 ### Installation
 
-```bash
-    bun x shadcn-svelte@latest add https://ori-ui.vercel.app/r/slide-text-button.json
-```
+<MultiCodeBlock code={scripts}>
 
 ### Usage
 

@@ -6,6 +6,10 @@ description: A scrolling text marquee component.
 <script>
     import Marquee from '$lib/components/marquee-demo.svelte';
     import CodePreview from '$lib/components/code-preview.svelte';
+
+    import MultiCodeBlock from '$lib/registry/components/code-block/multi-code-block.svelte';
+    import { multiInstallScriptUtil} from "$lib/utils";
+    const scripts = multiInstallScriptUtil("marquee");
 </script>
 
 <CodePreview>
@@ -14,9 +18,7 @@ description: A scrolling text marquee component.
 
 ### Installation
 
-```bash
-    bun x shadcn-svelte@latest add https://ori-ui.vercel.app/r/marquee.json
-```
+<MultiCodeBlock code={scripts}>
 
 ### Usage
 

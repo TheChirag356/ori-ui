@@ -14,6 +14,29 @@ export type WithElementRef<T, U extends HTMLElement = HTMLElement> = T & { ref?:
 
 import { siteConfig } from "$lib/config/site";
 
-export function installScriptUtil(slug: string): string {
-	return `bun x shadcn-svelte@latest ${siteConfig.url}/r/${slug}.json`;
+export function multiInstallScriptUtil(slug: string) {
+	const scripts = [
+		{
+			name: "bun",
+			text: `bun x shadcn-svelte add ${siteConfig.url}/r/${slug}.json`,
+			lang: "bash"
+		},
+		{
+			name: "npm",
+			text: `npx shadcn-svelte@latest add ${siteConfig.url}/r/${slug}.json`,
+			lang: "bash"
+		},
+		{
+			name: "yarn",
+			text: `yarn dlx shadcn-svelte@latest add ${siteConfig.url}/r/${slug}.json`,
+			lang: "bash"
+		},
+		{
+			name: "pnpm",
+			text: `pnpm dlx shadcn-svelte@latest add ${siteConfig.url}/r/${slug}.json`,
+			lang: "bash"
+		}
+	]
+
+	return scripts;
 }

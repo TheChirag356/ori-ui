@@ -6,6 +6,10 @@ description: A button that fills on hover.
 <script>
     import LiquidButton from '$lib/registry/buttons/liquid-button/liquid-button.svelte';
     import CodePreview from '$lib/components/code-preview.svelte';
+
+    import MultiCodeBlock from '$lib/registry/components/code-block/multi-code-block.svelte';
+    import { multiInstallScriptUtil} from "$lib/utils";
+    const scripts = multiInstallScriptUtil("liquid-button");
 </script>
 
 <CodePreview>
@@ -14,9 +18,7 @@ description: A button that fills on hover.
 
 ### Installation
 
-```bash
-    bun x shadcn-svelte@latest add https://ori-ui.vercel.app/r/liquid-button.json
-```
+<MultiCodeBlock code={scripts}>
 
 ### Usage
 
