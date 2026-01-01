@@ -18,7 +18,7 @@ description: An animated button with a rainbow effect.
 
 ### Installation
 
-<MultiCodeBlock code={scripts}>
+<MultiCodeBlock code={scripts} />
 
 ### Usage
 

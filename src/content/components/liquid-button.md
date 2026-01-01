@@ -18,7 +18,7 @@ description: A button that fills on hover.
 
 ### Installation
 
-<MultiCodeBlock code={scripts}>
+<MultiCodeBlock code={scripts} />
 
 ### Usage
 

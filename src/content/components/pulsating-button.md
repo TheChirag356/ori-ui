@@ -18,7 +18,7 @@ description: An animated pulsating button useful for capturing attention of user
 
 ### Installation
 
-<MultiCodeBlock code={scripts}>
+<MultiCodeBlock code={scripts} />
 
 ### Usage
 

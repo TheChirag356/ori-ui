@@ -18,7 +18,7 @@ description: A border that moves around the container. Perfect for making your b
 
 ### Installation
 
-<MultiCodeBlock code={scripts}>
+<MultiCodeBlock code={scripts} />
 
 ### Usage
 

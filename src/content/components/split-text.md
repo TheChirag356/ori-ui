@@ -24,7 +24,7 @@ description: A component that animates text by splitting it into words and apply
 
 ### Installation
 
-<MultiCodeBlock code={scripts}>
+<MultiCodeBlock code={scripts} />
 
 ### Usage
 

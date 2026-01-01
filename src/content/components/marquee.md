@@ -18,7 +18,7 @@ description: A scrolling text marquee component.
 
 ### Installation
 
-<MultiCodeBlock code={scripts}>
+<MultiCodeBlock code={scripts} />
 
 ### Usage
 

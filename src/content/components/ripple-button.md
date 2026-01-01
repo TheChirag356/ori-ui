@@ -18,7 +18,7 @@ description: A copy button component with a variety of styles and animations.
 
 ### Installation
 
-<MultiCodeBlock code={scripts}>
+<MultiCodeBlock code={scripts} />
 
 ### Usage
 

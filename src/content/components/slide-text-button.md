@@ -18,7 +18,7 @@ description: An animated button with vertical slide text transition effect
 
 ### Installation
 
-<MultiCodeBlock code={scripts}>
+<MultiCodeBlock code={scripts} />
 
 ### Usage
 

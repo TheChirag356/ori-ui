@@ -18,7 +18,7 @@ description: A dynamic navbar with morphing animation effects between active sta
 
 ### Installation
 
-<MultiCodeBlock code={scripts}>
+<MultiCodeBlock code={scripts} />
 
 ### Usage
 

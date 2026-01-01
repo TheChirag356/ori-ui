@@ -18,7 +18,7 @@ description: A sleek iOS-style toggle button with smooth animations and customiz
 
 ### Installation
 
-<MultiCodeBlock code={scripts}>
+<MultiCodeBlock code={scripts} />
 
 ### Usage
 
