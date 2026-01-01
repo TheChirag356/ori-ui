@@ -16,6 +16,7 @@ description: A beautiful syntax-highlighted code block with tabbed multi-file su
 
 <CodePreview>
     <MultiCodeBlock 
+        class="w-full"
         code={code}
     />
 </CodePreview>
