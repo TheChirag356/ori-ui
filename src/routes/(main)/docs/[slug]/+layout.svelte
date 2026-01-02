@@ -7,7 +7,7 @@
 <MetaTags
 	title={data.meta.title}
 	description={data.meta.description}
-	titleTemplate="Ori UI Docs | %s"
+	titleTemplate="%s | Ori UI Docs"
 />
 
 {@render children?.()}

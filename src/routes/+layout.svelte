@@ -11,47 +11,53 @@
 	let { children } = $props();
 </script>
 
-<svelte:head>
-	<!-- light mode favicon -->
-	<link
-		rel="icon"
-		type="image/svg+xml"
-		href="/assets/logo/ori-light.svg"
-		media="(prefers-color-scheme: light)"
-	/>
-	<!-- dark mode favicon -->
-	<link
-		rel="icon"
-		type="image/svg+xml"
-		href="/assets/logo/ori-dark.svg"
-		media="(prefers-color-scheme: dark)"
-	/>
-	<!-- Fallback (optional) -->
-	<link rel="icon" href="/assets/logo/ori-dark.svg" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Favicons -->
+<link
+	rel="icon"
+	type="image/svg+xml"
+	href="/assets/logo/ori-light.svg"
+	media="(prefers-color-scheme: light)"
+/>
+<link
+	rel="icon"
+	type="image/svg+xml"
+	href="/assets/logo/ori-dark.svg"
+	media="(prefers-color-scheme: dark)"
+/>
+<link rel="icon" href="/assets/logo/ori-dark.svg" />
 
-	<MetaTags
-		title={siteConfig.name}
-		description={siteConfig.description}
-		openGraph={{
-			type: 'website',
-			locale: 'en_IE',
-			title: siteConfig.name,
-			description: siteConfig.description,
-			url: siteConfig.url,
-			images: [
-				{
-					url: siteConfig.ogImage.url,
-					height: siteConfig.ogImage.height,
-					width: siteConfig.ogImage.width,
-					alt: siteConfig.ogImage.alt,
-					type: 'image/png'
-				}
-			],
-			siteName: siteConfig.name
-		}}
-	/>
-</svelte:head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<MetaTags
+	title={siteConfig.name}
+	description={siteConfig.description}
+	keywords={siteConfig.keywords}
+	openGraph={{
+		type: 'website',
+		locale: 'en_US',
+		url: siteConfig.url,
+		title: siteConfig.name,
+		description: siteConfig.description,
+		siteName: siteConfig.name,
+		images: [
+			{
+				url: siteConfig.ogImage.url,
+				width: siteConfig.ogImage.width,
+				height: siteConfig.ogImage.height,
+				alt: siteConfig.ogImage.alt,
+				type: 'image/png'
+			}
+		]
+	}}
+	twitter={{
+		cardType: 'summary_large_image',
+		title: siteConfig.name,
+		description: siteConfig.description,
+		image: siteConfig.ogImage.url,
+		site: '@chiragkun',
+		creator: '@chiragkun'
+	}}
+/>
 
 <ModeWatcher />
 <Tooltip.Provider delayDuration={150}>
