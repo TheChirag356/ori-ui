@@ -5,8 +5,8 @@ export const siteConfig = {
     version: "1.0.0",
     ogImage: {
         url: "https://oriui.app/assets/og-image.png",
-        height: "630",
-        width: "1200",
+        height: 630,
+        width: 1200,
         alt: "Ori UI - Animation-ready UI components for builders and designers. Built for Svelte"
     },
     author: "TheChirag356",
