@@ -3,9 +3,10 @@ import { defineConfig } from 'vitest/config';
 import { playwright } from '@vitest/browser-playwright';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { sidebarGenerator } from "./plugins/sidebar-generator";
+import { metaJsonGenerator } from "./plugins/meta-json-generator";
 
 export default defineConfig({
-	plugins: [tailwindcss(), sveltekit(), sidebarGenerator()],
+	plugins: [tailwindcss(), sveltekit(), metaJsonGenerator(), sidebarGenerator()],
 	test: {
 		expect: { requireAssertions: true },
 		projects: [
