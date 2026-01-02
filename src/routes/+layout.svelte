@@ -5,6 +5,9 @@
 	import Navbar from '$lib/components/navbar.svelte';
 	import Footer from '$lib/components/footer.svelte';
 
+	import { siteConfig } from "$lib/config/site";
+	import {MetaTags} from "svelte-meta-tags";
+
 	let { children } = $props();
 </script>
 
@@ -27,20 +30,27 @@
 	<link rel="icon" href="/assets/logo/ori-dark.svg" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<title>Ori UI</title>
-	<meta
-		name="description"
-		content="Beautiful, professional, and customizable Svelte, TailwindCSS and Framer Motion components."
+	<MetaTags
+		title={siteConfig.name}
+		description={siteConfig.description}
+		openGraph={{
+			type: 'website',
+			locale: 'en_IE',
+			title: siteConfig.name,
+			description: siteConfig.description,
+			url: siteConfig.url,
+			images: [
+				{
+					url: siteConfig.ogImage.url,
+					height: siteConfig.ogImage.height,
+					width: siteConfig.ogImage.width,
+					alt: siteConfig.ogImage.alt,
+					type: 'image/png'
+				}
+			],
+			siteName: siteConfig.name
+		}}
 	/>
-
-	<meta property="og:title" content="Ori UI" />
-	<meta
-		property="og:description"
-		content="Beautiful, professional, and customizable Svelte, TailwindCSS and Framer Motion components."
-	/>
-	<meta property="og:image" content="/assets/ogImage.png" />
-	<meta property="og:url" content="https://ori-ui.vercel.app" />
-	<meta property="og:site_name" content="Ori UI" />
 </svelte:head>
 
 <ModeWatcher />
