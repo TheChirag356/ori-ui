@@ -41,11 +41,7 @@
 		siteName: siteConfig.name,
 		images: [
 			{
-				url: siteConfig.ogImage.url,
-				width: siteConfig.ogImage.width,
-				height: siteConfig.ogImage.height,
-				alt: siteConfig.ogImage.alt,
-				type: 'image/png'
+				url: siteConfig.ogImage.url
 			}
 		]
 	}}

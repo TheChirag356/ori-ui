@@ -1,10 +1,10 @@
 export const siteConfig = {
     name: "Ori UI",
     url: "https://www.oriui.app",
-    description: "Free and open-source animated components and effects built with Svelte, Typescript, Tailwind CSS, and Motion. Perfect companion for svelte-shadcn/ui.",
+    description: "Free and open-source animated components and effects built with Svelte, Typescript, Tailwind CSS, and Animejs. Perfect companion for svelte-shadcn/ui.",
     version: "1.0.0",
     ogImage: {
-        url: `https://www.oriui.app/assets/ogimage.png`,
+        url: `https://www.oriui.app/assets/ogImage.png`,
         height: 630,
         width: 1200,
         alt: "Ori UI - Animation-ready UI components for builders and designers. Built for Svelte"
