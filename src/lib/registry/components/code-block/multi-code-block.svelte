@@ -2,6 +2,7 @@
 	import { cn } from "$lib/utils";
 	import { codeToHtml } from "shiki";
 	import CopyButton from "$lib/registry/buttons/copy-button/copy-button.svelte";
+	import { fly } from "svelte/transition";
 
 	type Code = {
 		name: string;
@@ -41,7 +42,7 @@
 	}
 </script>
 
-<div class={cn('border border-border rounded-md overflow-x-hidden', className)}>
+<div class={cn('border relative border-border rounded-md overflow-x-hidden', className)}>
 	<div class="flex justify-between items-center bg-muted/30 rounded-t-md pr-4">
 		<div class="flex gap-3">
 			{#each code as lang, index}
@@ -64,9 +65,12 @@
 		<CopyButton variant="ghost" content={code[selectedTab].text} />
 	</div>
 
-	{#key html}
-		<div class="px-4 py-4 border-none">
+	{#key selectedTab}
+		<div class="absolute px-4 py-4 border-none" in:fly={{ x: 100 }} out:fly={{ x: -100 }}>
 			{@html html}
 		</div>
 	{/key}
+	<div class="invisible px-4 py-4 border-none" in:fly={{ x: -100 }} out:fly={{ x: 100 }}>
+		{@html html}
+	</div>
 </div>
