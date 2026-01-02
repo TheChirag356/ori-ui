@@ -1,29 +1,47 @@
 <script lang="ts">
-    import { Button } from "$lib/components/ui/button";
-	import { cn } from "$lib/utils";
-    import { slide } from 'svelte/transition';
+  import { cn } from "$lib/utils";
+  import { fly } from "svelte/transition";
 
-    type FlipButtonProps = {
-        class?: string;
-        content: string;
-    };
+  type FlipButtonProps = {
+    frontContent: string;
+    backContent: string;
+    class?: string;
+  };
 
-    let {class: className, content, ...restProps}: FlipButtonProps = $props();
-    let isHovering = $state(false);
+  let { frontContent, backContent, class: className }: FlipButtonProps = $props();
+
+  let isHovering = $state(false);
 </script>
 
 <div
-	class={cn('relative', className)}
-	{...restProps}
-	onmouseenter={() => (isHovering = true)}
-	onmouseleave={() => (isHovering = false)}
+	class={cn('relative inline-grid overflow-hidden', className)}
+	onpointerenter={() => (isHovering = true)}
+	onpointerleave={() => (isHovering = false)}
 >
-	{#if !isHovering}
-		<button class="absolute" in:slide out:slide>{content}</button>
-	{:else}
-		<button class="absolute" in:slide out:slide>Back {content}</button>
-	{/if}
-	<div class="invisible">
-		{content}
+	<!-- WIDTH SIZER -->
+	<div class="col-start-1 row-start-1 invisible pointer-events-none px-4 py-2 font-inherit">
+		{frontContent.length > backContent.length ? frontContent : backContent}
 	</div>
+
+	<!-- FRONT -->
+	{#if !isHovering}
+		<button
+			class="col-start-1 row-start-1 bg-foreground text-background px-4 py-2 rounded-md"
+			in:fly={{ y: -40, duration: 300 }}
+			out:fly={{ y: -40, duration: 300 }}
+		>
+			{frontContent}
+		</button>
+	{/if}
+
+	<!-- BACK -->
+	{#if isHovering}
+		<button
+			class="col-start-1 row-start-1 bg-foreground text-background px-4 py-2 rounded-md"
+			in:fly={{ y: 40, duration: 300 }}
+			out:fly={{ y: 40, duration: 300 }}
+		>
+			{backContent}
+		</button>
+	{/if}
 </div>

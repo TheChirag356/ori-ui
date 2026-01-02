@@ -13,7 +13,7 @@ description: An animated flip button component with a variety of styles.
 </script>
 
 <CodePreview>
-    <FlipButton content="Hello World" />
+    <FlipButton frontContent="Hello World" backContent="Back Side" />
 </CodePreview>
 
 ### Installation
@@ -27,7 +27,7 @@ import FlipButton from '$lib/registry/buttons/flip-button/flip-button.svelte';
 ```
 
 ```svelte
-<FlipButton content="Hello World" />
+<FlipButton frontContent="Hello World" backContent="Back Side" />
 ```
 
 ### Props
