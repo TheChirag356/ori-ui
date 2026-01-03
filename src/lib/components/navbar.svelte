@@ -3,11 +3,15 @@
 	import OriLogoFull from '$lib/assets/ori.svelte';
 	import { Button } from './ui/button';
 	import { IconBrandGithub } from '@tabler/icons-svelte';
-	import {onMount} from 'svelte';
+	import { onMount } from 'svelte';
 
 	let stargazersCount = $state(0);
 	const CACHE_KEY = 'ORI-UI-GITHUB-STARS';
 	const CACHE_DURATION = 1000 * 60 * 60; // 1 hour
+	
+	import { mode } from "mode-watcher";
+
+	let theme = $state<string | undefined>("light");
 
 	onMount(() => {
 		const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
@@ -29,6 +33,10 @@
 		}
 	})
 
+	$effect(() => {
+		theme = mode.current;
+	})
+
 	import { page } from '$app/state';
 	import { cn } from '$lib/utils';
 	const navbarItems = [
@@ -42,7 +50,11 @@
 	<div class="container-wrapper 3xl:fixed:px-0 px-6">
 		<div class="3xl:fixed:container h-14 flex items-center gap-2">
 			<a href="/">
-				<OriLogoFull class="size-7 p-0" />
+				{#if theme === 'dark'}
+					<OriLogoFull class="size-7 p-0" />
+				{:else}
+					<OriLogoFull class="size-7 p-0" />
+				{/if}
 			</a>
 			<nav class="items-center gap-0.5 flex">
 				{#each navbarItems as item}

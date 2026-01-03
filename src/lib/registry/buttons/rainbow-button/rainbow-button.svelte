@@ -18,9 +18,8 @@
 	class={cn(
 		'rainbow-button relative cursor-pointer overflow-hidden',
 		'inline-flex items-center justify-center gap-2 shrink-0',
-		'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900',
 		'px-6 py-3 rounded-lg font-medium',
-		'hover:scale-[1.02] active:scale-[0.98] transition-transform duration-200',
+		'active:scale-[0.98] transition-[transform,colors,shadow] duration-200 ease-in-out',
 		className
 	)}
 	{...restProps}

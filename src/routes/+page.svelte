@@ -44,7 +44,7 @@
 				CSS, and Motion. Perfect companion for svelte-shadcn/ui.
 			</p>
 			<div class="flex gap-6" in:fly={{ y: 20, delay: 700, easing: cubicInOut }}>
-				<Button href="/components" class="font-mono cursor-pointer" variant="secondary">Browse Components</Button>
+				<Button href="/components" class="font-mono cursor-pointer" variant="default">Browse Components</Button>
 				<RainbowButton href="/docs" class="font-mono cursor-pointer" variant="outline">Get Started</RainbowButton>
 			</div>
 			<div
