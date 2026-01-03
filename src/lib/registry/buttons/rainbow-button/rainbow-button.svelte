@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button";
+	import { Button, type ButtonProps } from "$lib/components/ui/button";
 	import { cn } from "$lib/utils";
 
-	type ButtonProps = {
+	type RainbowButtonProps = ButtonProps & {
 		children?: () => any;
 		class?: string;
 	};
@@ -11,7 +11,7 @@
 		class: className = "",
 		children,
 		...restProps
-	}: ButtonProps = $props();
+	}: RainbowButtonProps = $props();
 </script>
 
 <Button
