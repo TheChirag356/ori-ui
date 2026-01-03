@@ -6,7 +6,7 @@
 	import Footer from '$lib/components/footer.svelte';
 
 	import { siteConfig } from "$lib/config/site";
-	import {MetaTags} from "svelte-meta-tags";
+	import { MetaTags } from "svelte-meta-tags";
 
 	let { children } = $props();
 </script>
@@ -15,14 +15,14 @@
 <link
 	rel="icon"
 	type="image/svg+xml"
-	href="/assets/logo/ori-light.svg"
-	media="(prefers-color-scheme: light)"
+	href="/assets/logo/ori-dark.svg"
+	media="(prefers-color-scheme: dark)"
 />
 <link
 	rel="icon"
 	type="image/svg+xml"
-	href="/assets/logo/ori-dark.svg"
-	media="(prefers-color-scheme: dark)"
+	href="/assets/logo/ori-light.svg"
+	media="(prefers-color-scheme: light)"
 />
 <link rel="icon" href="/assets/logo/ori-dark.svg" />
 

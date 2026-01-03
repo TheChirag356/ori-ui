@@ -2,9 +2,16 @@
     import "$lib/styles/markdown.css";
 	let { data } = $props();
 	import * as Sidebar from '$lib/components/ui/sidebar';
-
+	import { MetaTags } from 'svelte-meta-tags';
+	
     const Content = $derived(data?.content);
 </script>
+
+<MetaTags
+	title={data.meta.title}
+	description={data.meta.description}
+	titleTemplate="%s | Ori UI Docs"
+/>
 
 <div class="md:hidden flex">
 	<Sidebar.Trigger class="mt-4" />

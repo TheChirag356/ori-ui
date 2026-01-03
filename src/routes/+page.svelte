@@ -6,15 +6,24 @@
 	import MotionIcon from '$lib/assets/icons/motion-icon.svelte';
 	import ShadcnIcon from '$lib/assets/icons/shadcn-icon.svelte';
 	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
-	import { slide, fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
+	import { RainbowButton } from "$lib/registry/buttons/rainbow-button";
 
 	let mounted = $state(false);
 	onMount(() => {
 		mounted = true;
 	})
+
+	import { siteConfig } from "$lib/config/site";
+	import { MetaTags } from "svelte-meta-tags";
 </script>
+
+<MetaTags
+	title={siteConfig.name}
+	description={siteConfig.description}
+/>
 
 <div class="h-[85vh] w-full flex flex-col justify-between relative bg-background">
 	{#if mounted}
@@ -36,9 +45,7 @@
 			</p>
 			<div class="flex gap-6" in:fly={{ y: 20, delay: 700, easing: cubicInOut }}>
 				<Button href="/components" class="font-mono cursor-pointer" variant="secondary">Browse Components</Button>
-				<Button href="/docs" class="font-mono cursor-pointer" variant="outline"
-					>Get Started</Button
-				>
+				<RainbowButton href="/docs" class="font-mono cursor-pointer" variant="outline">Get Started</RainbowButton>
 			</div>
 			<div
 				class="flex gap-2 text-accent-foreground/70 mt-10"
