@@ -1,0 +1,6 @@
+pipeline:
+  test:
+    image: oven/bun:latest
+    commands:
+      - bun install
+      - bun run test
