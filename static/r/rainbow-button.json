@@ -21,11 +21,6 @@
 			"target": "ori/rainbow-button/index.ts"
 		},
 		{
-			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.521Z\"\n}",
-			"type": "registry:file",
-			"target": "ori/rainbow-button/meta.json"
-		},
-		{
 			"content": "<script lang=\"ts\">\r\n\timport { Button } from \"$COMPONENTS$/ui/button\";\r\n\timport { cn } from \"$LIB$/utils\";\r\n\r\n\ttype ButtonProps = {\r\n\t\tchildren?: () => any;\r\n\t\tclass?: string;\r\n\t};\r\n\r\n\tlet {\r\n\t\tclass: className = \"\",\r\n\t\tchildren,\r\n\t\t...restProps\r\n\t}: ButtonProps = $props();\r\n</script>\r\n\r\n<Button\r\n\tclass={cn(\r\n\t\t'rainbow-button relative cursor-pointer overflow-hidden',\r\n\t\t'inline-flex items-center justify-center gap-2 shrink-0',\r\n\t\t'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900',\r\n\t\t'px-6 py-3 rounded-lg font-medium',\r\n\t\t'hover:scale-[1.02] active:scale-[0.98] transition-transform duration-200',\r\n\t\tclassName\r\n\t)}\r\n\t{...restProps}\r\n>\r\n\t{@render children?.()}\r\n\r\n\t<!-- Rainbow border at the bottom -->\r\n\t<span class=\"rainbow-border\"></span>\r\n</Button>\r\n\r\n<style>\r\n\t:global(.rainbow-button) {\r\n\t\t--rainbow-gradient: linear-gradient(\r\n\t\t\t90deg,\r\n\t\t\t#ff0000,\r\n\t\t\t#ff7f00,\r\n\t\t\t#ffff00,\r\n\t\t\t#00ff00,\r\n\t\t\t#0000ff,\r\n\t\t\t#4b0082,\r\n\t\t\t#9400d3,\r\n\t\t\t#ff0000\r\n\t\t);\r\n\t}\r\n\r\n\t.rainbow-border {\r\n\t\tposition: absolute;\r\n\t\tbottom: 0;\r\n\t\tleft: 0;\r\n\t\tright: 0;\r\n\t\theight: 1px;\r\n\t\tbackground: var(--rainbow-gradient);\r\n\t\tbackground-size: 200% 100%;\r\n\t\tanimation: rainbow-flow 2s linear infinite;\r\n\t\tborder-radius: 0 0 0.5rem 0.5rem;\r\n\t}\r\n\r\n\t/* Glow effect underneath */\r\n\t.rainbow-border::after {\r\n\t\tcontent: '';\r\n\t\tposition: absolute;\r\n\t\tbottom: -4px;\r\n\t\tleft: 0;\r\n\t\tright: 0;\r\n\t\theight: 1px;\r\n\t\tbackground: var(--rainbow-gradient);\r\n\t\tbackground-size: 200% 100%;\r\n\t\tanimation: rainbow-flow 2s linear infinite;\r\n\t\tfilter: blur(8px);\r\n\t\topacity: 0.7;\r\n\t}\r\n\r\n\t@keyframes rainbow-flow {\r\n\t\t0% {\r\n\t\t\tbackground-position: 0% 50%;\r\n\t\t}\r\n\t\t100% {\r\n\t\t\tbackground-position: 200% 50%;\r\n\t\t}\r\n\t}\r\n</style>\r\n",
 			"type": "registry:file",
 			"target": "ori/rainbow-button/rainbow-button.svelte"

@@ -16,11 +16,6 @@
 	},
 	"files": [
 		{
-			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.540Z\"\n}",
-			"type": "registry:file",
-			"target": "ori/text-highlighter/meta.json"
-		},
-		{
 			"content": "declare module 'svelte-rough-notation';",
 			"type": "registry:file",
 			"target": "ori/text-highlighter/svelte-rough-notation.d.ts"

@@ -29,11 +29,6 @@
           "path": "src/lib/registry/buttons/copy-button/index.ts",
           "type": "registry:file",
           "target": "ori/copy-button/index.ts"
-        },
-        {
-          "path": "src/lib/registry/buttons/copy-button/meta.json",
-          "type": "registry:file",
-          "target": "ori/copy-button/meta.json"
         }
       ],
       "author": "Chirag Arora <arorachirag12005@gmail.com>",
@@ -63,11 +58,6 @@
           "path": "src/lib/registry/buttons/interactive-hover-button/interactive-hover-button.svelte",
           "type": "registry:file",
           "target": "ori/interactive-hover-button/interactive-hover-button.svelte"
-        },
-        {
-          "path": "src/lib/registry/buttons/interactive-hover-button/meta.json",
-          "type": "registry:file",
-          "target": "ori/interactive-hover-button/meta.json"
         }
       ],
       "author": "Chirag Arora <arorachirag12005@gmail.com>",
@@ -95,11 +85,6 @@
           "path": "src/lib/registry/buttons/ios-toggle-button/ios-toggle-button.svelte",
           "type": "registry:file",
           "target": "ori/ios-toggle-button/ios-toggle-button.svelte"
-        },
-        {
-          "path": "src/lib/registry/buttons/ios-toggle-button/meta.json",
-          "type": "registry:file",
-          "target": "ori/ios-toggle-button/meta.json"
         }
       ],
       "author": "Chirag Arora <arorachirag12005@gmail.com>",
@@ -131,11 +116,6 @@
           "path": "src/lib/registry/buttons/liquid-button/liquid-button.svelte",
           "type": "registry:file",
           "target": "ori/liquid-button/liquid-button.svelte"
-        },
-        {
-          "path": "src/lib/registry/buttons/liquid-button/meta.json",
-          "type": "registry:file",
-          "target": "ori/liquid-button/meta.json"
         }
       ],
       "author": "Chirag Arora <arorachirag12005@gmail.com>",
@@ -160,11 +140,6 @@
           "path": "src/lib/registry/buttons/moving-border-button/index.ts",
           "type": "registry:file",
           "target": "ori/moving-border-button/index.ts"
-        },
-        {
-          "path": "src/lib/registry/buttons/moving-border-button/meta.json",
-          "type": "registry:file",
-          "target": "ori/moving-border-button/meta.json"
         },
         {
           "path": "src/lib/registry/buttons/moving-border-button/moving-border-button.svelte",
@@ -196,11 +171,6 @@
           "target": "ori/pulsating-button/index.ts"
         },
         {
-          "path": "src/lib/registry/buttons/pulsating-button/meta.json",
-          "type": "registry:file",
-          "target": "ori/pulsating-button/meta.json"
-        },
-        {
           "path": "src/lib/registry/buttons/pulsating-button/pulsating-button.svelte",
           "type": "registry:file",
           "target": "ori/pulsating-button/pulsating-button.svelte"
@@ -228,11 +198,6 @@
           "path": "src/lib/registry/buttons/rainbow-button/index.ts",
           "type": "registry:file",
           "target": "ori/rainbow-button/index.ts"
-        },
-        {
-          "path": "src/lib/registry/buttons/rainbow-button/meta.json",
-          "type": "registry:file",
-          "target": "ori/rainbow-button/meta.json"
         },
         {
           "path": "src/lib/registry/buttons/rainbow-button/rainbow-button.svelte",
@@ -264,11 +229,6 @@
           "target": "ori/ripple-button/index.ts"
         },
         {
-          "path": "src/lib/registry/buttons/ripple-button/meta.json",
-          "type": "registry:file",
-          "target": "ori/ripple-button/meta.json"
-        },
-        {
           "path": "src/lib/registry/buttons/ripple-button/ripple-button.svelte",
           "type": "registry:file",
           "target": "ori/ripple-button/ripple-button.svelte"
@@ -296,11 +256,6 @@
           "path": "src/lib/registry/buttons/slide-text-button/index.ts",
           "type": "registry:file",
           "target": "ori/slide-text-button/index.ts"
-        },
-        {
-          "path": "src/lib/registry/buttons/slide-text-button/meta.json",
-          "type": "registry:file",
-          "target": "ori/slide-text-button/meta.json"
         },
         {
           "path": "src/lib/registry/buttons/slide-text-button/slide-text-button.svelte",
@@ -332,11 +287,6 @@
           "target": "ori/code-block/index.ts"
         },
         {
-          "path": "src/lib/registry/components/code-block/meta.json",
-          "type": "registry:file",
-          "target": "ori/code-block/meta.json"
-        },
-        {
           "path": "src/lib/registry/components/code-block/multi-code-block.svelte",
           "type": "registry:file",
           "target": "ori/code-block/multi-code-block.svelte"
@@ -364,11 +314,6 @@
           "path": "src/lib/registry/components/file-upload/file-upload.svelte",
           "type": "registry:file",
           "target": "ori/file-upload/file-upload.svelte"
-        },
-        {
-          "path": "src/lib/registry/components/file-upload/meta.json",
-          "type": "registry:file",
-          "target": "ori/file-upload/meta.json"
         }
       ],
       "author": "Chirag Arora <arorachirag12005@gmail.com>",
@@ -396,11 +341,6 @@
           "path": "src/lib/registry/components/glare-hover/index.ts",
           "type": "registry:file",
           "target": "ori/glare-hover/index.ts"
-        },
-        {
-          "path": "src/lib/registry/components/glare-hover/meta.json",
-          "type": "registry:file",
-          "target": "ori/glare-hover/meta.json"
         }
       ],
       "author": "Chirag Arora <arorachirag12005@gmail.com>",
@@ -428,11 +368,6 @@
           "path": "src/lib/registry/components/marquee/marquee.svelte",
           "type": "registry:file",
           "target": "ori/marquee/marquee.svelte"
-        },
-        {
-          "path": "src/lib/registry/components/marquee/meta.json",
-          "type": "registry:file",
-          "target": "ori/marquee/meta.json"
         }
       ],
       "author": "Chirag Arora <arorachirag12005@gmail.com>",
@@ -451,11 +386,6 @@
       "registryDependencies": [],
       "dependencies": [],
       "files": [
-        {
-          "path": "src/lib/registry/components/morphic-navbar/meta.json",
-          "type": "registry:file",
-          "target": "ori/morphic-navbar/meta.json"
-        },
         {
           "path": "src/lib/registry/components/morphic-navbar/morphic-navbar.svelte",
           "type": "registry:file",
@@ -485,11 +415,6 @@
           "path": "src/lib/registry/components/pdf-viewer/index.ts",
           "type": "registry:file",
           "target": "ori/pdf-viewer/index.ts"
-        },
-        {
-          "path": "src/lib/registry/components/pdf-viewer/meta.json",
-          "type": "registry:file",
-          "target": "ori/pdf-viewer/meta.json"
         },
         {
           "path": "src/lib/registry/components/pdf-viewer/pdf-renderer.svelte",
@@ -527,11 +452,6 @@
           "path": "src/lib/registry/text-animations/blur-text/blur-text.svelte",
           "type": "registry:file",
           "target": "ori/blur-text/blur-text.svelte"
-        },
-        {
-          "path": "src/lib/registry/text-animations/blur-text/meta.json",
-          "type": "registry:file",
-          "target": "ori/blur-text/meta.json"
         }
       ],
       "author": "Chirag Arora <arorachirag12005@gmail.com>",
@@ -550,11 +470,6 @@
       "registryDependencies": [],
       "dependencies": [],
       "files": [
-        {
-          "path": "src/lib/registry/text-animations/spinning-text/meta.json",
-          "type": "registry:file",
-          "target": "ori/spinning-text/meta.json"
-        },
         {
           "path": "src/lib/registry/text-animations/spinning-text/spinning-text.svelte",
           "type": "registry:file",
@@ -580,11 +495,6 @@
       ],
       "files": [
         {
-          "path": "src/lib/registry/text-animations/split-text/meta.json",
-          "type": "registry:file",
-          "target": "ori/split-text/meta.json"
-        },
-        {
           "path": "src/lib/registry/text-animations/split-text/split-text.svelte",
           "type": "registry:file",
           "target": "ori/split-text/split-text.svelte"
@@ -608,11 +518,6 @@
         "rough-notation"
       ],
       "files": [
-        {
-          "path": "src/lib/registry/text-animations/text-highlighter/meta.json",
-          "type": "registry:file",
-          "target": "ori/text-highlighter/meta.json"
-        },
         {
           "path": "src/lib/registry/text-animations/text-highlighter/svelte-rough-notation.d.ts",
           "type": "registry:file",
@@ -640,11 +545,6 @@
       "registryDependencies": [],
       "dependencies": [],
       "files": [
-        {
-          "path": "src/lib/registry/text-animations/word-rotate/meta.json",
-          "type": "registry:file",
-          "target": "ori/word-rotate/meta.json"
-        },
         {
           "path": "src/lib/registry/text-animations/word-rotate/word-rotate.svelte",
           "type": "registry:file",

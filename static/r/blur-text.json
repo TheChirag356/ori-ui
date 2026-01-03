@@ -16,11 +16,6 @@
 			"content": "",
 			"type": "registry:file",
 			"target": "ori/blur-text/blur-text.svelte"
-		},
-		{
-			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.537Z\"\n}",
-			"type": "registry:file",
-			"target": "ori/blur-text/meta.json"
 		}
 	]
 }

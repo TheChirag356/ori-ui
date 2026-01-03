@@ -21,11 +21,6 @@
 			"target": "ori/slide-text-button/index.ts"
 		},
 		{
-			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.523Z\"\n}",
-			"type": "registry:file",
-			"target": "ori/slide-text-button/meta.json"
-		},
-		{
 			"content": "<script lang=\"ts\">\n    import { Button } from \"$COMPONENTS$/ui/button\"\n\timport { cn } from \"$LIB$/utils\";\n    import { fly } from \"svelte/transition\";\n    type ButtonProps = {\n        mainText?: string;\n        slideText?: string;\n        class?: string;\n        duration?: number;\n        delay?: number;\n    };\n\n    let isHovering = $state(false);\n\n    let {mainText = \"Hover Me\", slideText = \"This is Ori\", class: className, duration = 200, delay = 0, ...restProps}: ButtonProps = $props();\n</script>\n\n<Button\n\tclass={cn('cursor-pointer relative overflow-hidden', className)}\n\tonmouseenter={() => (isHovering = true)}\n\tonmouseleave={() => (isHovering = false)}\n\tonfocus={() => (isHovering = true)}\n\tonblur={() => (isHovering = false)}\n\taria-label={isHovering ? slideText : mainText}\n\t{...restProps}\n>\n\t<span class=\"invisible whitespace-nowrap\">\n\t\t{mainText.length > slideText.length ? mainText : slideText}\n\t</span>\n\t{#if !isHovering}\n\t\t<div\n\t\t\tclass=\"absolute inset-0 flex items-center justify-center pointer-events-none\"\n\t\t\ttransition:fly={{ y: -20, duration, delay }}\n\t\t\taria-hidden={isHovering}\n\t\t>\n\t\t\t{mainText}\n\t\t</div>\n\t{:else}\n\t\t<div\n\t\t\tclass=\"absolute inset-0 flex items-center justify-center pointer-events-none\"\n\t\t\ttransition:fly={{ y: 20, duration, delay }}\n\t\t\taria-hidden={!isHovering}\n\t\t>\n\t\t\t{slideText}\n\t\t</div>\n\t{/if}\n</Button>\n",
 			"type": "registry:file",
 			"target": "ori/slide-text-button/slide-text-button.svelte"

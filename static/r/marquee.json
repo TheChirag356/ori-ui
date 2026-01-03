@@ -21,11 +21,6 @@
 			"content": "<script lang=\"ts\">\n  import { cn } from \"$LIB$/utils\";\n  import type { Snippet } from \"svelte\";\n\n  type MarqueeProps = {\n    pauseOnHover?: boolean;\n    vertical?: boolean;\n    repeat?: number;\n    reverse?: boolean;\n    class?: string;\n    children?: Snippet;\n  };\n  let {\n    pauseOnHover = false,\n    vertical = false,\n    repeat = 4,\n    reverse = false,\n    class: _class = \"\",\n    children,\n  }: MarqueeProps = $props();\n</script>\n\n<div\n  class={cn(\n    \"group flex overflow-hidden p-2 [--duration:16s] [--gap:3rem] [gap:var(--gap)]\",\n    {\n      \"flex-row\": !vertical,\n      \"flex-col\": vertical,\n    },\n    _class\n  )}\n>\n  {#each { length: repeat } as _, i (i)}\n    <div\n      class={cn(\"flex shrink-0 justify-around [gap:var(--gap)]\", {\n        \"animate-marquee flex-row\": !vertical,\n        \"animate-marquee-vertical flex-col\": vertical,\n        \"group-hover:[animation-play-state:paused]\": pauseOnHover,\n        \"[animation-direction:reverse]\": reverse,\n      })}\n    >\n      {@render children?.()}\n    </div>\n  {/each}\n</div>\n\n<style>\n  @keyframes marquee {\n    0% {\n      transform: translateX(0%);\n    }\n    100% {\n      transform: translateX(-100%);\n    }\n  }\n\n  @keyframes marquee-vertical {\n    0% {\n      transform: translateY(0%);\n    }\n    100% {\n      transform: translateY(-100%);\n    }\n  }\n\n  .animate-marquee {\n    animation: marquee var(--duration) linear infinite;\n  }\n\n  .animate-marquee-vertical {\n    animation: marquee-vertical var(--duration) linear infinite;\n  }\n</style>",
 			"type": "registry:file",
 			"target": "ori/marquee/marquee.svelte"
-		},
-		{
-			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.531Z\"\n}",
-			"type": "registry:file",
-			"target": "ori/marquee/meta.json"
 		}
 	]
 }

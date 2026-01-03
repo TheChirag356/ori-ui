@@ -24,11 +24,6 @@
 			"content": "<script lang=\"ts\" module>\r\n    import { cn } from '$LIB$/utils';\r\n    import { IconArrowRight } from '@tabler/icons-svelte';\r\n    export type ButtonProps = {\r\n        children?: import('svelte').Snippet;\r\n        class?: string;\r\n        role?: string;\r\n    };\r\n</script>\r\n\r\n<script lang=\"ts\">\r\n    let {children, class: className, role=\"button\", ...restProps}: ButtonProps = $props();\r\n</script>\r\n\r\n<button\r\n\t{role}\r\n\tclass={cn(\r\n\t\t'relative group overflow-hidden flex items-center justify-center gap-2 cursor-pointer',\r\n\t\t'transition-all duration-500 ease-out',\r\n\t\tclassName\r\n\t)}\r\n\t{...restProps}\r\n>\r\n\t<!-- Expanding background -->\r\n\t<span class=\"pointer-events-none absolute inset-0 flex items-center justify-center\">\r\n\t\t<span\r\n\t\t\tclass=\"size-4 rounded-full bg-foreground scale-0 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[14] transform-gpu\"\r\n\t\t></span>\r\n\t</span>\r\n\r\n\t<!-- Text -->\r\n\t<span\r\n\t\tclass=\"relative z-10 transition-all duration-500 ease-out group-hover:text-background group-hover:-translate-x-2\"\r\n\t>\r\n\t\t{@render children?.()}\r\n\t</span>\r\n\r\n\t<!-- Arrow -->\r\n\t<span\r\n\t\tclass=\"relative hidden group-hover:block z-10 opacity-0 translate-x-[-8px] transition-all duration-500 ease-out delay-75 group-hover:opacity-100 group-hover:translate-x-0 text-background\"\r\n\t>\r\n\t\t<IconArrowRight />\r\n\t</span>\r\n</button>\r\n",
 			"type": "registry:file",
 			"target": "ori/interactive-hover-button/interactive-hover-button.svelte"
-		},
-		{
-			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.515Z\"\n}",
-			"type": "registry:file",
-			"target": "ori/interactive-hover-button/meta.json"
 		}
 	]
 }

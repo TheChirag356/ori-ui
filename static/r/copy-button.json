@@ -24,11 +24,6 @@
 			"content": "export { default as CopyButton } from \"./copy-button.svelte\";",
 			"type": "registry:file",
 			"target": "ori/copy-button/index.ts"
-		},
-		{
-			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.508Z\"\n}",
-			"type": "registry:file",
-			"target": "ori/copy-button/meta.json"
 		}
 	]
 }

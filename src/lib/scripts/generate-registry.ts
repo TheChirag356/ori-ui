@@ -138,7 +138,7 @@ function toTitle(componentName: string) {
 }
 
 function shouldIgnoreFile(file: string) {
-  return IGNORED_EXTENSIONS.some(ext => file.endsWith(ext));
+  return IGNORED_EXTENSIONS.some(ext => file.endsWith(ext) || file === "meta.json");
 }
 
 function discoverComponents() {

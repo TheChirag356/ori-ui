@@ -21,11 +21,6 @@
 			"content": "export { default as GlareHover } from \"./glare-hover.svelte\";",
 			"type": "registry:file",
 			"target": "ori/glare-hover/index.ts"
-		},
-		{
-			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.529Z\"\n}",
-			"type": "registry:file",
-			"target": "ori/glare-hover/meta.json"
 		}
 	]
 }
