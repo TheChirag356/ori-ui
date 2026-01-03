@@ -1,0 +1,31 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "ios-toggle-button",
+	"title": "Ios Toggle Button",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://www.oriui.app/components/ios-toggle-button",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "export { default as IOSToggleButton } from \"./ios-toggle-button.svelte\";",
+			"type": "registry:file",
+			"target": "ori/ios-toggle-button/index.ts"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { cn } from \"$LIB$/utils\";\r\n\r\n    let { class: className = \"\", children, ...restProps } = $props();\r\n</script>\r\n\r\n<div class={cn('flex items-center gap-3', className)} {...restProps}>\r\n\t<span class=\"text-sm font-medium pointer-events-none\">{@render children?.()}</span>\r\n\r\n\t<label class=\"relative inline-flex items-center cursor-pointer\">\r\n\t\t<input type=\"checkbox\" class=\"sr-only peer\" aria-label=\"Toggle Setting\" />\r\n\t\t<span class=\"w-11 h-6 bg-neutral-300 rounded-full peer-checked:bg-green-400 transition\"></span>\r\n\t\t<span\r\n\t\t\tclass=\"absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition peer-checked:translate-x-5\"\r\n\t\t></span>\r\n\t</label>\r\n</div>\r\n",
+			"type": "registry:file",
+			"target": "ori/ios-toggle-button/ios-toggle-button.svelte"
+		},
+		{
+			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.516Z\"\n}",
+			"type": "registry:file",
+			"target": "ori/ios-toggle-button/meta.json"
+		}
+	]
+}

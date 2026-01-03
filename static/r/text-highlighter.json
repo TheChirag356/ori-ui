@@ -1,0 +1,34 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "text-highlighter",
+	"title": "Text Highlighter",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"dependencies": [
+		"rough-notation"
+	],
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://www.oriui.app/components/text-highlighter",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.540Z\"\n}",
+			"type": "registry:file",
+			"target": "ori/text-highlighter/meta.json"
+		},
+		{
+			"content": "declare module 'svelte-rough-notation';",
+			"type": "registry:file",
+			"target": "ori/text-highlighter/svelte-rough-notation.d.ts"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { cn } from \"$LIB$/utils\";\r\n\timport Annotation from \"svelte-rough-notation\";\r\n\timport type { RoughAnnotationType } from \"rough-notation/lib/model\";\r\n\timport { onMount } from \"svelte\";\r\n\r\n\ttype Props = {\r\n\t\taction?: RoughAnnotationType;\r\n\t\tcolor?: string;\r\n\t\tstrokeWidth?: number;\r\n\t\tduration?: number;\r\n\t\tdelay?: number;\r\n\t\tpadding?: number;\r\n\t\tclass?: string;\r\n\t\tchildren?: import(\"svelte\").Snippet;\r\n\t};\r\n\r\n\tlet {\r\n\t\taction = \"underline\",\r\n\t\tcolor = \"#ffd1dc\",\r\n\t\tstrokeWidth = 1.5,\r\n\t\tduration = 2000,\r\n\t\tdelay = 1000,\r\n\t\tpadding = 2,\r\n\t\tclass: className = \"\",\r\n\t\tchildren\r\n\t}: Props = $props();\r\n\r\n\tlet annotation: {\r\n\t\tshow: () => void;\r\n\t\thide: () => void;\r\n\t} | null = null;\r\n\r\n\tonMount(() => {\r\n\t\tconst timer = setTimeout(() => {\r\n\t\t\tannotation?.show();\r\n\t\t}, delay);\r\n\r\n\t\treturn () => clearTimeout(timer);\r\n\t});\r\n</script>\r\n\r\n<Annotation\r\n\tbind:this={annotation}\r\n\tshow={false}\r\n\ttype={action}\r\n\t{color}\r\n\t{strokeWidth}\r\n\t{duration}\r\n\t{padding}\r\n\tclass={cn(className)}\r\n>\r\n\t{@render children?.()}\r\n</Annotation>\r\n",
+			"type": "registry:file",
+			"target": "ori/text-highlighter/text-highlighter.svelte"
+		}
+	]
+}

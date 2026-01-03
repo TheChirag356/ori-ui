@@ -1,0 +1,31 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "glare-hover",
+	"title": "Glare Hover",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://www.oriui.app/components/glare-hover",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "<script lang=\"ts\" module>\r\n\timport { cn, type WithElementRef } from '$LIB$/utils';\r\n\r\n\texport type GlareHoverProps = WithElementRef<HTMLDivElement> & {\r\n\t\tglareColor?: string;\r\n\t\tglareOpacity?: number;\r\n\t\tglareAngle?: number;\r\n\t\tglareSize?: number;\r\n\t\ttransitionDuration?: number;\r\n\t\tplayOnce?: boolean;\r\n\t\twidth?: string;\r\n\t\theight?: string;\r\n\t\tbackground?: string;\r\n\t\tborderRadius?: string;\r\n\t\tborderColor?: string;\r\n\t\tclass?: string;\r\n\t\tstyle?: Record<string, string>;\r\n\t\tchildren?: () => any;\r\n\t};\r\n</script>\r\n\r\n<script lang=\"ts\">\r\n\tlet {\r\n\t\tclass: className = '',\r\n\t\tchildren,\r\n\t\ttransitionDuration = 650,\r\n\t\tglareSize = 250,\r\n\t\tglareAngle = -45,\r\n\t\tglareOpacity = 0.5,\r\n\t\tglareColor = '#ffffff',\r\n\t\tborderColor = '#333',\r\n\t\tborderRadius = '10px',\r\n\t\tbackground = '#000',\r\n\t\theight = '500px',\r\n\t\twidth = '500px',\r\n\t\tplayOnce = false,\r\n\t\tstyle,\r\n\t\t...restProps\r\n\t}: GlareHoverProps = $props();\r\n\r\n\tlet played = $state(false);\r\n\r\n\tfunction hexToRgba(hex: string, alpha: number) {\r\n\t\tconst h = hex.replace('#', '');\r\n\t\tconst n = h.length === 3\r\n\t\t\t? h.split('').map(c => c + c).join('')\r\n\t\t\t: h;\r\n\t\tconst r = parseInt(n.slice(0, 2), 16);\r\n\t\tconst g = parseInt(n.slice(2, 4), 16);\r\n\t\tconst b = parseInt(n.slice(4, 6), 16);\r\n\t\treturn `rgba(${r}, ${g}, ${b}, ${alpha})`;\r\n\t}\r\n\r\n\tconst vars = {\r\n\t\t'--gh-width': width,\r\n\t\t'--gh-height': height,\r\n\t\t'--gh-bg': background,\r\n\t\t'--gh-br': borderRadius,\r\n\t\t'--gh-angle': `${glareAngle}deg`,\r\n\t\t'--gh-duration': `${transitionDuration}ms`,\r\n\t\t'--gh-size': `${glareSize}%`,\r\n\t\t'--gh-glare': hexToRgba(glareColor, glareOpacity),\r\n\t\t'--gh-border': borderColor\r\n\t};\r\n</script>\r\n\r\n<div\r\n\tclass={cn('glare-hover', playOnce && played && 'glare-hover--done', className)}\r\n\tstyle={{ ...vars, ...style }}\r\n\tonpointerenter={() => playOnce && (played = true)}\r\n\t{...restProps as any}\r\n>\r\n\t{#if children}\r\n\t\t{@render children()}\r\n\t{/if}\r\n</div>\r\n\r\n<style>\r\n.glare-hover {\r\n\twidth: var(--gh-width);\r\n\theight: var(--gh-height);\r\n\tbackground: var(--gh-bg);\r\n\tborder-radius: var(--gh-br);\r\n\tborder: 1px solid var(--gh-border);\r\n\tposition: relative;\r\n\toverflow: hidden;\r\n\tdisplay: grid;\r\n\tplace-items: center;\r\n}\r\n\r\n.glare-hover::before {\r\n\tcontent: '';\r\n\tposition: absolute;\r\n\tinset: -50%;\r\n\tbackground: linear-gradient(\r\n\t\tvar(--gh-angle),\r\n\t\ttransparent 45%,\r\n\t\tvar(--gh-glare) 50%,\r\n\t\ttransparent 55%\r\n\t);\r\n\tbackground-size: var(--gh-size) var(--gh-size);\r\n\ttransform: translate(-100%, -100%);\r\n\ttransition: transform var(--gh-duration) ease;\r\n\tpointer-events: none;\r\n}\r\n\r\n.glare-hover:hover::before {\r\n\ttransform: translate(100%, 100%);\r\n}\r\n\r\n.glare-hover--done::before,\r\n.glare-hover--done:hover::before {\r\n\ttransform: none;\r\n\ttransition: none;\r\n}\r\n</style>\r\n",
+			"type": "registry:file",
+			"target": "ori/glare-hover/glare-hover.svelte"
+		},
+		{
+			"content": "export { default as GlareHover } from \"./glare-hover.svelte\";",
+			"type": "registry:file",
+			"target": "ori/glare-hover/index.ts"
+		},
+		{
+			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.529Z\"\n}",
+			"type": "registry:file",
+			"target": "ori/glare-hover/meta.json"
+		}
+	]
+}

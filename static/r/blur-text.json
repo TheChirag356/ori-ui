@@ -1,0 +1,26 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "blur-text",
+	"title": "Blur Text",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://www.oriui.app/components/blur-text",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "",
+			"type": "registry:file",
+			"target": "ori/blur-text/blur-text.svelte"
+		},
+		{
+			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.537Z\"\n}",
+			"type": "registry:file",
+			"target": "ori/blur-text/meta.json"
+		}
+	]
+}

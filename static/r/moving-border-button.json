@@ -1,0 +1,34 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "moving-border-button",
+	"title": "Moving Border Button",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"registryDependencies": [
+		"button"
+	],
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://www.oriui.app/components/moving-border-button",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "export { default as MovingBorderButton } from \"./moving-border-button.svelte\";\r\nexport type { MovingBorderButtonProps } from \"./moving-border-button.svelte\";",
+			"type": "registry:file",
+			"target": "ori/moving-border-button/index.ts"
+		},
+		{
+			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.519Z\"\n}",
+			"type": "registry:file",
+			"target": "ori/moving-border-button/meta.json"
+		},
+		{
+			"content": "<script lang=\"ts\" module>\r\n\timport { type ButtonProps } from '$COMPONENTS$/ui/button';\r\n\texport type MovingBorderButtonProps = ButtonProps & {\r\n\t\tborderRadius?: string;\r\n\t\tcontainerClass?: string;\r\n\t\tborderClass?: string;\r\n\t\tduration?: number;\r\n\t\tclass?: string;\r\n\t\tborderColor?: string;\r\n\t};\r\n</script>\r\n\r\n<script lang=\"ts\">\r\n\timport { cn } from '$LIB$/utils';\r\n\timport { onMount } from 'svelte';\r\n\r\n\tlet {\r\n\t\tclass: className = '',\r\n\t\tchildren,\r\n\t\tborderRadius = '28',\r\n\t\tcontainerClass,\r\n\t\tborderClass,\r\n\t\tduration = 3000,\r\n\t\tborderColor = '#0ea5e9',\r\n\t\t...restProps\r\n\t}: MovingBorderButtonProps = $props();\r\n\r\n\tlet containerRef: HTMLButtonElement;\r\n\tlet rectRef: SVGRectElement;\r\n\tlet width = $state(160);\r\n\tlet height = $state(64);\r\n\tlet rx = $derived(Math.min(parseFloat(borderRadius) || 28, Math.min(width, height) / 2));\r\n\tlet dashOffset = $state(0);\r\n\r\n\t// Calculate the perimeter of a rounded rectangle\r\n\tlet pathLength = $derived(2 * (width + height - 4 * rx) + 2 * Math.PI * rx);\r\n\tlet dashArray = $derived(`${pathLength * 0.25} ${pathLength * 0.75}`);\r\n\r\n\tonMount(() => {\r\n\t\tconst updateSize = () => {\r\n\t\t\tif (containerRef) {\r\n\t\t\t\twidth = containerRef.offsetWidth;\r\n\t\t\t\theight = containerRef.offsetHeight;\r\n\t\t\t}\r\n\t\t};\r\n\t\tupdateSize();\r\n\r\n\t\tconst resizeObserver = new ResizeObserver(updateSize);\r\n\t\tresizeObserver.observe(containerRef);\r\n\r\n\t\t// Animation using requestAnimationFrame\r\n\t\tlet startTime: number | null = null;\r\n\t\tlet animationId: number;\r\n\r\n\t\tconst animate = (timestamp: number) => {\r\n\t\t\tif (!startTime) startTime = timestamp;\r\n\t\t\tconst elapsed = timestamp - startTime;\r\n\t\t\tconst progress = (elapsed % duration) / duration;\r\n\t\t\tdashOffset = -progress * pathLength;\r\n\t\t\tanimationId = requestAnimationFrame(animate);\r\n\t\t};\r\n\r\n\t\tanimationId = requestAnimationFrame(animate);\r\n\r\n\t\treturn () => {\r\n\t\t\tresizeObserver.disconnect();\r\n\t\t\tcancelAnimationFrame(animationId);\r\n\t\t};\r\n\t});\r\n</script>\r\n\r\n<button\r\n\tbind:this={containerRef}\r\n\tclass={cn(\r\n\t\t'group relative h-16 w-40 cursor-pointer overflow-hidden bg-transparent p-[2px] text-xl',\r\n\t\tcontainerClass\r\n\t)}\r\n\tstyle=\"border-radius: {rx}px;\"\r\n\t{...restProps}\r\n>\r\n\t<!-- SVG border with animated stroke -->\r\n\t<svg\r\n\t\tclass=\"absolute inset-0 h-full w-full\"\r\n\t\tviewBox=\"0 0 {width} {height}\"\r\n\t\tpreserveAspectRatio=\"none\"\r\n\t\tfill=\"none\"\r\n\t\txmlns=\"http://www.w3.org/2000/svg\"\r\n\t>\r\n\t\t<!-- Animated border stroke -->\r\n\t\t<rect\r\n\t\t\tbind:this={rectRef}\r\n\t\t\tx=\"1\"\r\n\t\t\ty=\"1\"\r\n\t\t\twidth={width - 2}\r\n\t\t\theight={height - 2}\r\n\t\t\trx={rx - 1}\r\n\t\t\try={rx - 1}\r\n\t\t\tstroke={borderColor}\r\n\t\t\tstroke-width=\"2\"\r\n\t\t\tstroke-dasharray={dashArray}\r\n\t\t\tstroke-dashoffset={dashOffset}\r\n\t\t\tstroke-linecap=\"round\"\r\n\t\t\tclass={borderClass}\r\n\t\t/>\r\n\t</svg>\r\n\r\n\t<!-- Button content -->\r\n\t<div\r\n\t\tclass={cn(\r\n\t\t\t'relative z-10 flex h-full w-full items-center justify-center border border-neutral-800 bg-neutral-900/80 text-sm text-white antialiased backdrop-blur-xl transition-colors duration-300 group-hover:bg-neutral-800/90',\r\n\t\t\tclassName\r\n\t\t)}\r\n\t\tstyle=\"border-radius: {rx - 2}px;\"\r\n\t>\r\n\t\t{@render children?.()}\r\n\t</div>\r\n</button>\r\n",
+			"type": "registry:file",
+			"target": "ori/moving-border-button/moving-border-button.svelte"
+		}
+	]
+}

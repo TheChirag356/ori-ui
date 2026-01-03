@@ -1,0 +1,26 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "word-rotate",
+	"title": "Word Rotate",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://www.oriui.app/components/word-rotate",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.541Z\"\n}",
+			"type": "registry:file",
+			"target": "ori/word-rotate/meta.json"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n  import { fly } from \"svelte/transition\";\r\n  import { cn } from \"$LIB$/utils\";\r\n\r\n  let { words, class: className = \"\", interval = 2500 }: {words: string[], class: string, interval: number } = $props();\r\n\r\n  let currentIndex = $state(0);\r\n  let paused = $state(false);\r\n  let timer: number;\r\n\r\n  $effect(() => {\r\n    if (paused || !words?.length) return;\r\n\r\n    timer = window.setInterval(() => {\r\n      currentIndex = (currentIndex + 1) % words.length;\r\n    }, interval);\r\n\r\n    return () => clearInterval(timer);\r\n  });\r\n</script>\r\n\r\n<div\r\n\tclass=\"relative inline-flex overflow-hidden items-center\"\r\n\tonpointerenter={() => (paused = true)}\r\n\tonpointerleave={() => (paused = false)}\r\n>\r\n\t{#key currentIndex}\r\n\t\t<span\r\n\t\t\tclass={cn('word-rotate absolute inset-0', className)}\r\n\t\t\tin:fly={{ duration: 350, y: 20, opacity: 0, delay: 200 }}\r\n\t\t\tout:fly={{ duration: 250, y: -20, opacity: 0 }}\r\n\t\t>\r\n\t\t\t{words[currentIndex]}\r\n\t\t</span>\r\n\t{/key}\r\n\t<span class=\"block invisible\"\r\n\t\t>{words.reduce((w: string, a: string) => (w.length > a.length ? w : a), '')}</span\r\n\t>\r\n</div>\r\n\r\n<style>\r\n  .word-rotate {\r\n    white-space: nowrap;\r\n    will-change: transform;\r\n  }\r\n</style>\r\n",
+			"type": "registry:file",
+			"target": "ori/word-rotate/word-rotate.svelte"
+		}
+	]
+}

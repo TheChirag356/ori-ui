@@ -1,0 +1,26 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "spinning-text",
+	"title": "Spinning Text",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://www.oriui.app/components/spinning-text",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.538Z\"\n}",
+			"type": "registry:file",
+			"target": "ori/spinning-text/meta.json"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n  // Props\r\n  export let text: string = \"\";\r\n  // Speed of a full rotation in seconds (renamed from duration for clarity)\r\n  export let speed: number = 10;\r\n  export let reverse: boolean = false;   // reverse direction\r\n  export let radius: number = 100;       // radius in px\r\n  export let className: string = \"\";     // extra classes\r\n</script>\r\n\r\n{#if text.length > 0}\r\n\t<div\r\n\t\tclass={`relative inline-block ${className}`}\r\n\t\tstyle=\"\r\n    width: {radius * 2}px;\r\n    height: {radius * 2}px;\r\n  \"\r\n\t>\r\n\t\t<div\r\n\t\t\tclass=\"spinning-container\"\r\n\t\t\tstyle=\"\r\n      animation-duration: {speed}s;\r\n      animation-direction: {reverse ? 'reverse' : 'normal'};\r\n    \"\r\n\t\t>\r\n\t\t\t{#each text.split('') as char, i (i)}\r\n\t\t\t\t<span\r\n\t\t\t\t\tclass=\"spinning-char\"\r\n\t\t\t\t\tstyle=\"\r\n          transform: rotate({(360 / text.length) * i}deg)\r\n            translate({radius}px) rotate({-(360 / text.length) * i}deg);\r\n        \"\r\n\t\t\t\t>\r\n\t\t\t\t\t{char}\r\n\t\t\t\t</span>\r\n\t\t\t{/each}\r\n\t\t</div>\r\n\t</div>\r\n{/if}\r\n\r\n<style>\r\n  .spinning-container {\r\n    position: absolute;\r\n    inset: 0;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    animation: spin linear infinite;\r\n  }\r\n\r\n  .spinning-char {\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform-origin: 0 0;\r\n    white-space: pre;\r\n  }\r\n\r\n  @keyframes spin {\r\n    to { transform: rotate(360deg); }\r\n  }\r\n</style>\r\n",
+			"type": "registry:file",
+			"target": "ori/spinning-text/spinning-text.svelte"
+		}
+	]
+}

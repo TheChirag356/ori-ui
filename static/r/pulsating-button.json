@@ -1,0 +1,34 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "pulsating-button",
+	"title": "Pulsating Button",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"registryDependencies": [
+		"button"
+	],
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://www.oriui.app/components/pulsating-button",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "export { default as PulsatingButton } from \"./pulsating-button.svelte\";",
+			"type": "registry:file",
+			"target": "ori/pulsating-button/index.ts"
+		},
+		{
+			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.520Z\"\n}",
+			"type": "registry:file",
+			"target": "ori/pulsating-button/meta.json"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { Button } from \"$COMPONENTS$/ui/button\";\r\n\timport { cn } from \"$LIB$/utils\";\r\n\r\n\tlet {\r\n\t\tchildren,\r\n\t\tclass: className = \"\",\r\n\t\thoverOnly = false,\r\n\t\tpulseColor = \"var(--color-foreground)\",\r\n\t\tduration = 1.5,\r\n\t\t...restProps\r\n\t} = $props();\r\n</script>\r\n\r\n<div\r\n\tclass={cn(\r\n\t\t\"relative inline-flex\",\r\n\t\thoverOnly && \"group\"\r\n\t)}\r\n>\r\n\t<Button\r\n\t\tclass={cn(\"relative z-10\", className)}\r\n\t\t{...restProps}\r\n\t>\r\n\t\t{@render children?.()}\r\n\t</Button>\r\n\r\n\t<!-- Pulse ring -->\r\n\t<span\r\n\t\tclass={cn(\r\n\t\t\t\"absolute inset-0 rounded-md pointer-events-none\",\r\n\t\t\t\"pulse-ring\",\r\n\t\t\thoverOnly && \"opacity-0 group-hover:opacity-100\"\r\n\t\t)}\r\n\t\tstyle={`\r\n\t\t\t--pulse-color: ${pulseColor};\r\n\t\t\t--duration: ${duration}s;\r\n\t\t`}\r\n\t></span>\r\n</div>\r\n\r\n<style>\r\n\t.pulse-ring {\r\n\t\tbackground: var(--pulse-color);\r\n\t\topacity: 0.25;\r\n\t\ttransform: scale(1);\r\n\t\tanimation: pulse var(--duration) ease-out infinite;\r\n\t}\r\n\r\n\t@keyframes pulse {\r\n\t\t0% {\r\n\t\t\ttransform: scale(1);\r\n\t\t\topacity: 0.35;\r\n\t\t}\r\n\t\t70% {\r\n\t\t\ttransform: scale(1.8);\r\n\t\t\topacity: 0;\r\n\t\t}\r\n\t\t100% {\r\n\t\t\ttransform: scale(1.8);\r\n\t\t\topacity: 0;\r\n\t\t}\r\n\t}\r\n\r\n\t@media (prefers-reduced-motion: reduce) {\r\n\t\t.pulse-ring {\r\n\t\t\tanimation: none;\r\n\t\t}\r\n\t}\r\n</style>\r\n",
+			"type": "registry:file",
+			"target": "ori/pulsating-button/pulsating-button.svelte"
+		}
+	]
+}

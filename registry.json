@@ -1,0 +1,663 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry.json",
+  "name": "Ori UI",
+  "homepage": "https://www.oriui.app",
+  "aliases": {
+    "lib": "$lib",
+    "components": "$lib/components",
+    "utils": "$lib/utils/utils",
+    "ui": "$lib/components/ui",
+    "hooks": "$lib/hooks"
+  },
+  "items": [
+    {
+      "name": "copy-button",
+      "type": "registry:block",
+      "title": "Copy Button",
+      "description": "",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/buttons/copy-button/copy-button.svelte",
+          "type": "registry:file",
+          "target": "ori/copy-button/copy-button.svelte"
+        },
+        {
+          "path": "src/lib/registry/buttons/copy-button/index.ts",
+          "type": "registry:file",
+          "target": "ori/copy-button/index.ts"
+        },
+        {
+          "path": "src/lib/registry/buttons/copy-button/meta.json",
+          "type": "registry:file",
+          "target": "ori/copy-button/meta.json"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/copy-button",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "interactive-hover-button",
+      "type": "registry:block",
+      "title": "Interactive Hover Button",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [
+        "@tabler/icons-svelte"
+      ],
+      "files": [
+        {
+          "path": "src/lib/registry/buttons/interactive-hover-button/index.ts",
+          "type": "registry:file",
+          "target": "ori/interactive-hover-button/index.ts"
+        },
+        {
+          "path": "src/lib/registry/buttons/interactive-hover-button/interactive-hover-button.svelte",
+          "type": "registry:file",
+          "target": "ori/interactive-hover-button/interactive-hover-button.svelte"
+        },
+        {
+          "path": "src/lib/registry/buttons/interactive-hover-button/meta.json",
+          "type": "registry:file",
+          "target": "ori/interactive-hover-button/meta.json"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/interactive-hover-button",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "ios-toggle-button",
+      "type": "registry:block",
+      "title": "Ios Toggle Button",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/buttons/ios-toggle-button/index.ts",
+          "type": "registry:file",
+          "target": "ori/ios-toggle-button/index.ts"
+        },
+        {
+          "path": "src/lib/registry/buttons/ios-toggle-button/ios-toggle-button.svelte",
+          "type": "registry:file",
+          "target": "ori/ios-toggle-button/ios-toggle-button.svelte"
+        },
+        {
+          "path": "src/lib/registry/buttons/ios-toggle-button/meta.json",
+          "type": "registry:file",
+          "target": "ori/ios-toggle-button/meta.json"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/ios-toggle-button",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "liquid-button",
+      "type": "registry:block",
+      "title": "Liquid Button",
+      "description": "",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "tailwind-variants"
+      ],
+      "files": [
+        {
+          "path": "src/lib/registry/buttons/liquid-button/index.ts",
+          "type": "registry:file",
+          "target": "ori/liquid-button/index.ts"
+        },
+        {
+          "path": "src/lib/registry/buttons/liquid-button/liquid-button.svelte",
+          "type": "registry:file",
+          "target": "ori/liquid-button/liquid-button.svelte"
+        },
+        {
+          "path": "src/lib/registry/buttons/liquid-button/meta.json",
+          "type": "registry:file",
+          "target": "ori/liquid-button/meta.json"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/liquid-button",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "moving-border-button",
+      "type": "registry:block",
+      "title": "Moving Border Button",
+      "description": "",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/buttons/moving-border-button/index.ts",
+          "type": "registry:file",
+          "target": "ori/moving-border-button/index.ts"
+        },
+        {
+          "path": "src/lib/registry/buttons/moving-border-button/meta.json",
+          "type": "registry:file",
+          "target": "ori/moving-border-button/meta.json"
+        },
+        {
+          "path": "src/lib/registry/buttons/moving-border-button/moving-border-button.svelte",
+          "type": "registry:file",
+          "target": "ori/moving-border-button/moving-border-button.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/moving-border-button",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "pulsating-button",
+      "type": "registry:block",
+      "title": "Pulsating Button",
+      "description": "",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/buttons/pulsating-button/index.ts",
+          "type": "registry:file",
+          "target": "ori/pulsating-button/index.ts"
+        },
+        {
+          "path": "src/lib/registry/buttons/pulsating-button/meta.json",
+          "type": "registry:file",
+          "target": "ori/pulsating-button/meta.json"
+        },
+        {
+          "path": "src/lib/registry/buttons/pulsating-button/pulsating-button.svelte",
+          "type": "registry:file",
+          "target": "ori/pulsating-button/pulsating-button.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/pulsating-button",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "rainbow-button",
+      "type": "registry:block",
+      "title": "Rainbow Button",
+      "description": "",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/buttons/rainbow-button/index.ts",
+          "type": "registry:file",
+          "target": "ori/rainbow-button/index.ts"
+        },
+        {
+          "path": "src/lib/registry/buttons/rainbow-button/meta.json",
+          "type": "registry:file",
+          "target": "ori/rainbow-button/meta.json"
+        },
+        {
+          "path": "src/lib/registry/buttons/rainbow-button/rainbow-button.svelte",
+          "type": "registry:file",
+          "target": "ori/rainbow-button/rainbow-button.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/rainbow-button",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "ripple-button",
+      "type": "registry:block",
+      "title": "Ripple Button",
+      "description": "",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/buttons/ripple-button/index.ts",
+          "type": "registry:file",
+          "target": "ori/ripple-button/index.ts"
+        },
+        {
+          "path": "src/lib/registry/buttons/ripple-button/meta.json",
+          "type": "registry:file",
+          "target": "ori/ripple-button/meta.json"
+        },
+        {
+          "path": "src/lib/registry/buttons/ripple-button/ripple-button.svelte",
+          "type": "registry:file",
+          "target": "ori/ripple-button/ripple-button.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/ripple-button",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "slide-text-button",
+      "type": "registry:block",
+      "title": "Slide Text Button",
+      "description": "",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/buttons/slide-text-button/index.ts",
+          "type": "registry:file",
+          "target": "ori/slide-text-button/index.ts"
+        },
+        {
+          "path": "src/lib/registry/buttons/slide-text-button/meta.json",
+          "type": "registry:file",
+          "target": "ori/slide-text-button/meta.json"
+        },
+        {
+          "path": "src/lib/registry/buttons/slide-text-button/slide-text-button.svelte",
+          "type": "registry:file",
+          "target": "ori/slide-text-button/slide-text-button.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/slide-text-button",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "code-block",
+      "type": "registry:block",
+      "title": "Code Block",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [
+        "shiki"
+      ],
+      "files": [
+        {
+          "path": "src/lib/registry/components/code-block/index.ts",
+          "type": "registry:file",
+          "target": "ori/code-block/index.ts"
+        },
+        {
+          "path": "src/lib/registry/components/code-block/meta.json",
+          "type": "registry:file",
+          "target": "ori/code-block/meta.json"
+        },
+        {
+          "path": "src/lib/registry/components/code-block/multi-code-block.svelte",
+          "type": "registry:file",
+          "target": "ori/code-block/multi-code-block.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/code-block",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "file-upload",
+      "type": "registry:block",
+      "title": "File Upload",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [
+        "@tabler/icons-svelte"
+      ],
+      "files": [
+        {
+          "path": "src/lib/registry/components/file-upload/file-upload.svelte",
+          "type": "registry:file",
+          "target": "ori/file-upload/file-upload.svelte"
+        },
+        {
+          "path": "src/lib/registry/components/file-upload/meta.json",
+          "type": "registry:file",
+          "target": "ori/file-upload/meta.json"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/file-upload",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "glare-hover",
+      "type": "registry:block",
+      "title": "Glare Hover",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/components/glare-hover/glare-hover.svelte",
+          "type": "registry:file",
+          "target": "ori/glare-hover/glare-hover.svelte"
+        },
+        {
+          "path": "src/lib/registry/components/glare-hover/index.ts",
+          "type": "registry:file",
+          "target": "ori/glare-hover/index.ts"
+        },
+        {
+          "path": "src/lib/registry/components/glare-hover/meta.json",
+          "type": "registry:file",
+          "target": "ori/glare-hover/meta.json"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/glare-hover",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "marquee",
+      "type": "registry:block",
+      "title": "Marquee",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/components/marquee/index.ts",
+          "type": "registry:file",
+          "target": "ori/marquee/index.ts"
+        },
+        {
+          "path": "src/lib/registry/components/marquee/marquee.svelte",
+          "type": "registry:file",
+          "target": "ori/marquee/marquee.svelte"
+        },
+        {
+          "path": "src/lib/registry/components/marquee/meta.json",
+          "type": "registry:file",
+          "target": "ori/marquee/meta.json"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/marquee",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "morphic-navbar",
+      "type": "registry:block",
+      "title": "Morphic Navbar",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/components/morphic-navbar/meta.json",
+          "type": "registry:file",
+          "target": "ori/morphic-navbar/meta.json"
+        },
+        {
+          "path": "src/lib/registry/components/morphic-navbar/morphic-navbar.svelte",
+          "type": "registry:file",
+          "target": "ori/morphic-navbar/morphic-navbar.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/morphic-navbar",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "pdf-viewer",
+      "type": "registry:block",
+      "title": "Pdf Viewer",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [
+        "@tabler/icons-svelte",
+        "pdfjs-dist"
+      ],
+      "files": [
+        {
+          "path": "src/lib/registry/components/pdf-viewer/index.ts",
+          "type": "registry:file",
+          "target": "ori/pdf-viewer/index.ts"
+        },
+        {
+          "path": "src/lib/registry/components/pdf-viewer/meta.json",
+          "type": "registry:file",
+          "target": "ori/pdf-viewer/meta.json"
+        },
+        {
+          "path": "src/lib/registry/components/pdf-viewer/pdf-renderer.svelte",
+          "type": "registry:file",
+          "target": "ori/pdf-viewer/pdf-renderer.svelte"
+        },
+        {
+          "path": "src/lib/registry/components/pdf-viewer/pdf-toolbar.svelte",
+          "type": "registry:file",
+          "target": "ori/pdf-viewer/pdf-toolbar.svelte"
+        },
+        {
+          "path": "src/lib/registry/components/pdf-viewer/pdf-viewer-root.svelte",
+          "type": "registry:file",
+          "target": "ori/pdf-viewer/pdf-viewer-root.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/pdf-viewer",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "blur-text",
+      "type": "registry:block",
+      "title": "Blur Text",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/text-animations/blur-text/blur-text.svelte",
+          "type": "registry:file",
+          "target": "ori/blur-text/blur-text.svelte"
+        },
+        {
+          "path": "src/lib/registry/text-animations/blur-text/meta.json",
+          "type": "registry:file",
+          "target": "ori/blur-text/meta.json"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/blur-text",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "spinning-text",
+      "type": "registry:block",
+      "title": "Spinning Text",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/text-animations/spinning-text/meta.json",
+          "type": "registry:file",
+          "target": "ori/spinning-text/meta.json"
+        },
+        {
+          "path": "src/lib/registry/text-animations/spinning-text/spinning-text.svelte",
+          "type": "registry:file",
+          "target": "ori/spinning-text/spinning-text.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/spinning-text",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "split-text",
+      "type": "registry:block",
+      "title": "Split Text",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [
+        "animejs"
+      ],
+      "files": [
+        {
+          "path": "src/lib/registry/text-animations/split-text/meta.json",
+          "type": "registry:file",
+          "target": "ori/split-text/meta.json"
+        },
+        {
+          "path": "src/lib/registry/text-animations/split-text/split-text.svelte",
+          "type": "registry:file",
+          "target": "ori/split-text/split-text.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/split-text",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "text-highlighter",
+      "type": "registry:block",
+      "title": "Text Highlighter",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [
+        "rough-notation"
+      ],
+      "files": [
+        {
+          "path": "src/lib/registry/text-animations/text-highlighter/meta.json",
+          "type": "registry:file",
+          "target": "ori/text-highlighter/meta.json"
+        },
+        {
+          "path": "src/lib/registry/text-animations/text-highlighter/svelte-rough-notation.d.ts",
+          "type": "registry:file",
+          "target": "ori/text-highlighter/svelte-rough-notation.d.ts"
+        },
+        {
+          "path": "src/lib/registry/text-animations/text-highlighter/text-highlighter.svelte",
+          "type": "registry:file",
+          "target": "ori/text-highlighter/text-highlighter.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/text-highlighter",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "word-rotate",
+      "type": "registry:block",
+      "title": "Word Rotate",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/text-animations/word-rotate/meta.json",
+          "type": "registry:file",
+          "target": "ori/word-rotate/meta.json"
+        },
+        {
+          "path": "src/lib/registry/text-animations/word-rotate/word-rotate.svelte",
+          "type": "registry:file",
+          "target": "ori/word-rotate/word-rotate.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://www.oriui.app/components/word-rotate",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    }
+  ]
+}

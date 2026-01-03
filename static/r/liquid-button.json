@@ -1,0 +1,40 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "liquid-button",
+	"title": "Liquid Button",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"dependencies": [
+		"tailwind-variants"
+	],
+	"devDependencies": [
+		"tailwind-variants@^3.2.2"
+	],
+	"registryDependencies": [
+		"button"
+	],
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://www.oriui.app/components/liquid-button",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "export { default as LiquidButton } from \"./liquid-button.svelte\";",
+			"type": "registry:file",
+			"target": "ori/liquid-button/index.ts"
+		},
+		{
+			"content": "<script lang=\"ts\" module>\r\n    import { Button } from \"$COMPONENTS$/ui/button\";\r\n    import { cn, type WithElementRef } from \"$LIB$/utils\";\r\n    import { type VariantProps, tv } from \"tailwind-variants\";\r\n\timport type { HTMLAnchorAttributes, HTMLButtonAttributes } from \"svelte/elements\";\r\n\r\n    export const liquidButtonVariants = tv({\r\n        base: \"focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0\",\r\n        variants: {\r\n            variant: {\r\n                default: \"bg-primary text-primary-foreground shadow-xs hover:bg-primary/90\",\r\n\t\t\t\tdestructive:\r\n\t\t\t\t\t\"bg-destructive shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60 text-white\",\r\n\t\t\t\toutline:\r\n\t\t\t\t\t\"bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 border\",\r\n\t\t\t\tsecondary: \"bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80\",\r\n\t\t\t\tghost: \"hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50\",\r\n\t\t\t\tlink: \"text-primary underline-offset-4 hover:underline\",\r\n            },\r\n            size: {\r\n                default: \"h-9 px-4 py-2 has-[>svg]:px-3\",\r\n\t\t\t\tsm: \"h-8 gap-1.5 rounded-md px-3 has-[>svg]:px-2.5\",\r\n\t\t\t\tlg: \"h-10 rounded-md px-6 has-[>svg]:px-4\",\r\n\t\t\t\ticon: \"size-9\",\r\n\t\t\t\t\"icon-sm\": \"size-8\",\r\n\t\t\t\t\"icon-lg\": \"size-10\",\r\n            }\r\n        },\r\n        defaultVariants: {\r\n            variant: \"default\",\r\n            size: \"default\",\r\n        }\r\n    })\r\n\r\n    export type LiquidButtonVariant = VariantProps<typeof liquidButtonVariants>[\"variant\"];\r\n    export type LiquidButtonSize = VariantProps<typeof liquidButtonVariants>[\"size\"];\r\n\r\n    export type LiquidButtonProps = WithElementRef<HTMLButtonAttributes> & WithElementRef<HTMLAnchorAttributes> & {\r\n        variant?: LiquidButtonVariant;\r\n        size?: LiquidButtonSize;\r\n    }\r\n</script>\r\n\r\n<script>\r\n    let {\r\n        class: className = \"\",\r\n        children,\r\n        ...restProps\r\n    }: LiquidButtonProps = $props();\r\n\r\n    function handleHover(event: MouseEvent) {\r\n        const button = event.currentTarget as HTMLButtonElement;\r\n        const rect = button.getBoundingClientRect();\r\n        const x = event.clientX - rect.left;\r\n        const y = event.clientY - rect.top;\r\n        button.style.setProperty('--x', `${x}px`);\r\n        button.style.setProperty('--y', `${y}px`);\r\n    }\r\n</script>\r\n\r\n<Button\r\n\tclass={cn('cursor-pointer relative overflow-hidden group z-0', className)}\r\n\tvariant=\"secondary\"\r\n\tonmousemove={handleHover}\r\n\t{...restProps}\r\n>\r\n\t<div class=\"relative z-10 group-hover:text-white transition-colors duration-300 ease-in-out\">\r\n\t\t{@render children?.()}\r\n\t</div>\r\n\t<div\r\n\t\tclass=\"absolute inset-0 w-1/2 rounded-full translate-x-1/2 group-hover:-translate-x-3 bg-accent translate-y-[110%] group-hover:translate-y-0 group-hover:w-28 transition-all duration-300 ease-in-out pointer-events-none group-hover:rounded-none z-5\"\r\n\t></div>\r\n</Button>\r\n",
+			"type": "registry:file",
+			"target": "ori/liquid-button/liquid-button.svelte"
+		},
+		{
+			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.518Z\"\n}",
+			"type": "registry:file",
+			"target": "ori/liquid-button/meta.json"
+		}
+	]
+}

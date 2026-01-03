@@ -1,0 +1,34 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "ripple-button",
+	"title": "Ripple Button",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"registryDependencies": [
+		"button"
+	],
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://www.oriui.app/components/ripple-button",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "export { default as RippleButton } from \"./ripple-button.svelte\";",
+			"type": "registry:file",
+			"target": "ori/ripple-button/index.ts"
+		},
+		{
+			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.522Z\"\n}",
+			"type": "registry:file",
+			"target": "ori/ripple-button/meta.json"
+		},
+		{
+			"content": "<script lang=\"ts\" module>\r\n    import { Button, type ButtonProps } from \"$COMPONENTS$/ui/button\";\r\n    import { cn } from \"$LIB$/utils\";\r\n\r\n    export type RippleButtonProps = ButtonProps & {\r\n        rippleColor?: string;\r\n        duration?: string;\r\n    }\r\n\r\n</script>\r\n\r\n<script lang=\"ts\">\r\n    let {\r\n        class: className = \"\",\r\n        children,\r\n        rippleColor = \"#ffffff\",\r\n        duration = \"600ms\",\r\n        ...restProps\r\n    }: RippleButtonProps = $props();\r\n\r\n    let buttonRipples = $state<Array<{x: number, y: number; size: number; key: number}>>([]);\r\n\r\n    function handleClick(event: MouseEvent) {\r\n        createRipple(event);\r\n    }\r\n\r\n    function createRipple(event: MouseEvent) {\r\n        const button = event.currentTarget as HTMLButtonElement;\r\n        const rect = button.getBoundingClientRect();\r\n        const size = Math.max(rect.width, rect.height);\r\n        const x = event.clientX - rect.left - size/2;\r\n        const y = event.clientY - rect.top - size/2;\r\n\r\n        const newRipple = {x, y, size, key: Date.now()};\r\n        buttonRipples = [...buttonRipples, newRipple];\r\n    }\r\n</script>\r\n\r\n<button\r\n\tclass={cn(\r\n\t\t'bg-background border border-foreground/40 text-primary relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg px-4 py-2 text-center',\r\n\t\tclassName\r\n\t)}\r\n\tonclick={handleClick}\r\n\t{...restProps}\r\n\t><div class=\"relative z-10\">{@render children?.()}</div>\r\n\t<span class=\"pointer-events-none absolute inset-0\">\r\n\t\t{#each buttonRipples as ripple (ripple.key)}\r\n\t\t\t<span\r\n\t\t\t\tclass=\"ripple\"\r\n\t\t\t\tstyle=\"left: {ripple.x}px; top: {ripple.y}px; width: {ripple.size}px; height: {ripple.size}px; --duration: {duration}; --ripple-color: {rippleColor};\"\r\n\t\t\t\tonanimationend={() => (buttonRipples = buttonRipples.filter((r) => r.key !== ripple.key))}\r\n\t\t\t></span>\r\n\t\t{/each}\r\n\t</span>\r\n</button>\r\n\r\n<style>\r\n  .ripple {\r\n    position: absolute;\r\n    border-radius: 50%;\r\n    transform: scale(0);\r\n    animation: rippling var(--duration, 600ms) ease-out;\r\n    background-color: var(--ripple-color, #ffffff);\r\n  }\r\n\r\n  @keyframes rippling {\r\n    0% {\r\n      opacity: 1;\r\n    }\r\n    100% {\r\n      transform: scale(2);\r\n      opacity: 0;\r\n    }\r\n  }\r\n</style>\r\n",
+			"type": "registry:file",
+			"target": "ori/ripple-button/ripple-button.svelte"
+		}
+	]
+}

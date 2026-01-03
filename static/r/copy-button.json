@@ -1,0 +1,34 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "copy-button",
+	"title": "Copy Button",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"registryDependencies": [
+		"button"
+	],
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://www.oriui.app/components/copy-button",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n    import { Button, type ButtonProps } from \"$COMPONENTS$/ui/button\";\r\n\timport { cn } from \"$LIB$/utils\";\r\n    import { fade } from 'svelte/transition';\r\n\r\n\ttype CopyButtonProps = ButtonProps & {\r\n\t\tcontent: string;\r\n\t};\r\n\r\n    let {class: className, content, ...restProps}: CopyButtonProps = $props();\r\n    let isClicked = $state(false);\r\n\r\n    function handleClick() {\r\n        isClicked = true;\r\n        try {\r\n            navigator.clipboard.writeText(content);\r\n        } catch (error) {\r\n            console.log(\"Failed to copy text: \", error);\r\n        } finally {\r\n            setTimeout(() => {\r\n                isClicked = false;\r\n            }, 2000);\r\n        }     \r\n    }\r\n</script>\r\n\r\n<Button\r\n\tdata-testid=\"copy-button\"\r\n\tclass={cn('relative cursor-pointer backdrop-blur-xs', className)}\r\n\t{...restProps}\r\n\tonclick={handleClick}\r\n\tdisabled={isClicked}\r\n>\r\n\t<!-- Copy Icon -->\r\n\t{#if !isClicked}\r\n\t\t<svg\r\n\t\t\tin:fade={{ duration: 150, delay: 150 }}\r\n\t\t\tout:fade={{ duration: 150 }}\r\n\t\t\txmlns=\"http://www.w3.org/2000/svg\"\r\n\t\t\twidth=\"24\"\r\n\t\t\theight=\"24\"\r\n\t\t\tviewBox=\"0 0 24 24\"\r\n\t\t\tfill=\"none\"\r\n\t\t\tstroke-width=\"2\"\r\n\t\t\tstroke-linecap=\"round\"\r\n\t\t\tstroke-linejoin=\"round\"\r\n\t\t\tclass=\"absolute stroke-current\"\r\n\t\t\t><path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" /><path\r\n\t\t\t\td=\"M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z\"\r\n\t\t\t/><path\r\n\t\t\t\td=\"M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1\"\r\n\t\t\t/></svg\r\n\t\t>\r\n\t{:else}\r\n\t\t<!-- Check Icon -->\r\n\t\t<svg\r\n\t\t\tin:fade={{ duration: 150, delay: 150 }}\r\n\t\t\tout:fade={{ duration: 150 }}\r\n\t\t\txmlns=\"http://www.w3.org/2000/svg\"\r\n\t\t\twidth=\"24\"\r\n\t\t\theight=\"24\"\r\n\t\t\tviewBox=\"0 0 24 24\"\r\n\t\t\tfill=\"none\"\r\n\t\t\tstroke-width=\"2\"\r\n\t\t\tstroke-linecap=\"round\"\r\n\t\t\tstroke-linejoin=\"round\"\r\n\t\t\tclass=\"absolute stroke-current\"\r\n\t\t\t><path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" /><path d=\"M5 12l5 5l10 -10\" /></svg\r\n\t\t>\r\n\t{/if}\r\n\t<svg\r\n\t\txmlns=\"http://www.w3.org/2000/svg\"\r\n\t\twidth=\"24\"\r\n\t\theight=\"24\"\r\n\t\tviewBox=\"0 0 24 24\"\r\n\t\tfill=\"none\"\r\n\t\tstroke=\"#000000\"\r\n\t\tstroke-width=\"2\"\r\n\t\tstroke-linecap=\"round\"\r\n\t\tstroke-linejoin=\"round\"\r\n\t\tclass=\"invisible\"\r\n\t\t><path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" /><path d=\"M5 12l5 5l10 -10\" /></svg\r\n\t>\r\n</Button>\r\n",
+			"type": "registry:file",
+			"target": "ori/copy-button/copy-button.svelte"
+		},
+		{
+			"content": "export { default as CopyButton } from \"./copy-button.svelte\";",
+			"type": "registry:file",
+			"target": "ori/copy-button/index.ts"
+		},
+		{
+			"content": "{\n  \"createdAt\": \"2026-01-02T14:52:31.508Z\"\n}",
+			"type": "registry:file",
+			"target": "ori/copy-button/meta.json"
+		}
+	]
+}
