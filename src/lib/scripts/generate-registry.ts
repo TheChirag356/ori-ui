@@ -7,7 +7,7 @@ import type RegistryItem from "./schema/registry-item.json";
 
 const REGISTRY_ROOT = "src/lib/registry";
 const OUTPUT = "registry.json";
-const IGNORED_EXTENSIONS = [".test.ts"];
+const IGNORED_EXTENSIONS = [".test.ts", ".test.js"];
 
 // Regex to match import statements
 const IMPORT_REGEX = /import\s+(?:(?:\{[^}]*\}|\*\s+as\s+\w+|\w+)\s*,?\s*)*\s*from\s*["']([^"']+)["']/g;
@@ -169,8 +169,12 @@ function discoverComponents() {
         })
       }
 
+      const dependencyFiles = files.filter(
+        (file) => !shouldIgnoreFile(file) && (file.endsWith(".svelte") || file.endsWith(".ts"))
+      )
+
       // Parse dependencies from component files
-      const { registryDependencies, dependencies } = parseComponentDependencies(componentPath, files);
+      const { registryDependencies, dependencies } = parseComponentDependencies(componentPath, dependencyFiles);
 
       items.push({
         name: component,
@@ -187,10 +191,6 @@ function discoverComponents() {
   }
   return items;
 }
-
-import { validateRegistryData } from "./validate-registry";
-
-// validateRegistryData(registry);
 
 writeFileSync(
   OUTPUT,
