@@ -1,6 +1,5 @@
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vitest/config';
-import { playwright } from '@vitest/browser-playwright';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { sidebarGenerator } from "./plugins/sidebar-generator";
 import { metaJsonGenerator } from "./plugins/meta-json-generator";
@@ -8,31 +7,11 @@ import { metaJsonGenerator } from "./plugins/meta-json-generator";
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit(), metaJsonGenerator(), sidebarGenerator()],
 	test: {
-		expect: { requireAssertions: true },
-		projects: [
-			{
-				extends: './vite.config.ts',
-				test: {
-					name: 'client',
-					browser: {
-						enabled: true,
-						provider: playwright(),
-						instances: [{ browser: 'chromium', headless: true }]
-					},
-					include: ['src/**/*.svelte.{test,spec}.{js,ts}'],
-					exclude: ['src/lib/server/**']
-				}
-			},
-			{
-				extends: './vite.config.ts',
-				test: {
-					name: 'server',
-					environment: 'node',
-					include: ['src/**/*.{test,spec}.{js,ts}'],
-					exclude: ['src/**/*.svelte.{test,spec}.{js,ts}']
-				}
-			}
-		]
+		environment: 'happy-dom',
+		setupFiles: ['@testing-library/jest-dom/vitest', './vitest.setup.ts'],
+	},
+	resolve: {
+		conditions: process.env.TEST ? [`browser`] : undefined,
 	},
 	optimizeDeps: {
 		exclude: ['pdfjs-dist']

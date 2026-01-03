@@ -25,6 +25,7 @@
 </script>
 
 <Button
+	data-testid="copy-button"
 	class={cn('relative cursor-pointer backdrop-blur-xs', className)}
 	{...restProps}
 	onclick={handleClick}

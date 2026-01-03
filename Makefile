@@ -4,7 +4,7 @@ test:
 registry:
 	bun run registry:build
 
-run: registry
+run: generate registry
 	bun run dev
 
 build: generate registry
