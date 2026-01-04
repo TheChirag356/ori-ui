@@ -20,7 +20,7 @@ async function highlighter(code, lang = "javascript") {
     const html = escapeSvelte(shiki.codeToHtml(code,
         {
             lang,
-            theme: 'vitesse-dark',
+            themes: {dark: 'vitesse-dark', light: 'vitesse-light'},
             wrap: true,
         })
     )
