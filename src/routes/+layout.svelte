@@ -32,23 +32,6 @@
 	title={siteConfig.name}
 	description={siteConfig.description}
 	keywords={siteConfig.keywords}
-	openGraph={{
-		type: 'website',
-		locale: 'en_US',
-		url: siteConfig.url,
-		title: siteConfig.name,
-		description: siteConfig.description,
-		siteName: siteConfig.name,
-		images: [
-			{
-				url: siteConfig.ogImage.url,
-				width: siteConfig.ogImage.width,
-				height: siteConfig.ogImage.height,
-				alt: siteConfig.ogImage.alt,
-				type: 'image/png'
-			}
-		]
-	}}
 	twitter={{
 		cardType: 'summary_large_image',
 		title: siteConfig.name,

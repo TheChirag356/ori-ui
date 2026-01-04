@@ -23,6 +23,23 @@
 <MetaTags
 	title={siteConfig.name}
 	description={siteConfig.description}
+	openGraph={{
+		type: 'website',
+		locale: 'en_US',
+		url: siteConfig.url,
+		title: siteConfig.name,
+		description: siteConfig.description,
+		siteName: siteConfig.name,
+		images: [
+			{
+				url: siteConfig.ogImage.url,
+				width: siteConfig.ogImage.width,
+				height: siteConfig.ogImage.height,
+				alt: siteConfig.ogImage.alt,
+				type: 'image/png'
+			}
+		]
+	}}
 />
 
 <div class="h-[85vh] w-full flex flex-col justify-between relative bg-background">

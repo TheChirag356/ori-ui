@@ -11,6 +11,18 @@
 	title={data.meta.title}
 	description={data.meta.description}
 	titleTemplate="%s | Ori UI Component"
+	openGraph={{
+		title: data.meta.title,
+		description: data.meta.description,
+		images: [
+			{
+				url: `/api/og?title=${encodeURIComponent(data.meta.title)}&description=${encodeURIComponent(data.meta.description)}`,
+				height: 630,
+				width: 1200,
+				alt: data.meta.title,
+			}
+		]
+	}}
 />
 
 <div class="md:hidden flex">

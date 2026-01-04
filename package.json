@@ -49,6 +49,7 @@
 		"vitest": "^4.0.10"
 	},
 	"dependencies": {
+		"@resvg/resvg-js": "^2.6.2",
 		"@sveltejs/adapter-vercel": "^6.2.0",
 		"@tabler/icons-svelte": "^3.35.0",
 		"animejs": "^4.2.2",
@@ -58,8 +59,11 @@
 		"rehype-slug": "^6.0.0",
 		"remark-toc": "^9.0.0",
 		"rough-notation": "^0.5.1",
+		"satori": "^0.18.3",
+		"satori-html": "^0.3.2",
 		"shiki": "^3.19.0",
 		"svelte-meta-tags": "^4.5.0",
-		"svelte-rough-notation": "^0.1.5"
+		"svelte-rough-notation": "^0.1.5",
+		"yoga-wasm-web": "^0.3.3"
 	}
 }
