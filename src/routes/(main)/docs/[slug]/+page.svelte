@@ -10,7 +10,7 @@
 <MetaTags
 	title={data.meta.title}
 	description={data.meta.description}
-	titleTemplate="%s | Ori UI Component"
+	titleTemplate="%s | Ori UI Docs"
 	openGraph={{
 		title: data.meta.title,
 		description: data.meta.description,
