@@ -75,7 +75,7 @@
 	<Sidebar.Content class="thin-scrollbar bg-background mb-4 gap-0 pt-6">
 		{#each data.navMain as item (item.title)}
 			<Sidebar.Group class="p-0">
-				<Sidebar.GroupLabel class="text-muted-foreground text-xs ">
+				<Sidebar.GroupLabel class="text-muted-foreground text-xs">
 					{item.title.toUpperCase()}
 				</Sidebar.GroupLabel>
 				<div class="mb-2">
@@ -85,7 +85,7 @@
 								<Sidebar.MenuItem>
 									<Sidebar.MenuButton
 										isActive={subItem.isActive}
-										class="hover:text-accent text-white active:text-accent hover:bg-transparent active:bg-transparent data-[active=true]:bg-transparent data-[active=true]:font-normal data-[active=true]:text-accent"
+										class="hover:text-accent text-foreground active:text-accent hover:bg-transparent active:bg-transparent data-[active=true]:bg-transparent data-[active=true]:font-normal data-[active=true]:text-accent"
 										onclick={() => {
 											updateIsActive(subItem.url);
 										}}
