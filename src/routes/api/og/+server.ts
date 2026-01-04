@@ -1,18 +1,19 @@
 import satori from 'satori';
 import { html } from 'satori-html';
 import { readFileSync } from 'fs';
-import path from 'path';
-import {Resvg} from '@resvg/resvg-js';
+import { Resvg } from '@resvg/resvg-js';
 
-const font = readFileSync('static/assets/fonts/Inter-Bold.ttf');
+const font = readFileSync(
+  new URL('../../../../static/assets/fonts/Inter-Bold.ttf', import.meta.url)
+);
 
 const logoSvg = readFileSync(
-	path.resolve('static/assets/logo/ori-dark.svg'),
-	'utf-8'
+  new URL('../../../../static/assets/logo/ori-dark.svg', import.meta.url),
+  'utf-8'
 );
 
 const bgBuffer = readFileSync(
-  path.resolve('static/assets/ogBackground.png')
+  new URL('../../../../static/assets/ogBackground.png', import.meta.url)
 );
 const bgBase64 = bgBuffer.toString('base64');
 
