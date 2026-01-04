@@ -1,23 +1,23 @@
 import satori from 'satori';
 import { html } from 'satori-html';
-import { readFileSync } from 'fs';
 import { Resvg } from '@resvg/resvg-js';
 
-const font = readFileSync(
-  new URL('../../../../static/assets/fonts/Inter-Bold.ttf', import.meta.url)
-);
-
-const logoSvg = readFileSync(
-  new URL('../../../../static/assets/logo/ori-dark.svg', import.meta.url),
-  'utf-8'
-);
-
-const bgBuffer = readFileSync(
-  new URL('../../../../static/assets/ogBackground.png', import.meta.url)
-);
-const bgBase64 = bgBuffer.toString('base64');
-
 export const GET = async ({ url }) => {
+    const origin = url.origin;
+
+    const font = await fetch(`${origin}/assets/fonts/Inter-Bold.ttf`)
+    .then(r => r.arrayBuffer())
+    .then(b => Buffer.from(b));
+
+    const logoSvg = await fetch(`${origin}/assets/logo/ori-dark.svg`)
+    .then(r => r.text());
+
+    const bgBuffer = await fetch(`${origin}/assets/ogBackground.png`)
+    .then(r => r.arrayBuffer())
+    .then(b => Buffer.from(b));
+
+    const bgBase64 = bgBuffer.toString('base64');
+
 	const title = url.searchParams.get("title") ?? "Ori UI";
     const description = url.searchParams.get("description") ?? "Svelte Components";
     console.log("Satori start")
@@ -67,7 +67,7 @@ export const GET = async ({ url }) => {
 	return new Response(png, {
 		headers: {
             'Content-Type': 'image/png',
-            'Cache-Control': 'public, max-age=3600'
+            'Cache-Control': 'public, max-age=86400'
         }
 	});
 };
