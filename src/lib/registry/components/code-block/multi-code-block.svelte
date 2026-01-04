@@ -43,7 +43,7 @@
 </script>
 
 <div class={cn('border relative border-border rounded-md overflow-x-hidden', className)}>
-	<div class="flex justify-between items-center bg-muted/30 rounded-t-md pr-4">
+	<div class="flex justify-between items-center bg-muted rounded-t-md pr-4">
 		<div class="flex gap-3">
 			{#each code as lang, index}
 				<button
