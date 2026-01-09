@@ -11,23 +11,6 @@
 	let { children } = $props();
 </script>
 
-<!-- Favicons -->
-<link
-	rel="icon"
-	type="image/svg+xml"
-	href="/assets/logo/ori-dark.svg"
-	media="(prefers-color-scheme: dark)"
-/>
-<link
-	rel="icon"
-	type="image/svg+xml"
-	href="/assets/logo/ori-light.svg"
-	media="(prefers-color-scheme: light)"
-/>
-<link rel="icon" href="/assets/logo/ori-dark.svg" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
 <MetaTags
 	title={siteConfig.name}
 	description={siteConfig.description}
@@ -40,6 +23,47 @@
 		site: '@chiragkun',
 		creator: '@chiragkun'
 	}}
+	additionalMetaTags={[
+		{
+			content: 'width=device-width, initial-scale=1',
+			name: 'viewport'
+		}
+	]}
+	additionalLinkTags={[
+		{
+			rel: 'icon',
+			href: '/favicon.ico'
+		},
+		{
+			rel: 'icon',
+			type: 'image/png',
+			sizes: '32x32',
+			href: '/favicon-32x32.png'
+		},
+		{
+			rel: 'icon',
+			type: 'image/png',
+			sizes: '16x16',
+			href: '/favicon-16x16.png'
+		},
+		{
+			rel: 'apple-touch-icon',
+			sizes: '180x180',
+			href: '/apple-touch-icon.png'
+		},
+		{
+			rel: 'icon',
+			type: 'image/png',
+			sizes: '192x192',
+			href: '/android-chrome-192x192.png'
+		},
+		{
+			rel: 'icon',
+			type: 'image/png',
+			sizes: '512x512',
+			href: '/android-chrome-512x512.png'
+		}
+	]}
 />
 
 <ModeWatcher />
