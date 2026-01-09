@@ -18,6 +18,8 @@
 		"registry:generate": "bun src/lib/scripts/generate-registry.ts"
 	},
 	"devDependencies": {
+		"@fontsource-variable/bitcount-prop-single": "^5.2.2",
+		"@fontsource-variable/geist": "^5.2.8",
 		"@fontsource-variable/outfit": "^5.2.8",
 		"@fontsource-variable/space-grotesk": "^5.2.10",
 		"@fontsource/bbh-sans-bartle": "^5.2.1",

@@ -7,9 +7,13 @@
 
 	import { siteConfig } from "$lib/config/site";
 	import { MetaTags } from "svelte-meta-tags";
+
+	// fonts
 	import '@fontsource-variable/outfit';
 	import '@fontsource/bbh-sans-bartle';
 	import '@fontsource-variable/space-grotesk';
+	import '@fontsource-variable/geist';
+	import '@fontsource-variable/bitcount-prop-single';
 
 	let { children } = $props();
 </script>

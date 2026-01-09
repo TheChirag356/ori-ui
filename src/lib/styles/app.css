@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=BBH+Hegarty&family=Bitcount+Prop+Single:wght@100..900&family=Geist:wght@100..900&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
@@ -37,11 +36,10 @@
   --sidebar-accent-foreground: oklch(0.2101 0.0318 264.6645);
   --sidebar-border: oklch(0.9276 0.0058 264.5313);
   --sidebar-ring: oklch(0.6716 0.1368 48.5130);
-	--font-sans: 'Outfit Variable', 'Geist', sans-serif;
-	--font-serif: 'Bitcount Prop Single', serif;
+	--font-sans: 'Outfit Variable', 'Geist Variable', sans-serif;
+	--font-serif: 'Bitcount Prop Single Variable', serif;
 	--font-mono: 'Space Grotesk Variable', monospace;
   --font-bartle: 'BBH Sans Bartle', system-ui, sans-serif;
-  --font-hegarty: 'BBH Hegarty', system-ui, sans-serif;
   --radius: 0.75rem;
   --shadow-x: 0px;
   --shadow-y: 1px;
