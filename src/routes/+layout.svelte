@@ -19,12 +19,12 @@
 </script>
 
 <MetaTags
-	title={siteConfig.name}
+	title={siteConfig.title}
 	description={siteConfig.description}
 	keywords={siteConfig.keywords}
 	twitter={{
 		cardType: 'summary_large_image',
-		title: siteConfig.name,
+		title: siteConfig.title,
 		description: siteConfig.description,
 		image: siteConfig.ogImage.url,
 		site: '@chiragkun',
