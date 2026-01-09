@@ -37,7 +37,7 @@
 
 	<!-- Arrow -->
 	<span
-		class="relative hidden group-hover:block z-10 opacity-0 translate-x-[-8px] transition-all duration-500 ease-out delay-75 group-hover:opacity-100 group-hover:translate-x-0 text-background"
+		class="relative hidden group-hover:block z-10 opacity-0 -translate-x-2 transition-all duration-500 ease-out delay-75 group-hover:opacity-100 group-hover:translate-x-0 text-background"
 	>
 		<IconArrowRight />
 	</span>

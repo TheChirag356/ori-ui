@@ -16,7 +16,7 @@
 
 <Button
 	class={cn(
-		'rainbow-button relative cursor-pointer overflow-hidden',
+		'rainbow-button relative cursor-pointer overflow-x-hidden',
 		'inline-flex items-center justify-center gap-2 shrink-0',
 		'px-6 py-3 rounded-lg font-medium',
 		'active:scale-[0.98] transition-[transform,colors,shadow] duration-200 ease-in-out',
@@ -64,11 +64,11 @@
 		bottom: -4px;
 		left: 0;
 		right: 0;
-		height: 1px;
+		height: 2px;
 		background: var(--rainbow-gradient);
 		background-size: 200% 100%;
 		animation: rainbow-flow 2s linear infinite;
-		filter: blur(8px);
+		filter: blur(4px);
 		opacity: 0.7;
 	}
 
