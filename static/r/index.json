@@ -12,7 +12,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/copy-button",
+			"documentation": "https://oriui.app/components/copy-button",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "copy-button.json"
@@ -30,7 +30,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/interactive-hover-button",
+			"documentation": "https://oriui.app/components/interactive-hover-button",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "interactive-hover-button.json"
@@ -46,7 +46,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/ios-toggle-button",
+			"documentation": "https://oriui.app/components/ios-toggle-button",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "ios-toggle-button.json"
@@ -66,7 +66,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/liquid-button",
+			"documentation": "https://oriui.app/components/liquid-button",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "liquid-button.json"
@@ -84,7 +84,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/moving-border-button",
+			"documentation": "https://oriui.app/components/moving-border-button",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "moving-border-button.json"
@@ -102,7 +102,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/pulsating-button",
+			"documentation": "https://oriui.app/components/pulsating-button",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "pulsating-button.json"
@@ -120,7 +120,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/rainbow-button",
+			"documentation": "https://oriui.app/components/rainbow-button",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "rainbow-button.json"
@@ -138,7 +138,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/ripple-button",
+			"documentation": "https://oriui.app/components/ripple-button",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "ripple-button.json"
@@ -156,7 +156,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/slide-text-button",
+			"documentation": "https://oriui.app/components/slide-text-button",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "slide-text-button.json"
@@ -174,7 +174,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/code-block",
+			"documentation": "https://oriui.app/components/code-block",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "code-block.json"
@@ -192,7 +192,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/file-upload",
+			"documentation": "https://oriui.app/components/file-upload",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "file-upload.json"
@@ -208,7 +208,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/glare-hover",
+			"documentation": "https://oriui.app/components/glare-hover",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "glare-hover.json"
@@ -224,7 +224,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/marquee",
+			"documentation": "https://oriui.app/components/marquee",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "marquee.json"
@@ -240,7 +240,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/morphic-navbar",
+			"documentation": "https://oriui.app/components/morphic-navbar",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "morphic-navbar.json"
@@ -259,7 +259,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/pdf-viewer",
+			"documentation": "https://oriui.app/components/pdf-viewer",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "pdf-viewer.json"
@@ -275,7 +275,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/blur-text",
+			"documentation": "https://oriui.app/components/blur-text",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "blur-text.json"
@@ -291,7 +291,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/spinning-text",
+			"documentation": "https://oriui.app/components/spinning-text",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "spinning-text.json"
@@ -309,7 +309,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/split-text",
+			"documentation": "https://oriui.app/components/split-text",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "split-text.json"
@@ -327,7 +327,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/text-highlighter",
+			"documentation": "https://oriui.app/components/text-highlighter",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "text-highlighter.json"
@@ -343,7 +343,7 @@
 		"meta": {
 			"author": "TheChirag356",
 			"version": "1.0.0",
-			"documentation": "https://www.oriui.app/components/word-rotate",
+			"documentation": "https://oriui.app/components/word-rotate",
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "word-rotate.json"
