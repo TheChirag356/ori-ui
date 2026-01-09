@@ -5,18 +5,8 @@ description: Learn how to get started using Ori in your app.
 
 <script>
     import { MultiCodeBlock } from "$lib/registry/components/code-block";
-    let installation = [
-        {
-            name: "bun",
-            text: "bun x shadcn-svelte@latest add ori-ui",
-            lang: "bash"
-        },
-        {
-            name: "pnpm",
-            text: "pnpm add shadcn-svelte@latest add ori-ui",
-            lang: "bash"
-        }
-    ]
+    import { multiInstallScriptUtil } from "$lib/utils";
+    const scripts = multiInstallScriptUtil("{component-name}");
 </script>
 
 Welcome to Ori UI — a collection of reusable Svelte 5 components designed for flexibility, accessibility, and a smooth developer experience. This guide will help you quickly integrate Ori UI into your project.
@@ -25,7 +15,7 @@ Welcome to Ori UI — a collection of reusable Svelte 5 components designed for 
 
 Install Ori UI using your preferred package manager:
 
-<MultiCodeBlock code={installation} />
+<MultiCodeBlock code={scripts} />
 
 This command will scaffold the components directly into your project, allowing you to customize, modify, and extend them however you like.
 
