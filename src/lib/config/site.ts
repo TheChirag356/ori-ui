@@ -1,6 +1,6 @@
 export const siteConfig = {
     name: "Ori UI",
-    url: "https://www.oriui.app",
+    url: "https://oriui.app",
     description: "Free and open-source animated components and effects built with Svelte, Typescript, Tailwind CSS, and Animejs. Perfect companion for svelte-shadcn/ui.",
     version: "1.0.0",
     ogImage: {
