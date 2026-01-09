@@ -18,6 +18,9 @@
 		"registry:generate": "bun src/lib/scripts/generate-registry.ts"
 	},
 	"devDependencies": {
+		"@fontsource-variable/outfit": "^5.2.8",
+		"@fontsource-variable/space-grotesk": "^5.2.10",
+		"@fontsource/bbh-sans-bartle": "^5.2.1",
 		"@lucide/svelte": "^0.544.0",
 		"@sveltejs/adapter-auto": "^7.0.0",
 		"@sveltejs/kit": "^2.48.5",

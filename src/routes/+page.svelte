@@ -42,7 +42,7 @@
 	}}
 />
 
-<div class="h-[85vh] w-full flex flex-col justify-between relative bg-background">
+<main class="h-[85vh] w-full flex flex-col justify-between relative bg-background">
 	{#if mounted}
 		<div
 			class="h-full z-10 relative mx-auto font-sans text-center items-center justify-center flex flex-col"
@@ -115,4 +115,4 @@
 			</div>
 		</div>
 	{/if}
-</div>
+</main>

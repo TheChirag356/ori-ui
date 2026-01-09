@@ -66,10 +66,18 @@
 					>
 				{/each}
 			</nav>
-			<div class="ms-auto flex items-center gap-2 md:flex-1 md:justify-end divide-x">
-				<Button href="https://github.com/TheChirag356/ori-ui" target="_blank" variant="ghost"
-					><IconBrandGithub /></Button
-				>{stargazersCount}
+			<div class="ms-auto flex items-center gap-1 md:flex-1 md:justify-end divide-x">
+				<Button
+					href="https://github.com/TheChirag356/ori-ui"
+					aria-label="Open ori-ui GitHub repository (opens in a new tab)"
+					target="_blank"
+					rel="noopener noreferrer"
+					variant="ghost"
+					class="p-2"
+				>
+					<IconBrandGithub />
+				</Button>
+				{stargazersCount}
 			</div>
 			<ModeToggle />
 		</div>
