@@ -14,70 +14,58 @@
 	}: RainbowButtonProps = $props();
 </script>
 
-<Button
-	class={cn(
-		'rainbow-button relative cursor-pointer overflow-x-hidden',
-		'inline-flex items-center justify-center gap-2 shrink-0',
-		'px-6 py-3 rounded-lg font-medium',
-		'active:scale-[0.98] transition-[transform,colors,shadow] duration-200 ease-in-out',
-		className
-	)}
-	{...restProps}
->
-	{@render children?.()}
+<div class="rainbow-wrapper relative inline-block rounded-lg">
+	<div class="relative overflow-x-hidden rounded-lg">
+		<Button
+			class={cn(
+				'rainbow-button relative cursor-pointer',
+				'inline-flex items-center justify-center gap-2 shrink-0',
+				'px-6 py-3 rounded-lg font-medium',
+				'active:scale-[0.98] transition-[transform,colors,shadow] duration-200 ease-in-out',
+				className
+			)}
+			{...restProps}
+		>
+			{@render children?.()}
+		</Button>
 
-	<!-- Rainbow border at the bottom -->
-	<span class="rainbow-border"></span>
-</Button>
+		<!-- Border -->
+		<span class="rainbow-border absolute left-0 right-0 bottom-0 h-px pointer-events-none"></span>
+	</div>
+
+	<!-- Glow (not clipped vertically) -->
+	<span class="rainbow-glow absolute left-0 right-0 -bottom-1 h-px pointer-events-none"></span>
+</div>
 
 <style>
-	:global(.rainbow-button) {
-		--rainbow-gradient: linear-gradient(
-			90deg,
-			#ff0000,
-			#ff7f00,
-			#ffff00,
-			#00ff00,
-			#0000ff,
-			#4b0082,
-			#9400d3,
-			#ff0000
-		);
-	}
+:global(.rainbow-wrapper) {
+	--rainbow-gradient: linear-gradient(
+		90deg,
+		#ff0000,
+		#ff7f00,
+		#ffff00,
+		#00ff00,
+		#0000ff,
+		#4b0082,
+		#9400d3,
+		#ff0000
+	);
+}
 
-	.rainbow-border {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		height: 1px;
-		background: var(--rainbow-gradient);
-		background-size: 200% 100%;
-		animation: rainbow-flow 2s linear infinite;
-		border-radius: 0 0 0.5rem 0.5rem;
-	}
+.rainbow-border,
+.rainbow-glow {
+	background: var(--rainbow-gradient);
+	background-size: 200% 100%;
+	animation: rainbow-flow 2s linear infinite;
+}
 
-	/* Glow effect underneath */
-	.rainbow-border::after {
-		content: '';
-		position: absolute;
-		bottom: -4px;
-		left: 0;
-		right: 0;
-		height: 2px;
-		background: var(--rainbow-gradient);
-		background-size: 200% 100%;
-		animation: rainbow-flow 2s linear infinite;
-		filter: blur(4px);
-		opacity: 0.7;
-	}
+.rainbow-glow {
+	filter: blur(6px);
+	opacity: 0.7;
+}
 
-	@keyframes rainbow-flow {
-		0% {
-			background-position: 0% 50%;
-		}
-		100% {
-			background-position: 200% 50%;
-		}
-	}
+@keyframes rainbow-flow {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 200% 50%; }
+}
 </style>

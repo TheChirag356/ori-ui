@@ -463,6 +463,35 @@
       }
     },
     {
+      "name": "count-animation",
+      "type": "registry:block",
+      "title": "Count Animation",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "src/lib/registry/text-animations/count-animation/count.svelte.ts",
+          "type": "registry:file",
+          "target": "ori/count-animation/count.svelte.ts"
+        },
+        {
+          "path": "src/lib/registry/text-animations/count-animation/index.ts",
+          "type": "registry:file",
+          "target": "ori/count-animation/index.ts"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://oriui.app/components/count-animation",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
       "name": "spinning-text",
       "type": "registry:block",
       "title": "Spinning Text",

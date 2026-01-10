@@ -1,0 +1,29 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "count-animation",
+	"title": "Count Animation",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"dependencies": [
+		"motion"
+	],
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://oriui.app/components/count-animation",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "import type { Action } from \"svelte/action\";\r\nimport { animate, type AnimationOptions } from \"motion\";\r\n\r\nexport type CountAnimationOptions = AnimationOptions & {\r\n    to: Number,\r\n    onUpdate?: (latest: string) => void\r\n}\r\n\r\nexport const countanimation: Action = (node: HTMLElement, data: CountAnimationOptions = { from: 0, to: 100, duration: 2 }) => {\r\n\r\n    const x = data.from;\r\n    const y = data.to;\r\n    \r\n    $effect(() => {\r\n        const animation = animate(x, y, {\r\n            onUpdate: latest => node.innerHTML = `${Math.round(Number(latest))}`,\r\n            ...data\r\n        })\r\n\r\n        return () => animation.stop();\r\n    })\r\n}",
+			"type": "registry:file",
+			"target": "ori/count-animation/count.svelte.ts"
+		},
+		{
+			"content": "import { countanimation } from \"./count.svelte\";\r\n\r\nexport { countanimation };",
+			"type": "registry:file",
+			"target": "ori/count-animation/index.ts"
+		}
+	]
+}
