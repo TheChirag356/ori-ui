@@ -21,6 +21,7 @@ async function highlighter(code, lang = "javascript") {
         {
             lang,
             themes: {dark: 'vitesse-dark', light: 'vitesse-light'},
+            defaultColor: false,
             wrap: true,
         })
     )

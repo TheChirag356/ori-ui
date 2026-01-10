@@ -2,7 +2,7 @@
 
 .markdown code:not(pre > code):not(.custom) {
 	/* @apply bg-muted text-foreground relative rounded px-[0.375rem] py-[0.125rem] font-mono text-sm font-semibold; */
-	@apply font-mono dark:text-[#fdffa4] text-[#0040A7] mx-[0.1em];
+	@apply font-mono mx-[0.1em];
 }
 
 .markdown h1 code,
@@ -38,7 +38,7 @@
 	@apply relative;
 
 	& pre {
-		@apply rounded-lg mb-4 mt-6 w-full overflow-x-auto py-5 text-sm font-semibold;
+		@apply rounded-lg mb-4 mt-6 w-full overflow-x-auto py-5 text-sm;
 	}
 
 	& pre[data-metadata] {
@@ -110,16 +110,20 @@
 	@apply mb-0!;
 }
 
-code[data-theme*=" "],
-code[data-theme*=" "] span {
+code[data-theme*=" "] {
 	color: var(--shiki-light);
 	background-color: var(--shiki-light-bg);
 }
+.shiki span {
+	color: var(--shiki-light);
+}
 
 .dark {
-	& code[data-theme*=" "],
-	code[data-theme*=" "] span {
+	& code[data-theme*=" "] {
 		color: var(--shiki-dark);
 		background-color: var(--shiki-dark-bg);
 	}
+}
+.dark .shiki span {
+	color: var(--shiki-dark);
 }
