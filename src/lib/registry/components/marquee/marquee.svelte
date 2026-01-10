@@ -15,7 +15,7 @@
     vertical = false,
     repeat = 4,
     reverse = false,
-    class: _class = "",
+    class: className = "",
     children,
   }: MarqueeProps = $props();
 </script>
@@ -27,7 +27,7 @@
       "flex-row": !vertical,
       "flex-col": vertical,
     },
-    _class
+    className
   )}
 >
   {#each { length: repeat } as _, i (i)}
@@ -35,7 +35,7 @@
       class={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
         "animate-marquee flex-row": !vertical,
         "animate-marquee-vertical flex-col": vertical,
-        "group-hover:[animation-play-state:paused]": pauseOnHover,
+        "group-hover:paused": pauseOnHover,
         "[animation-direction:reverse]": reverse,
       })}
     >
