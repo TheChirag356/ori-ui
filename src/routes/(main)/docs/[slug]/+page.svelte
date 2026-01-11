@@ -3,7 +3,8 @@
 	let { data } = $props();
 	import * as Sidebar from '$lib/components/ui/sidebar';
 	import { MetaTags } from 'svelte-meta-tags';
-	
+	import DocsToc from "$lib/components/docs-toc.svelte"
+
     const Content = $derived(data?.content);
 </script>
 
@@ -29,14 +30,27 @@
 	<Sidebar.Trigger class="mt-4" />
 </div>
 {#key data?.meta.title}
-	<article class="max-w-3xl mx-auto">
-		<hgroup class="mt-8">
-			<h1 class="text-5xl font-sans font-semibold">{data?.meta.title}</h1>
-			{#if data?.meta.description}
-				<p class="text-lg mb-4 mt-1 text-foreground/50 font-serif">{data?.meta.description}</p>
-			{/if}
-		</hgroup>
-		<hr />
-		<Content />
-	</article>
+	<div class="w-full">
+		<div class="flex max-w-7xl mx-auto gap-8 px-4">
+			<article class="flex-1 max-w-5xl">
+				<hgroup class="mt-8">
+					<h1 class="text-5xl font-sans font-semibold">{data?.meta.title}</h1>
+					{#if data?.meta.description}
+						<p class="text-lg mb-4 mt-1 text-foreground/50 font-serif">
+							{data?.meta.description}
+						</p>
+					{/if}
+				</hgroup>
+				<hr />
+				<Content />
+			</article>
+
+			<!-- Right TOC -->
+			<aside class="hidden xl:block min-w-46 shrink-0">
+				<div class="sticky top-24">
+					<DocsToc toc={data.toc} />
+				</div>
+			</aside>
+		</div>
+	</div>
 {/key}

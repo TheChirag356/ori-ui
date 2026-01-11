@@ -2,6 +2,7 @@ import { escapeSvelte } from "mdsvex";
 import { bundledLanguages, bundledThemes, createHighlighter } from "shiki"
 import remarkToc from "remark-toc";
 import rehypeSlug from "rehype-slug";
+import { remarkExtractToc } from "./src/lib/remark-toc-extract.ts";
 
 
 import { join, dirname } from 'path';
@@ -37,7 +38,7 @@ export const mdsvexOptions = {
     highlight: {
         highlighter
     },
-    remarkPlugins: [remarkToc],
+    remarkPlugins: [remarkToc, remarkExtractToc],
     rehypePlugins: [rehypeSlug],
     smartypants: true
 }

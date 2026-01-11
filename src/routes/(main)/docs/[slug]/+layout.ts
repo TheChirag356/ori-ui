@@ -13,5 +13,6 @@ export async function load({ params }) {
     return {
         content: newDoc.default,
         meta: newDoc.metadata,
+        toc: newDoc.metadata.toc
     };
 }

@@ -13,6 +13,7 @@ export async function load({ params }) {
     return {
         content: newComponent.default,
         meta: newComponent.metadata,
+        toc: newComponent.metadata.toc
     };
 }
 

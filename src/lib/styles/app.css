@@ -183,6 +183,9 @@ body {
 	* {
 		@apply border-border outline-ring/50;
 	}
+  html {
+    scroll-behavior: smooth;
+  }
 	body {
 		letter-spacing: var(--tracking-normal);
 		@apply bg-background text-foreground;
