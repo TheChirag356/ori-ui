@@ -7,7 +7,7 @@
 <CopyButton
 	content={code}
 	class={cn(
-		'absolute z-10 right-0 top-0 px-1 rounded-md cursor-pointer text-sm',
+		'absolute backdrop-blur-lg z-10 ml-auto top-0 right-0 px-1 rounded-md cursor-pointer text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300',
 		className
 	)}
 	variant="ghost"
