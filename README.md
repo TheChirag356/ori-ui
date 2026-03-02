@@ -10,14 +10,11 @@
   </p>
 
   <p align="center">
-    <a href="https://ori-ui.vercel.app/docs"><strong>Explore Documentation »</strong></a>
-    <br />
-    <br />
     <a href="https://madewithsvelte.com/p/ori-ui-for-svelte/shield-link">
       <img src="https://madewithsvelte.com/storage/repo-shields/6173-shield.svg" alt="Made With Svelte">
     </a>
-    <img src="https://img.shields.io/github/license/your-username/ori-ui?color=orange&style=flat-square" alt="License">
-    <img src="https://img.shields.io/github/stars/your-username/ori-ui?color=ff3e00&style=flat-square" alt="Stars">
+    <img src="https://img.shields.io/github/license/TheChirag356/ori-ui?color=orange&style=flat-square" alt="License">
+    <img src="https://img.shields.io/github/stars/TheChirag356/ori-ui?color=orange&style=flat-square" alt="Stars">
   </p>
 </div>
 
