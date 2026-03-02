@@ -4,6 +4,7 @@
 	import { Button } from './ui/button';
 	import { IconBrandGithub } from '@tabler/icons-svelte';
 	import { onMount } from 'svelte';
+	import Search from '$lib/components/search.svelte';
 
 	let stargazersCount = $state(0);
 	const CACHE_KEY = 'ORI-UI-GITHUB-STARS';
@@ -67,6 +68,7 @@
 				{/each}
 			</nav>
 			<div class="ms-auto flex items-center gap-1 md:flex-1 md:justify-end divide-x">
+				<Search />
 				<Button
 					href="https://github.com/TheChirag356/ori-ui"
 					aria-label="Open ori-ui GitHub repository (opens in a new tab)"
