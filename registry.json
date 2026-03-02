@@ -441,6 +441,33 @@
       }
     },
     {
+      "name": "ribbon",
+      "type": "registry:block",
+      "title": "Ribbon",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/components/ribbon/index.ts",
+          "type": "registry:file",
+          "target": "ori/ribbon/index.ts"
+        },
+        {
+          "path": "src/lib/registry/components/ribbon/ribbon.svelte",
+          "type": "registry:file",
+          "target": "ori/ribbon/ribbon.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://oriui.app/components/ribbon",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
       "name": "animate-text",
       "type": "registry:block",
       "title": "Animate Text",
