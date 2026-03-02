@@ -1,4 +1,7 @@
-# Ori UI
+<div class="flex flex-col justify-center items-center">
+<h1>Ori UI</h1>
+[![MadeWithSvelte.com shield](https://madewithsvelte.com/storage/repo-shields/6173-shield.svg)](https://madewithsvelte.com/p/ori-ui-for-svelte/shield-link)
+</div>
 
 ## ![Og Image](/static/assets/ogImage.png)
 
