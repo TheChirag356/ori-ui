@@ -13,12 +13,16 @@
   }
   import { SidebarComponentData } from "$lib/data/sidebar-component-data.generated";
 
-  const documentations = SidebarComponentData[0].items.map((item) => ({
+  const documentations = [
+    { title: "Introduction", href: "/docs/introduction" },
+    { title: "Installation", href: "/docs/installation" },
+  ];
+  const components = SidebarComponentData[0].items.map((item) => ({
     title: item.title,
     href: item.url,
   }));
 
-  const components = SidebarComponentData[1].items.map((item) => ({
+  const buttons = SidebarComponentData[1].items.map((item) => ({
     title: item.title,
     href: item.url,
   }));
@@ -58,9 +62,9 @@
     </Command.Group>
     
     <Command.Group heading="Documentation">
-      {#each documentations as page}
-        <Command.Item onSelect={() => navigate(page.href)}>
-          <span>{page.title}</span>
+      {#each documentations as docs}
+        <Command.Item onSelect={() => navigate(docs.href)}>
+          <span>{docs.title}</span>
         </Command.Item>
       {/each}
     </Command.Group>
@@ -71,6 +75,16 @@
       {#each components as comp}
         <Command.Item onSelect={() => navigate(comp.href)}>
           <span>{comp.title}</span>
+        </Command.Item>
+      {/each}
+    </Command.Group>
+
+    <Command.Separator />
+
+    <Command.Group heading="Buttons">
+      {#each buttons as button}
+        <Command.Item onSelect={() => navigate(button.href)}>
+          <span>{button.title}</span>
         </Command.Item>
       {/each}
     </Command.Group>
