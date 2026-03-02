@@ -31,10 +31,10 @@
 </div>
 {#key data?.meta.title}
 	<div class="w-full">
-		<div class="flex max-w-7xl mx-auto gap-8 px-4">
-			<article class="max-w-3xl mx-auto">
+		<div class="flex flex-col lg:flex-row max-w-7xl mx-auto gap-8 px-4">
+			<article class="w-full lg:max-w-3xl lg:mx-auto">
 				<hgroup class="mt-8">
-					<h1 class="text-5xl font-sans font-semibold">{data?.meta.title}</h1>
+					<h1 class="text-3xl sm:text-4xl md:text-5xl font-sans font-semibold">{data?.meta.title}</h1>
 					{#if data?.meta.description}
 						<p class="text-lg mb-4 mt-1 text-foreground/50 font-serif">{data?.meta.description}</p>
 					{/if}
