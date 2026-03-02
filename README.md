@@ -22,13 +22,25 @@
 
 ## ✨ Features
 
-Ori UI allows you to grab the most trending web components and drop them straight into your Svelte projects.
+Ori UI provides production-ready Svelte components designed for real-world projects — clean code, minimal overhead, and easy customization.
 
-* 🚀 **Copy & Paste:** No heavy library to install. Just take the code you need.
-* 🎨 **Modern Design:** Heavily inspired by the "Linear" and "Dark Mode" aesthetic.
-* ⚡ **Svelte Native:** Optimized for Svelte and SvelteKit performance.
-* 🧩 **Tailwind Powered:** Easy to customize using the utility classes you already know.
+- 🚀 **Copy & Paste**  
+  No npm installs or bundled UI libraries. Grab the component code, drop it into your project, and ship.
 
+- ⚡ **Svelte & SvelteKit First**  
+  Built specifically for Svelte’s reactivity model and optimized for SvelteKit apps.
+
+- 🧩 **Tailwind Native**  
+  Styled entirely with Tailwind CSS — no custom styling systems to learn or override.
+
+- 🛠 **Readable, Maintainable Code**  
+  Components are structured for clarity, making them easy to extend, refactor, or adapt to your architecture.
+
+- 🌙 **Dark Mode by Default**  
+  Designed with modern dark interfaces in mind, with clean contrast and consistent spacing.
+
+- 🎨 **Animation**
+    The animations or transitions are svelte/transition first. This means that you can easily customize the animations using svelte's built-in transition functions or by creating your own custom transitions.
 ## 📖 Documentation
 
 Visit our official site for full installation guides and interactive previews:
