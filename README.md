@@ -1,6 +1,5 @@
 <div class="flex flex-col justify-center items-center">
 <h1>Ori UI</h1>
-[![MadeWithSvelte.com shield](https://madewithsvelte.com/storage/repo-shields/6173-shield.svg)](https://madewithsvelte.com/p/ori-ui-for-svelte/shield-link)
 <a href="https://madewithsvelte.com/p/ori-ui-for-svelte/shield-link">
     <img src="https://madewithsvelte.com/storage/repo-shields/6173-shield.svg" alt="Made With Svelte">
   </a>
