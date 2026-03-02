@@ -1,0 +1,1 @@
+export { default as Ribbon, type RibbonType } from './ribbon.svelte';
