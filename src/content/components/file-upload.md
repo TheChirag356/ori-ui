@@ -23,7 +23,7 @@ description: A minimal file upload form with background grid, drag and drop, and
 ### Usage
 
 ```js
-import FileUpload from '$lib/registry/components/file-upload/file-upload.svelte';
+import { FileUpload } from '$lib/components/ori/file-upload';
 ```
 
 ```svelte
@@ -32,11 +32,18 @@ import FileUpload from '$lib/registry/components/file-upload/file-upload.svelte'
 
 ### Props
 
-| Prop      | Type           | Default    | Description                                       |
-| --------- | -------------- | ---------- | ------------------------------------------------- |
-| mainText  | string         | 'Click Me' | The main text displayed on the button             |
-| slideText | string         | 'Slide Me' | The text that appears on hover with slide effect  |
-| class     | string         | ''         | Additional CSS classes for custom styling         |
-| duration  | number         | 300        | Duration of the slide animation in milliseconds   |
-| delay     | number         | 0          | Delay before the animation starts in milliseconds |
-| easing    | EasingFunction | undefined  | Easing function for the animation                 |
+| Prop         | Type                      | Default                                                            | Description                                                                                                                           |
+| ------------ | ------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| class        | `string`                  | ''                                                                 | Additional CSS classes for custom styling                                                                                             |
+| accept       | `string`                  | 'image/jpeg,image/png,image/gif'                                   | The accepted file types                                                                                                               |
+| multiple     | `boolean`                 | true                                                               | Whether multiple files can be uploaded                                                                                                |
+| onFileChange | `(files: File[]) => void` | undefined                                                          | Callback function that is called when files are changed                                                                               |
+| description  | `string`                  | 'You can upload 4 files. Each up to 2MB. Accepted JPEG, PNG, GIF.' | Description of the file upload component. It can be a string or an object with `fileTypes`, `maxFileSize`, and `maxFiles` properties. |
+
+#### Description Props
+
+| Prop        | Type     | Default                          | Description                 |
+| ----------- | -------- | -------------------------------- | --------------------------- |
+| fileTypes   | `string` | 'image/jpeg,image/png,image/gif' | The accepted file types     | 
+| maxFileSize | `string` | '2MB'                            | The maximum file size       |
+| maxFiles    | `number` | 4                                | The maximum number of files |

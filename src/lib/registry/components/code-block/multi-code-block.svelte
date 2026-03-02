@@ -13,11 +13,13 @@
 	interface CodeBlockProps {
 		class?: string;
 		code?: Code[];
+		theme: 'vitesse-dark'
 	}
 
 	let {
 		class: className = "",
-		code = []
+		code = [],
+		theme: codeTheme
 	}: CodeBlockProps = $props();
 	
 	// holds generated HTML
@@ -35,7 +37,7 @@
 	async function updateCode(code: Code) {
 		const newCode = await codeToHtml(code.text, {
 			lang: code.lang,
-			theme: 'vitesse-dark'
+			theme: codeTheme
 		})
 		const match = newCode.match(/<code[^>]*>[\s\S]*?<\/code>/); // strips the surrounding <pre> tags
 		return match?.[0] ?? newCode;

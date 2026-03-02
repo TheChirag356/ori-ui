@@ -1,0 +1,1 @@
+export { default as GlareHover } from "./glare-hover.svelte";

@@ -1,9 +1,9 @@
 ---
 title: Introduction
-description: A Shadcn based UI Library for Svelte.
+description: A Shadcn-based UI library for Svelte.
 ---
 
-Ori UI is a collection of re-usable components that you can copy and paste into your web apps. It focuses on components, blocks, and templates that help you build landing pages, marketing sites, and polished user-facing interfaces quickly.
+Ori UI is a collection of reusable components you can copy and paste into your web apps. It focuses on components, blocks, and templates that help you build landing pages, marketing sites, and polished user-facing interfaces quickly.
 
 It is built on top of [shadcn-svelte](https://shadcn-svelte.com).
 
@@ -23,42 +23,38 @@ It is built on top of [shadcn-svelte](https://shadcn-svelte.com).
   class="h-full w-full mt-16 -mb-6 rounded-xl md:rounded-2xl border" 
 />
 
-### Building for Developer Experience
+### Built for Developer Experience
 
-Every API in Ori UI is designed to be predictable and ergonomic, helping you stay in flow while shipping fast:
+Every API in Ori UI is designed to be predictable, ergonomic, and easy to work with, so you can stay in flow and ship faster.
 
-- Full TypeScript coverage
+- Full TypeScript support
 - Stable and intuitive component APIs
 - Flexible event override system
-- Great defaults with easy extensibility
-- Clear documentation and practical examples
-
-<!-- <img
-  src="/img/accessibility.png"
-  alt="Illustration representing accessibility features, including keyboard navigation and screen reader support."
-  class="h-full w-full mt-16 -mb-6 rounded-xl md:rounded-2xl border"
-/> -->
+- Great defaults with simple extensibility
+- Clear documentation with real-world examples
 
 ### Production-Ready Accessibility
 
-Accessibility is deeply integrated into every component — not added as an afterthought:
+Accessibility is not an afterthought. It is deeply integrated into every component.
 
 - WAI-ARIA compliant behavior
-- Keyboard navigation built-in
+- Built-in keyboard navigation
 - Automatic focus management
-- Robust screen reader support
+- Strong screen reader support
 
 ## Community
 
 Ori UI is built and maintained by [Chirag Arora](https://x.com/chiragkun).  
 Contributions, issues, and feedback are always welcome.
 
-Found an issue? [Open one](https://github.com/TheChirag356/ori-ui/issues/new).  
-Have a feature request? [Let's discuss](https://github.com/TheChirag356/ori-ui/discussions/new?category=feature-requests-ideas)
+Found a bug? [Open an issue](https://github.com/TheChirag356/ori-ui/issues/new).  
+Have a feature request? [Start a discussion](https://github.com/TheChirag356/ori-ui/discussions/new?category=feature-requests-ideas).
 
 ## Acknowledgments
 
-Built on the shoulders of giants:
+Ori UI is inspired by the following React-based UI libraries:
 
-- [Aceternity UI](https://ui.aceternity.com) — inspired the internal architecture
-- [Magic UI](https://magicui.design) — inspired the component designs
+- [Aceternity UI](https://ui.aceternity.com)
+- [Magic UI](https://magicui.design)
+- [Kokonut UI](https://kokonutui.com/)
+- [Vengeance UI](https://vengeance-ui-xfq9.vercel.app/)

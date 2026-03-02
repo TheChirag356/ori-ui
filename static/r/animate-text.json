@@ -1,0 +1,29 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "animate-text",
+	"title": "Animate Text",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"dependencies": [
+		"motion"
+	],
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://oriui.app/components/animate-text",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "import type { Action } from \"svelte/action\";\r\nimport { animate, stagger, inView, type AnimationOptions } from \"motion\";\r\n\r\ntype Props = AnimationOptions & {\r\n  by: \"character\" | \"word\";\r\n  once?: boolean;\r\n  stagger?: number;\r\n};\r\n\r\nexport const blurIn: Action<HTMLElement, Props> = (\r\n  node,\r\n  data: Props = { by: \"word\", once: false }\r\n) => {\r\n  let controls: any[] = [];\r\n  let stopInView: (() => void) | null = null;\r\n  const originalHTML = node.innerHTML;\r\n\r\n  function splitText() {\r\n    const text = node.textContent ?? \"\";\r\n    const by = data?.by ?? \"character\";\r\n\r\n    let parts: string[] = [];\r\n\r\n    if (by === \"word\") {\r\n      parts = text.split(/(\\s+)/);\r\n    } else {\r\n      parts = [...text];\r\n    }\r\n\r\n    node.innerHTML = parts\r\n      .map((part) =>\r\n        part.trim()\r\n          ? `<span style=\"display:inline-block; will-change: filter, opacity, transform;\">${part}</span>`\r\n          : part\r\n      )\r\n      .join(\"\");\r\n  }\r\n\r\n  function animateIn() {\r\n    const spans = Array.from(node.querySelectorAll(\"span\"));\r\n\r\n    controls = spans.map((el, i) =>\r\n      animate(\r\n        el,\r\n        {\r\n          opacity: [0, 1],\r\n          filter: [\"blur(8px)\", \"blur(0px)\"],\r\n          transform: [\"translateY(8px)\", \"translateY(0px)\"]\r\n        },\r\n        {\r\n            delay: stagger(data?.stagger) ?? 0,\r\n            ...data\r\n        }\r\n      )\r\n    );\r\n  }\r\n\r\n  function setup() {\r\n    stopInView?.();\r\n    controls.forEach((c) => c.stop());\r\n    controls = [];\r\n\r\n    node.innerHTML = originalHTML;\r\n    splitText();\r\n\r\n    stopInView = inView(node, () => {\r\n      animateIn();\r\n\r\n      if (data?.once) {\r\n        stopInView?.();\r\n      }\r\n    });\r\n  }\r\n\r\n  setup();\r\n\r\n  return {\r\n    update(newData) {\r\n      data = newData;\r\n      setup();\r\n    },\r\n    destroy() {\r\n      controls.forEach((c) => c.stop());\r\n      stopInView?.();\r\n      node.innerHTML = originalHTML;\r\n    }\r\n  };\r\n};\r\n",
+			"type": "registry:file",
+			"target": "ori/animate-text/blurIn.svelte.ts"
+		},
+		{
+			"content": "import { blurIn } from \"./blurIn.svelte\"\r\n\r\nexport { blurIn }",
+			"type": "registry:file",
+			"target": "ori/animate-text/index.ts"
+		}
+	]
+}

@@ -23,8 +23,8 @@ This command will scaffold the components directly into your project, allowing y
 
 If you have questions or need help, the Ori UI community is here to support you:
 
-- Found a bug? Please [open an issue](https://github.com/chiragkun/ori-ui/issues/new) on GitHub.
-- Have a question or need guidance? Start a conversation in the GitHub [discussions](https://github.com/chiragkun/ori-ui/discussions) section.
-- Have a feature request or idea? Share it in the [feature requests category](https://github.com/chiragkun/ori-ui/discussions).
+- Found a bug? Please [open an issue](https://github.com/TheChirag356/ori-ui/issues/new) on GitHub.
+- Have a question or need guidance? Start a conversation in the GitHub [discussions](https://github.com/TheChirag356/ori-ui/discussions) section.
+- Have a feature request or idea? Share it in the [feature requests category](https://github.com/TheChirag356/ori-ui/discussions).
 
 Your feedback, ideas, and contributions help shape the future of Ori UI.
