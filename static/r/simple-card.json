@@ -1,0 +1,29 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "simple-card",
+	"title": "Simple Card",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"registryDependencies": [
+		"card"
+	],
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://oriui.app/components/simple-card",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "export { default as SimpleCard } from \"./simple-card.svelte\";",
+			"type": "registry:file",
+			"target": "ori/simple-card/index.ts"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { Card, CardContent } from \"$COMPONENTS$/ui/card\";\r\n\timport type { Snippet } from \"svelte\";\r\n\r\n\tlet {\r\n\t\tclass: className,\r\n\t\theadingTop,\r\n\t\theadingBottom,\r\n\t\tbody\r\n\t}: {\r\n\t\tclass?: string;\r\n\t\theadingTop?: Snippet;\r\n\t\theadingBottom?: Snippet;\r\n\t\tbody?: Snippet;\r\n\t} = $props();\r\n</script>\r\n\r\n<Card class={`rounded-lg border border-zinc-800/60 p-4 ${className ?? ''}`}>\r\n\t<CardContent class=\"p-0 flex flex-col h-full\">\r\n\t\t<div class=\"text-foreground mb-0.5\">\r\n\t\t\t{@render headingTop?.()}\r\n\t\t</div>\r\n\r\n\t\t<div class=\"grow bg-[#0e0e0f] rounded-md mb-2 relative overflow-hidden\">\r\n\t\t\t{@render body?.()}\r\n\t\t</div>\r\n\r\n\t\t<div class=\"text-foreground/80 font-extralight text-sm w-full\">\r\n\t\t\t{@render headingBottom?.()}\r\n\t\t</div>\r\n\t</CardContent>\r\n</Card>\r\n",
+			"type": "registry:file",
+			"target": "ori/simple-card/simple-card.svelte"
+		}
+	]
+}

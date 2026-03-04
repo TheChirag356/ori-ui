@@ -272,6 +272,33 @@
       }
     },
     {
+      "name": "browser-window",
+      "type": "registry:block",
+      "title": "Browser Window",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/components/browser-window/browser-window.svelte",
+          "type": "registry:file",
+          "target": "ori/browser-window/browser-window.svelte"
+        },
+        {
+          "path": "src/lib/registry/components/browser-window/index.ts",
+          "type": "registry:file",
+          "target": "ori/browser-window/index.ts"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://oriui.app/components/browser-window",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
       "name": "code-block",
       "type": "registry:block",
       "title": "Code Block",
@@ -377,6 +404,33 @@
         "author": "TheChirag356",
         "version": "1.0.0",
         "documentation": "https://oriui.app/components/glare-hover",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "lamp",
+      "type": "registry:block",
+      "title": "Lamp",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/components/lamp/index.ts",
+          "type": "registry:file",
+          "target": "ori/lamp/index.ts"
+        },
+        {
+          "path": "src/lib/registry/components/lamp/lamp.svelte",
+          "type": "registry:file",
+          "target": "ori/lamp/lamp.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://oriui.app/components/lamp",
         "repository": "https://github.com/TheChirag356/ori-ui"
       }
     },
@@ -495,6 +549,35 @@
         "author": "TheChirag356",
         "version": "1.0.0",
         "documentation": "https://oriui.app/components/ribbon",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "simple-card",
+      "type": "registry:block",
+      "title": "Simple Card",
+      "description": "",
+      "registryDependencies": [
+        "card"
+      ],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/components/simple-card/index.ts",
+          "type": "registry:file",
+          "target": "ori/simple-card/index.ts"
+        },
+        {
+          "path": "src/lib/registry/components/simple-card/simple-card.svelte",
+          "type": "registry:file",
+          "target": "ori/simple-card/simple-card.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://oriui.app/components/simple-card",
         "repository": "https://github.com/TheChirag356/ori-ui"
       }
     },

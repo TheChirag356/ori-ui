@@ -162,6 +162,22 @@
 		"relativeUrl": "slide-text-button.json"
 	},
 	{
+		"name": "browser-window",
+		"title": "Browser Window",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [],
+		"registryDependencies": [],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://oriui.app/components/browser-window",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "browser-window.json"
+	},
+	{
 		"name": "code-block",
 		"title": "Code Block",
 		"type": "registry:block",
@@ -232,6 +248,22 @@
 		"relativeUrl": "glare-hover.json"
 	},
 	{
+		"name": "lamp",
+		"title": "Lamp",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [],
+		"registryDependencies": [],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://oriui.app/components/lamp",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "lamp.json"
+	},
+	{
 		"name": "marquee",
 		"title": "Marquee",
 		"type": "registry:block",
@@ -299,6 +331,24 @@
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "ribbon.json"
+	},
+	{
+		"name": "simple-card",
+		"title": "Simple Card",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [],
+		"registryDependencies": [
+			"card"
+		],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://oriui.app/components/simple-card",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "simple-card.json"
 	},
 	{
 		"name": "animate-text",

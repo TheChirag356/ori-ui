@@ -1,0 +1,26 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "lamp",
+	"title": "Lamp",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://oriui.app/components/lamp",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "export { default as Lamp } from './lamp.svelte';",
+			"type": "registry:file",
+			"target": "ori/lamp/index.ts"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\timport { cn } from \"$LIB$/utils\";\r\n\timport type { Snippet } from \"svelte\";\r\n\r\n\tlet {\r\n\t\tclass: className,\r\n\t\tglowClass = \"bg-accent\",\r\n\t\tlineClass = \"bg-accent\",\r\n        children,\r\n        ...restProps\r\n\t}: {\r\n\t\tclass?: string;\r\n\t\tglowClass?: string;\r\n\t\tlineClass?: string;\r\n        children?: Snippet;\r\n\t} = $props();\r\n</script>\r\n\r\n<div\r\n\tclass={cn(\r\n\t\t'relative flex min-h-100 flex-col items-center justify-center overflow-hidden w-full rounded-md z-0',\r\n\t\tclassName\r\n\t)}\r\n>\r\n\t<div class=\"relative flex w-full flex-1 items-center justify-center isolate\">\r\n\t\t<div\r\n\t\t\tclass={cn(\r\n\t\t\t\t'absolute h-36 w-md -translate-y-1/2 rounded-full opacity-50 blur-3xl transition-all duration-700',\r\n\t\t\t\tglowClass\r\n\t\t\t)}\r\n\t\t></div>\r\n\t\t<div\r\n\t\t\tclass={cn(\r\n\t\t\t\t'absolute h-36 w-64 -translate-y-24 rounded-full blur-2xl transition-all duration-700',\r\n\t\t\t\tglowClass\r\n\t\t\t)}\r\n\t\t></div>\r\n\t\t<div\r\n\t\t\tclass={cn(\r\n\t\t\t\t'absolute h-0.5 w-120 -translate-y-28 transition-all duration-700',\r\n\t\t\t\tlineClass\r\n\t\t\t)}\r\n\t\t></div>\r\n\t\t<div class=\"absolute h-44 w-full -translate-y-50 bg-background\"></div>\r\n\t</div>\r\n\t<div class=\"relative z-50 flex -translate-y-32 flex-col items-center px-5\">\r\n\t\t{@render children?.()}\r\n\t</div>\r\n</div>",
+			"type": "registry:file",
+			"target": "ori/lamp/lamp.svelte"
+		}
+	]
+}

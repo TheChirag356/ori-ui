@@ -1,0 +1,26 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "browser-window",
+	"title": "Browser Window",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://oriui.app/components/browser-window",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n  type SafariMode = \"default\" | \"simple\"\r\n\r\n  interface Props {\r\n    url?: string\r\n    mode?: SafariMode\r\n    className?: string\r\n    children?: () => any\r\n  }\r\n\r\n  let {\r\n    url,\r\n    mode = \"default\",\r\n    className = \"\",\r\n    children,\r\n    ...restProps\r\n  }: Props = $props()\r\n\r\n  const SAFARI_WIDTH = 1203\r\n  const SAFARI_HEIGHT = 753\r\n\r\n  const SCREEN_X = 1\r\n  const SCREEN_Y = 52\r\n  const SCREEN_WIDTH = 1200\r\n  const SCREEN_HEIGHT = 700\r\n\r\n  const LEFT_PCT = (SCREEN_X / SAFARI_WIDTH) * 100\r\n  const TOP_PCT = (SCREEN_Y / SAFARI_HEIGHT) * 100\r\n  const WIDTH_PCT = (SCREEN_WIDTH / SAFARI_WIDTH) * 100\r\n  const HEIGHT_PCT = (SCREEN_HEIGHT / SAFARI_HEIGHT) * 100\r\n</script>\r\n\r\n<div\r\n  class={`relative inline-block w-full align-middle leading-none ${className}`}\r\n  style={`aspect-ratio: ${SAFARI_WIDTH}/${SAFARI_HEIGHT};`}\r\n  {...restProps}\r\n>\r\n  <!-- Screen Content -->\r\n  <div\r\n    class=\"pointer-events-none absolute z-0 overflow-hidden\"\r\n    style=\"\r\n      left: {LEFT_PCT}%;\r\n      top: {TOP_PCT}%;\r\n      width: {WIDTH_PCT}%;\r\n      height: {HEIGHT_PCT}%;\r\n      border-radius: 0 0 11px 11px;\r\n    \"\r\n  >\r\n    {@render children?.()}\r\n  </div>\r\n\r\n  <!-- Safari Frame -->\r\n  <svg\r\n    viewBox={`0 0 ${SAFARI_WIDTH} ${SAFARI_HEIGHT}`}\r\n    fill=\"none\"\r\n    xmlns=\"http://www.w3.org/2000/svg\"\r\n    class=\"absolute inset-0 z-10 size-full\"\r\n    style=\"transform: translateZ(0);\"\r\n  >\r\n    <defs>\r\n      <clipPath id=\"path0\">\r\n        <rect width={SAFARI_WIDTH} height={SAFARI_HEIGHT} fill=\"white\" />\r\n      </clipPath>\r\n\r\n      <clipPath id=\"roundedBottom\">\r\n        <path\r\n          d=\"M1 52H1201V741C1201 747.075 1196.08 752 1190 752H12C5.92486 752 1 747.075 1 741V52Z\"\r\n          fill=\"white\"\r\n        />\r\n      </clipPath>\r\n    </defs>\r\n\r\n    <g clip-path=\"url(#path0)\">\r\n      <!-- Body -->\r\n      <path\r\n        d=\"M0 52H1202V741C1202 747.627 1196.63 753 1190 753H12C5.37258 753 0 747.627 0 741V52Z\"\r\n        class=\"fill-[#E5E5E5] dark:fill-[#404040]\"\r\n      />\r\n\r\n      <!-- Top Bar -->\r\n      <path\r\n        fill-rule=\"evenodd\"\r\n        clip-rule=\"evenodd\"\r\n        d=\"M0 12C0 5.37258 5.37258 0 12 0H1190C1196.63 0 1202 5.37258 1202 12V52H0L0 12Z\"\r\n        class=\"fill-[#E5E5E5] dark:fill-[#404040]\"\r\n      />\r\n\r\n      <path\r\n        fill-rule=\"evenodd\"\r\n        clip-rule=\"evenodd\"\r\n        d=\"M1.06738 12C1.06738 5.92487 5.99225 1 12.0674 1H1189.93C1196.01 1 1200.93 5.92487 1200.93 12V51H1.06738V12Z\"\r\n        class=\"fill-white dark:fill-[#262626]\"\r\n      />\r\n\r\n      <!-- Window Controls -->\r\n      <circle cx=\"27\" cy=\"25\" r=\"6\" class=\"fill-[#E5E5E5] dark:fill-[#404040]\" />\r\n      <circle cx=\"47\" cy=\"25\" r=\"6\" class=\"fill-[#E5E5E5] dark:fill-[#404040]\" />\r\n      <circle cx=\"67\" cy=\"25\" r=\"6\" class=\"fill-[#E5E5E5] dark:fill-[#404040]\" />\r\n\r\n      <!-- URL Bar -->\r\n      <path\r\n        d=\"M286 17C286 13.6863 288.686 11 292 11H946C949.314 11 952 13.6863 952 17V35C952 38.3137 949.314 41 946 41H292C288.686 41 286 38.3137 286 35V17Z\"\r\n        class=\"fill-[#E5E5E5] dark:fill-[#404040]\"\r\n      />\r\n\r\n      <!-- URL Text -->\r\n      <text\r\n        x=\"580\"\r\n        y=\"30\"\r\n        fill=\"#A3A3A3\"\r\n        font-size=\"12\"\r\n        font-family=\"Arial, sans-serif\"\r\n      >\r\n        {url}\r\n      </text>\r\n\r\n      {#if mode === \"default\"}\r\n        <!-- You can paste the remaining icon SVG paths here exactly as-is -->\r\n      {/if}\r\n    </g>\r\n  </svg>\r\n</div>",
+			"type": "registry:file",
+			"target": "ori/browser-window/browser-window.svelte"
+		},
+		{
+			"content": "export { default as BrowserWindow } from './browser-window.svelte';",
+			"type": "registry:file",
+			"target": "ori/browser-window/index.ts"
+		}
+	]
+}
