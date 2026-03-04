@@ -1,0 +1,1 @@
+export { default as Lamp } from './lamp.svelte';
