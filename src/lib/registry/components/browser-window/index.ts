@@ -1,0 +1,1 @@
+export { default as BrowserWindow } from './browser-window.svelte';
