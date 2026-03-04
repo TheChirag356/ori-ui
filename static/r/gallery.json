@@ -1,0 +1,29 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "gallery",
+	"title": "Gallery",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"dependencies": [
+		"@tabler/icons-svelte"
+	],
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://oriui.app/components/gallery",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "<script lang=\"ts\" module>\r\n    export type Image = {\r\n        src: string;\r\n        alt: string;\r\n    };\r\n</script>\r\n\r\n<script lang=\"ts\">\r\n    import { IconChevronLeft, IconChevronRight } from \"@tabler/icons-svelte\";\r\n    import { cn } from \"$LIB$/utils\";\r\n\r\n    let { images, class: className }: {images: Image[], class?: string} = $props();\r\n\r\n    let currentSlide = $state(0);\r\n</script>\r\n\r\n<div class={cn('size-75 relative group rounded-2xl overflow-hidden', className)}>\r\n\t<div class=\"absolute inset-0 flex items-center\">\r\n\t\t<div\r\n\t\t\tclass=\"flex transition-transform duration-400 ease-in-out h-full w-full\"\r\n\t\t\tstyle:transform={`translateX(-${currentSlide * 100}%)`}\r\n\t\t>\r\n\t\t\t{#each images as image, i (image.src + i)}\r\n\t\t\t\t<img src={image.src} class=\"h-full w-full min-w-full object-cover\" alt={image.alt} />\r\n\t\t\t{/each}\r\n\t\t</div>\r\n\t</div>\r\n\r\n\t<div class=\"absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center space-x-2\">\r\n\t\t{#each images as _, i (i)}\r\n\t\t\t<div\r\n\t\t\t\tclass=\"w-1.5 h-1.5 rounded-full transition-all {currentSlide === i\r\n\t\t\t\t\t? 'bg-white'\r\n\t\t\t\t\t: 'bg-zinc-300 scale-75'}\"\r\n\t\t\t></div>\r\n\t\t{/each}\r\n\t</div>\r\n\r\n\t<button\r\n\t\tonclick={() => (currentSlide = (currentSlide - 1 + images.length) % images.length)}\r\n\t\tclass=\"absolute opacity-0 group-hover:opacity-100 cursor-pointer transition left-1.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-zinc-950 flex items-center justify-center\"\r\n\t>\r\n\t\t<IconChevronLeft class=\"h-3.5 w-3.5 text-white\" />\r\n\t</button>\r\n\r\n\t<button\r\n\t\tonclick={() => (currentSlide = (currentSlide + 1) % images.length)}\r\n\t\tclass=\"absolute opacity-0 group-hover:opacity-100 cursor-pointer transition right-1.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-zinc-950 flex items-center justify-center\"\r\n\t>\r\n\t\t<IconChevronRight class=\"h-3.5 w-3.5 text-white\" />\r\n\t</button>\r\n</div>\r\n",
+			"type": "registry:file",
+			"target": "ori/gallery/gallery.svelte"
+		},
+		{
+			"content": "export { default as Gallery } from \"./gallery.svelte\";\r\nexport type { Image } from \"./gallery.svelte\";",
+			"type": "registry:file",
+			"target": "ori/gallery/index.ts"
+		}
+	]
+}

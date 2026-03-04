@@ -76,7 +76,7 @@
 		{#each data.navMain as item (item.title)}
 			<Sidebar.Group class="p-0">
 				<Sidebar.GroupLabel class="text-muted-foreground text-xs">
-					{item.title.toUpperCase()}
+					{item.title}
 				</Sidebar.GroupLabel>
 				<div class="mb-2">
 					<Sidebar.GroupContent>

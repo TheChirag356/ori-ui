@@ -5,6 +5,9 @@
 	"type": "registry:block",
 	"author": "Chirag Arora <arorachirag12005@gmail.com>",
 	"description": "",
+	"dependencies": [
+		"@tabler/icons-svelte"
+	],
 	"meta": {
 		"author": "TheChirag356",
 		"version": "1.0.0",
@@ -13,12 +16,12 @@
 	},
 	"files": [
 		{
-			"content": "export { default as Ribbon } from './ribbon.svelte';",
+			"content": "export { default as Ribbon, type RibbonType } from './ribbon.svelte';",
 			"type": "registry:file",
 			"target": "ori/ribbon/index.ts"
 		},
 		{
-			"content": "<script lang=\"ts\"></script>",
+			"content": "<script lang=\"ts\" module>\r\n    export type RibbonType = {\r\n        bgColor: string;\r\n        color?: string;\r\n        text: string;\r\n        rotate: string;\r\n        direction: number; // 1 for left-to-right, -1 for right-to-left\r\n        zIndex: string;\r\n        top: string;\r\n    };\r\n</script>\r\n\r\n<script lang=\"ts\">\r\n  import { onMount } from 'svelte';\r\n  import { IconSparkles } from '@tabler/icons-svelte';\r\n  import { cn } from '$LIB$/utils';\r\n  \r\n  let { ribbons, class: className }: { ribbons: RibbonType[], class: string} = $props();\r\n\r\n  let container: HTMLElement;\r\n  \r\n  let baseX = $state(0); \r\n  let currentScrollY = 0;\r\n\r\n  onMount(() => {\r\n    let rafId: number;\r\n\r\n    const update = () => {\r\n      currentScrollY = window.scrollY;\r\n      \r\n      baseX = currentScrollY * 0.01;\r\n\r\n      rafId = requestAnimationFrame(update);\r\n    };\r\n\r\n    rafId = requestAnimationFrame(update);\r\n    return () => cancelAnimationFrame(rafId);\r\n  });\r\n  const repeatCount = 7;\r\n</script>\r\n\r\n<div\r\n\tclass={cn(\r\n\t\t'relative w-full h-32 md:h-56 lg:h-68 flex items-center justify-center overflow-hidden bg-transparent my-8',\r\n\t\t`dark:text-black text-white font-bold text-lg md:text-2xl uppercase tracking-wider`,\r\n\t\tclassName\r\n\t)}\r\n\tbind:this={container}\r\n>\r\n\t{#each ribbons as ribbon}\r\n\t\t<div\r\n\t\t\tclass={`absolute left-[-20%] right-[-20%] py-2 md:py-4 shadow-sm flex items-center justify-center ${ribbon.bgColor} ${ribbon.rotate} ${ribbon.zIndex} overflow-hidden whitespace-nowrap will-change-transform transform-gpu`}\r\n\t\t>\r\n\t\t\t<div\r\n\t\t\t\tclass=\"flex items-center gap-4\"\r\n\t\t\t\tstyle:transform={`translateX(${(baseX * ribbon.direction * -1) % 50}%)`}\r\n\t\t\t>\r\n\t\t\t\t{#each Array(repeatCount) as _}\r\n\t\t\t\t\t<span class=\"flex items-center gap-4 shrink-0 px-4\">\r\n\t\t\t\t\t\t{ribbon.text}\r\n\t\t\t\t\t\t<IconSparkles size={20} class=\"fill-current\" />\r\n\t\t\t\t\t</span>\r\n\t\t\t\t{/each}\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t{/each}\r\n</div>\r\n\r\n<style>\r\n    :global(body) {\r\n        overflow-x: hidden;\r\n    }\r\n</style>\r\n",
 			"type": "registry:file",
 			"target": "ori/ribbon/ribbon.svelte"
 		}

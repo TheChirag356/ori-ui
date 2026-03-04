@@ -325,6 +325,35 @@
       }
     },
     {
+      "name": "gallery",
+      "type": "registry:block",
+      "title": "Gallery",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [
+        "@tabler/icons-svelte"
+      ],
+      "files": [
+        {
+          "path": "src/lib/registry/components/gallery/gallery.svelte",
+          "type": "registry:file",
+          "target": "ori/gallery/gallery.svelte"
+        },
+        {
+          "path": "src/lib/registry/components/gallery/index.ts",
+          "type": "registry:file",
+          "target": "ori/gallery/index.ts"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://oriui.app/components/gallery",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
       "name": "glare-hover",
       "type": "registry:block",
       "title": "Glare Hover",
@@ -446,7 +475,9 @@
       "title": "Ribbon",
       "description": "",
       "registryDependencies": [],
-      "dependencies": [],
+      "dependencies": [
+        "@tabler/icons-svelte"
+      ],
       "files": [
         {
           "path": "src/lib/registry/components/ribbon/index.ts",

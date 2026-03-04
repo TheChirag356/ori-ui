@@ -12,7 +12,7 @@
 
 <div
 	class={cn(
-		'relative w-full min-h-56 border border-border flex justify-center items-center rounded-md p-4',
+		'relative w-full min-h-56 flex justify-center items-center rounded-md p-4 border',
 		className
 	)}
 >

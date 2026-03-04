@@ -35,6 +35,10 @@ description: A ribbon component that moves with scroll
     <Ribbon {ribbons}>Hello World</Ribbon> 
 </CodePreview>
 
+### Installation
+
+<MultiCodeBlock code={scripts} />
+
 ### Usage
 
 ```js
