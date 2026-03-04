@@ -13,13 +13,13 @@
 	interface CodeBlockProps {
 		class?: string;
 		code?: Code[];
-		theme: 'vitesse-dark'
+		theme?: 'vitesse-dark'
 	}
 
 	let {
 		class: className = "",
 		code = [],
-		theme: codeTheme
+		theme: codeTheme = 'vitesse-dark'
 	}: CodeBlockProps = $props();
 	
 	// holds generated HTML
