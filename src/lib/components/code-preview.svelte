@@ -20,7 +20,7 @@
 	<button
 		type="button"
 		onclick={reload}
-		class="absolute top-2 cursor-pointer right-2 rounded-md border px-2 py-1 text-xs hover:bg-muted"
+		class="absolute top-2 cursor-pointer right-2 rounded-md border px-2 py-1 text-xs hover:bg-muted z-50"
 		aria-label="Reload preview"
 		title="Reload preview"
 	>
