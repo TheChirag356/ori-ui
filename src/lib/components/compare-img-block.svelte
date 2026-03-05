@@ -178,7 +178,7 @@
 	<div class="pointer-events-none relative z-20 h-full w-full overflow-hidden">
 		{#if firstImage}
 			<div
-				class="absolute inset-0 z-20 h-full w-full flex-shrink-0 overflow-hidden rounded-tl-2xl select-none {firstImageClass}"
+				class="absolute inset-0 z-20 h-full w-full shrink-0 overflow-hidden rounded-tl-2xl select-none {firstImageClass}"
 				style="clip-path: inset(0 {100 - sliderXPercent.current}% 0 0);"
 			>
 				<!-- svelte-ignore a11y_img_redundant_alt -->
@@ -186,7 +186,7 @@
 					alt="first image"
 					src={firstImage}
 					class={[
-						"absolute inset-0 z-20 h-full  w-full flex-shrink-0 select-none dark:bg-black",
+						"absolute inset-0 z-20 h-full w-full shrink-0 select-none dark:bg-black object-cover object-center",
 						firstImageClass,
 					]}
 					draggable="false"
@@ -199,7 +199,7 @@
 		<!-- svelte-ignore a11y_img_redundant_alt -->
 		<img
 			class={[
-				"absolute top-0 left-0 z-[19] h-full w-full rounded-tl-3xl select-none",
+				"absolute top-0 left-0 z-19 h-full w-full shrink-0 rounded-tl-3xl select-none object-cover object-center",
 				secondImageClass,
 			]}
 			alt="second image"
