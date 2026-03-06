@@ -1,6 +1,6 @@
 ---
-title: Copy Button
-description: A copy button component with a variety of styles and animations.
+title: Ripple Button
+description: A button that shows a smooth ripple animation when clicked.
 ---
 
 <script>
