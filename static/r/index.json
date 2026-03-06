@@ -248,6 +248,22 @@
 		"relativeUrl": "glare-hover.json"
 	},
 	{
+		"name": "hero-video",
+		"title": "Hero Video",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [],
+		"registryDependencies": [],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://oriui.app/components/hero-video",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "hero-video.json"
+	},
+	{
 		"name": "lamp",
 		"title": "Lamp",
 		"type": "registry:block",
@@ -351,6 +367,24 @@
 		"relativeUrl": "simple-card.json"
 	},
 	{
+		"name": "tweet-card",
+		"title": "Tweet Card",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [
+			"sveltweet"
+		],
+		"registryDependencies": [],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://oriui.app/components/tweet-card",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "tweet-card.json"
+	},
+	{
 		"name": "animate-text",
 		"title": "Animate Text",
 		"type": "registry:block",
@@ -385,6 +419,22 @@
 			"repository": "https://github.com/TheChirag356/ori-ui"
 		},
 		"relativeUrl": "count-animation.json"
+	},
+	{
+		"name": "shimmer-text",
+		"title": "Shimmer Text",
+		"type": "registry:block",
+		"author": "Chirag Arora <arorachirag12005@gmail.com>",
+		"description": "",
+		"dependencies": [],
+		"registryDependencies": [],
+		"meta": {
+			"author": "TheChirag356",
+			"version": "1.0.0",
+			"documentation": "https://oriui.app/components/shimmer-text",
+			"repository": "https://github.com/TheChirag356/ori-ui"
+		},
+		"relativeUrl": "shimmer-text.json"
 	},
 	{
 		"name": "spinning-text",

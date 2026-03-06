@@ -408,6 +408,33 @@
       }
     },
     {
+      "name": "hero-video",
+      "type": "registry:block",
+      "title": "Hero Video",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/components/hero-video/hero-video.svelte",
+          "type": "registry:file",
+          "target": "ori/hero-video/hero-video.svelte"
+        },
+        {
+          "path": "src/lib/registry/components/hero-video/index.ts",
+          "type": "registry:file",
+          "target": "ori/hero-video/index.ts"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://oriui.app/components/hero-video",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
       "name": "lamp",
       "type": "registry:block",
       "title": "Lamp",
@@ -582,6 +609,60 @@
       }
     },
     {
+      "name": "tweet-card",
+      "type": "registry:block",
+      "title": "Tweet Card",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [
+        "sveltweet"
+      ],
+      "files": [
+        {
+          "path": "src/lib/registry/components/tweet-card/index.ts",
+          "type": "registry:file",
+          "target": "ori/tweet-card/index.ts"
+        },
+        {
+          "path": "src/lib/registry/components/tweet-card/tweet-body.svelte",
+          "type": "registry:file",
+          "target": "ori/tweet-card/tweet-body.svelte"
+        },
+        {
+          "path": "src/lib/registry/components/tweet-card/tweet-card.svelte",
+          "type": "registry:file",
+          "target": "ori/tweet-card/tweet-card.svelte"
+        },
+        {
+          "path": "src/lib/registry/components/tweet-card/tweet-header.svelte",
+          "type": "registry:file",
+          "target": "ori/tweet-card/tweet-header.svelte"
+        },
+        {
+          "path": "src/lib/registry/components/tweet-card/tweet-media.svelte",
+          "type": "registry:file",
+          "target": "ori/tweet-card/tweet-media.svelte"
+        },
+        {
+          "path": "src/lib/registry/components/tweet-card/tweet-not-found.svelte",
+          "type": "registry:file",
+          "target": "ori/tweet-card/tweet-not-found.svelte"
+        },
+        {
+          "path": "src/lib/registry/components/tweet-card/tweet-skeleton.svelte",
+          "type": "registry:file",
+          "target": "ori/tweet-card/tweet-skeleton.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://oriui.app/components/tweet-card",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
       "name": "animate-text",
       "type": "registry:block",
       "title": "Animate Text",
@@ -636,6 +717,33 @@
         "author": "TheChirag356",
         "version": "1.0.0",
         "documentation": "https://oriui.app/components/count-animation",
+        "repository": "https://github.com/TheChirag356/ori-ui"
+      }
+    },
+    {
+      "name": "shimmer-text",
+      "type": "registry:block",
+      "title": "Shimmer Text",
+      "description": "",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/lib/registry/text-animations/shimmer-text/index.ts",
+          "type": "registry:file",
+          "target": "ori/shimmer-text/index.ts"
+        },
+        {
+          "path": "src/lib/registry/text-animations/shimmer-text/shimmer-text.svelte",
+          "type": "registry:file",
+          "target": "ori/shimmer-text/shimmer-text.svelte"
+        }
+      ],
+      "author": "Chirag Arora <arorachirag12005@gmail.com>",
+      "meta": {
+        "author": "TheChirag356",
+        "version": "1.0.0",
+        "documentation": "https://oriui.app/components/shimmer-text",
         "repository": "https://github.com/TheChirag356/ori-ui"
       }
     },

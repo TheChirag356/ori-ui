@@ -1,0 +1,26 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "shimmer-text",
+	"title": "Shimmer Text",
+	"type": "registry:block",
+	"author": "Chirag Arora <arorachirag12005@gmail.com>",
+	"description": "",
+	"meta": {
+		"author": "TheChirag356",
+		"version": "1.0.0",
+		"documentation": "https://oriui.app/components/shimmer-text",
+		"repository": "https://github.com/TheChirag356/ori-ui"
+	},
+	"files": [
+		{
+			"content": "export { default as ShimmerText } from './shimmer-text.svelte';",
+			"type": "registry:file",
+			"target": "ori/shimmer-text/index.ts"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\timport type { Snippet } from \"svelte\";\r\n\timport { cn } from \"$LIB$/utils\";\r\n\r\n\tlet {\r\n\t\tclass: className,\r\n\t\tduration = 2,\r\n\t\tchildren\r\n\t}: {\r\n\t\tclass?: string;\r\n\t\tduration?: number;\r\n\t\tchildren?: Snippet;\r\n\t} = $props();\r\n</script>\r\n\r\n<span\r\n\tclass={cn(\r\n\t\t\"inline-block bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer\",\r\n\t\tclassName\r\n\t)}\r\n\tstyle={`animation-duration: ${duration}s;\r\n\tbackground-image: linear-gradient(\r\n\t\t110deg,\r\n\t\t#777 45%,\r\n\t\t#fff 50%,\r\n\t\t#777 55%\r\n\t);`}\r\n>\r\n\t{@render children?.()}\r\n</span>\r\n\r\n<style>\r\n\t@keyframes shimmer {\r\n\t\tfrom {\r\n\t\t\tbackground-position: 200% 0;\r\n\t\t}\r\n\t\tto {\r\n\t\t\tbackground-position: -200% 0;\r\n\t\t}\r\n\t}\r\n\r\n\t.animate-shimmer {\r\n\t\tanimation-name: shimmer;\r\n\t\tanimation-timing-function: linear;\r\n\t\tanimation-iteration-count: infinite;\r\n\t}\r\n</style>",
+			"type": "registry:file",
+			"target": "ori/shimmer-text/shimmer-text.svelte"
+		}
+	]
+}
