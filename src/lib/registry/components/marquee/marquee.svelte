@@ -21,27 +21,27 @@
 </script>
 
 <div
-  class={cn(
-    "group flex overflow-hidden p-2 [--duration:16s] [--gap:3rem] [gap:var(--gap)]",
-    {
-      "flex-row": !vertical,
-      "flex-col": vertical,
-    },
-    className
-  )}
+	class={cn(
+		'group flex overflow-hidden p-2 [--duration:16s] [--gap:3rem] [gap:var(--gap)]',
+		{
+			'flex-row': !vertical,
+			'flex-col': vertical
+		},
+		className
+	)}
 >
-  {#each { length: repeat } as _, i (i)}
-    <div
-      class={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
-        "animate-marquee flex-row": !vertical,
-        "animate-marquee-vertical flex-col": vertical,
-        "group-hover:paused": pauseOnHover,
-        "[animation-direction:reverse]": reverse,
-      })}
-    >
-      {@render children?.()}
-    </div>
-  {/each}
+	{#each { length: repeat } as _, i (i)}
+		<div
+			class={cn('flex shrink-0 justify-around [gap:var(--gap)]', {
+				'animate-marquee flex-row': !vertical,
+				'animate-marquee-vertical flex-col': vertical,
+				'group-hover:paused': pauseOnHover,
+				'[animation-direction:reverse]': reverse
+			})}
+		>
+			{@render children?.()}
+		</div>
+	{/each}
 </div>
 
 <style>

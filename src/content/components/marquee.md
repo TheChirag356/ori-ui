@@ -23,20 +23,25 @@ description: A scrolling text marquee component.
 ### Usage
 
 ```js
-import LiquidButton from '$lib/registry/buttons/liquid-button/liquid-button.svelte';
+ import Marquee from "$lib/components/ori/marquee";
 ```
 
 ```svelte
-<LiquidButton>Hover Me</LiquidButton>
+<Marquee>
+	<img src="https://icon.icepanel.io/Technology/svg/Svelte.svg" alt="Svelte Logo" />
+	<img src="https://icon.icepanel.io/Technology/svg/TypeScript.svg" alt="TypeScript Logo" />
+	<img src="https://icon.icepanel.io/Technology/svg/Bun.svg" alt="Bun Logo" />
+	<img src="https://icon.icepanel.io/Technology/svg/GitHub.svg" alt="Github Logo" />
+</Marquee>
 ```
 
 ### Props
 
-| Prop      | Type           | Default    | Description                                       |
-| --------- | -------------- | ---------- | ------------------------------------------------- |
-| mainText  | string         | 'Click Me' | The main text displayed on the button             |
-| slideText | string         | 'Slide Me' | The text that appears on hover with slide effect  |
-| class     | string         | ''         | Additional CSS classes for custom styling         |
-| duration  | number         | 300        | Duration of the slide animation in milliseconds   |
-| delay     | number         | 0          | Delay before the animation starts in milliseconds |
-| easing    | EasingFunction | undefined  | Easing function for the animation                 |
+| Prop         | Type    | Default | Description                                   |
+| ------------ | ------- | ------- | --------------------------------------------- |
+| pauseOnHover | boolean | false   | Whether to pause the marquee on hover         |
+| vertical     | boolean | false   | Whether to scroll vertically                  |
+| repeat       | number  | 4       | Number of times to repeat the children        |
+| reverse      | boolean | false   | Whether to reverse the scrolling direction    |
+| class        | string  | ""      | Additional CSS classes for custom styling     |
+| children     | Snippet |         | The content to be scrolled within the marquee |
