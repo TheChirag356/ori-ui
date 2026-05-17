@@ -1,9 +1,10 @@
-import type { Root } from "mdast";
-import type { VFile } from "vfile";
 import { toc } from "mdast-util-toc";
 
+/**
+ * @returns {(tree: import('mdast').Root, file: import('vfile').VFile) => void}
+ */
 export function remarkExtractToc() {
-	return (tree: Root, file: VFile) => {
+	return (tree, file) => {
 		const result = toc(tree);
 
 		if (result.map) {

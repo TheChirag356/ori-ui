@@ -2,7 +2,7 @@ import { escapeSvelte } from "mdsvex";
 import { bundledLanguages, bundledThemes, createHighlighter } from "shiki"
 import remarkToc from "remark-toc";
 import rehypeSlug from "rehype-slug";
-import { remarkExtractToc } from "./src/lib/remark-toc-extract.ts";
+import { remarkExtractToc } from "./src/lib/remark-toc-extract.js";
 
 
 import { join, dirname } from 'path';
