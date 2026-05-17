@@ -1,7 +1,6 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "ori-ui",
-	"account_id": "e6d650877c49145fe490cb6285a91b8b",
 	"compatibility_date": "2026-05-17",
 	"pages_build_output_dir": ".svelte-kit/cloudflare",
 	"compatibility_flags": ["nodejs_compat"],
