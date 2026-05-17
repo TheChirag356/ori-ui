@@ -1,6 +1,6 @@
 import satori from 'satori';
 import { html } from 'satori-html';
-import { Resvg } from '@resvg/resvg-js';
+import { Resvg } from '@resvg/resvg-wasm';
 
 export const GET = async ({ url }) => {
     const origin = url.origin;
