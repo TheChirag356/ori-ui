@@ -373,9 +373,7 @@
 		"type": "registry:block",
 		"author": "Chirag Arora <arorachirag12005@gmail.com>",
 		"description": "",
-		"dependencies": [
-			"sveltweet"
-		],
+		"dependencies": [],
 		"registryDependencies": [],
 		"meta": {
 			"author": "TheChirag356",

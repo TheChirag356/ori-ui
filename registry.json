@@ -615,44 +615,12 @@
       "title": "Tweet Card",
       "description": "",
       "registryDependencies": [],
-      "dependencies": [
-        "sveltweet"
-      ],
+      "dependencies": [],
       "files": [
         {
           "path": "src/lib/registry/components/tweet-card/index.ts",
           "type": "registry:file",
           "target": "ori/tweet-card/index.ts"
-        },
-        {
-          "path": "src/lib/registry/components/tweet-card/tweet-body.svelte",
-          "type": "registry:file",
-          "target": "ori/tweet-card/tweet-body.svelte"
-        },
-        {
-          "path": "src/lib/registry/components/tweet-card/tweet-card.svelte",
-          "type": "registry:file",
-          "target": "ori/tweet-card/tweet-card.svelte"
-        },
-        {
-          "path": "src/lib/registry/components/tweet-card/tweet-header.svelte",
-          "type": "registry:file",
-          "target": "ori/tweet-card/tweet-header.svelte"
-        },
-        {
-          "path": "src/lib/registry/components/tweet-card/tweet-media.svelte",
-          "type": "registry:file",
-          "target": "ori/tweet-card/tweet-media.svelte"
-        },
-        {
-          "path": "src/lib/registry/components/tweet-card/tweet-not-found.svelte",
-          "type": "registry:file",
-          "target": "ori/tweet-card/tweet-not-found.svelte"
-        },
-        {
-          "path": "src/lib/registry/components/tweet-card/tweet-skeleton.svelte",
-          "type": "registry:file",
-          "target": "ori/tweet-card/tweet-skeleton.svelte"
         }
       ],
       "author": "Chirag Arora <arorachirag12005@gmail.com>",
