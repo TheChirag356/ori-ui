@@ -1,0 +1,15 @@
+# Example .valinhallignore file
+# Add files or folders here that you want the SAST engine to skip
+
+# Vercel output
+.vercel/output
+.vercel
+
+# Node modules (already skipped by default, but you can add more)
+dist/
+build/
+coverage/
+
+# Specific debug configs
+debug_keys.json
+test_secrets.env
