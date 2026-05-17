@@ -5,6 +5,12 @@
 	"type": "registry:block",
 	"author": "Chirag Arora <arorachirag12005@gmail.com>",
 	"description": "",
+	"dependencies": [
+		"sveltweet"
+	],
+	"devDependencies": [
+		"sveltweet@^0.5.1"
+	],
 	"meta": {
 		"author": "TheChirag356",
 		"version": "1.0.0",
@@ -16,6 +22,36 @@
 			"content": "export { default as TweetCard } from \"./tweet-card.svelte\";\r\n\r\nexport { default as TweetHeader } from \"./tweet-header.svelte\";\r\nexport { default as TweetBody } from \"./tweet-body.svelte\";\r\nexport { default as TweetMedia } from \"./tweet-media.svelte\";\r\n\r\nexport { default as TweetSkeleton } from \"./tweet-skeleton.svelte\";\r\nexport { default as TweetNotFound } from \"./tweet-not-found.svelte\";",
 			"type": "registry:file",
 			"target": "ori/tweet-card/index.ts"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\tlet { tweet }: { tweet: any } = $props();\r\n</script>\r\n\r\n<div class=\"text-[15px] leading-relaxed tracking-normal wrap-break-words\">\r\n\t{#each tweet.entities as entity}\r\n\t\t{#if entity.type === \"text\"}\r\n\t\t\t<span class=\"text-foreground\">{@html entity.text}</span>\r\n\t\t{:else}\r\n\t\t\t<a\r\n\t\t\t\thref={entity.href}\r\n\t\t\t\ttarget=\"_blank\"\r\n\t\t\t\trel=\"noopener noreferrer\"\r\n\t\t\t\tclass=\"text-muted-foreground hover:text-foreground\"\r\n\t\t\t>\r\n\t\t\t\t{entity.text}\r\n\t\t\t</a>\r\n\t\t{/if}\r\n\t{/each}\r\n</div>",
+			"type": "registry:file",
+			"target": "ori/tweet-card/tweet-body.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\timport type { Tweet } from \"sveltweet\";\r\n\timport TweetSkeleton from \"./tweet-skeleton.svelte\";\r\n\timport TweetNotFound from \"./tweet-not-found.svelte\";\r\n\timport { browser } from \"$app/environment\";\r\n\r\n\tlet { id, tweet, class: className = \"\" }: { id?: string; tweet?: Tweet; class?: string } = $props();\r\n\r\n\tasync function fetchTweetData(tweetId: string): Promise<Tweet> {\r\n\t\tif (browser) {\r\n\t\t\tconst res = await fetch(`/api/tweet/${tweetId}`);\r\n\t\t\tif (!res.ok) {\r\n\t\t\t\tthrow new Error(\"Failed to fetch tweet\");\r\n\t\t\t}\r\n\t\t\treturn res.json();\r\n\t\t} else {\r\n\t\t\tconst { getTweet } = await import(\"sveltweet/api\");\r\n\t\t\tconst data = await getTweet(tweetId);\r\n\t\t\tif (!data) {\r\n\t\t\t\tthrow new Error(\"Tweet not found\");\r\n\t\t\t}\r\n\t\t\treturn data as Tweet;\r\n\t\t}\r\n\t}\r\n\r\n\tlet tweetPromise = $derived(\r\n\t\ttweet ? Promise.resolve(tweet) : id ? fetchTweetData(id) : Promise.reject(new Error(\"No tweet or id provided\"))\r\n\t);\r\n</script>\r\n\r\n{#await tweetPromise}\r\n\t<TweetSkeleton class={className} />\r\n{:then loadedTweet}\r\n\t{#if loadedTweet}\r\n\t\t<div class={`flex w-full max-w-lg flex-col gap-4 rounded-xl border p-5 ${className}`}>\r\n\t\t\t<!-- HEADER -->\r\n\t\t\t<div class=\"flex items-start justify-between\">\r\n\t\t\t\t<div class=\"flex items-center gap-3\">\r\n\t\t\t\t\t<a href={loadedTweet.user.url} target=\"_blank\" rel=\"noreferrer\">\r\n\t\t\t\t\t\t<img\r\n\t\t\t\t\t\t\tsrc={loadedTweet.user.profile_image_url_https}\r\n\t\t\t\t\t\t\talt={loadedTweet.user.name}\r\n\t\t\t\t\t\t\tclass=\"h-10 w-10 rounded-full border\"\r\n\t\t\t\t\t\t/>\r\n\t\t\t\t\t</a>\r\n\r\n\t\t\t\t\t<div class=\"flex flex-col leading-tight\">\r\n\t\t\t\t\t\t<a\r\n\t\t\t\t\t\t\thref={loadedTweet.user.url}\r\n\t\t\t\t\t\t\ttarget=\"_blank\"\r\n\t\t\t\t\t\t\tclass=\"font-medium hover:opacity-80\"\r\n\t\t\t\t\t\t>\r\n\t\t\t\t\t\t\t{loadedTweet.user.name}\r\n\t\t\t\t\t\t</a>\r\n\r\n\t\t\t\t\t\t<span class=\"text-sm text-muted-foreground\">\r\n\t\t\t\t\t\t\t@{loadedTweet.user.screen_name}\r\n\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t\t<a href={loadedTweet.url} target=\"_blank\" rel=\"noreferrer\">\r\n\t\t\t\t\t<svg viewBox=\"0 0 24 24\" class=\"h-5 w-5 text-muted-foreground\">\r\n\t\t\t\t\t\t<path\r\n\t\t\t\t\t\t\tfill=\"currentColor\"\r\n\t\t\t\t\t\t\td=\"M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z\"\r\n\t\t\t\t\t\t></path>\r\n\t\t\t\t\t</svg>\r\n\t\t\t\t</a>\r\n\t\t\t</div>\r\n\r\n\t\t\t<!-- BODY -->\r\n\t\t\t<p class=\"text-[15px] leading-relaxed\">{loadedTweet.text}</p>\r\n\r\n\t\t\t<!-- MEDIA -->\r\n\t\t\t{#if loadedTweet.photos?.length}\r\n\t\t\t\t<div class=\"flex gap-3 overflow-x-auto\">\r\n\t\t\t\t\t{#each loadedTweet.photos as photo}\r\n\t\t\t\t\t\t<img\r\n\t\t\t\t\t\t\tsrc={photo.url}\r\n\t\t\t\t\t\t\talt={loadedTweet.text}\r\n\t\t\t\t\t\t\tclass=\"h-64 w-auto rounded-lg border object-cover\"\r\n\t\t\t\t\t\t/>\r\n\t\t\t\t\t{/each}\r\n\t\t\t\t</div>\r\n\t\t\t{/if}\r\n\r\n\t\t\t{#if loadedTweet.video}\r\n\t\t\t\t<video\r\n\t\t\t\t\tclass=\"rounded-lg border\"\r\n\t\t\t\t\tposter={loadedTweet.video.poster}\r\n\t\t\t\t\tautoplay\r\n\t\t\t\t\tmuted\r\n\t\t\t\t\tloop\r\n\t\t\t\t\tplaysinline\r\n\t\t\t\t>\r\n\t\t\t\t\t<source src={loadedTweet.video.variants[0].src} type=\"video/mp4\" />\r\n\t\t\t\t</video>\r\n\t\t\t{/if}\r\n\r\n\t\t\t<!-- FOOTER -->\r\n\t\t\t<div class=\"text-sm text-muted-foreground\">\r\n\t\t\t\t{new Date(loadedTweet.created_at).toLocaleDateString()}\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t{:else}\r\n\t\t<TweetNotFound class={className} />\r\n\t{/if}\r\n{:catch}\r\n\t<TweetNotFound class={className} />\r\n{/await}",
+			"type": "registry:file",
+			"target": "ori/tweet-card/tweet-card.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\tlet { tweet }: { tweet: any } = $props();\r\n</script>\r\n\r\n<div class=\"flex flex-row items-start justify-between tracking-normal\">\r\n\t<div class=\"flex items-center space-x-3\">\r\n\t\t<a href={tweet.user.url} target=\"_blank\" rel=\"noreferrer\" class=\"shrink-0\">\r\n\t\t\t<img\r\n\t\t\t\tsrc={tweet.user.profile_image_url_https}\r\n\t\t\t\talt={tweet.user.screen_name}\r\n\t\t\t\tclass=\"border-border/50 overflow-hidden rounded-full border\"\r\n\t\t\t\twidth=\"48\"\r\n\t\t\t\theight=\"48\"\r\n\t\t\t/>\r\n\t\t</a>\r\n\r\n\t\t<div class=\"flex flex-col gap-0.5\">\r\n\t\t\t<a\r\n\t\t\t\thref={tweet.user.url}\r\n\t\t\t\ttarget=\"_blank\"\r\n\t\t\t\tclass=\"text-foreground flex items-center font-medium whitespace-nowrap hover:opacity-80\"\r\n\t\t\t>\r\n\t\t\t\t{tweet.user.name}\r\n\r\n\t\t\t\t{#if tweet.user.verified || tweet.user.is_blue_verified}\r\n\t\t\t\t\t<span class=\"ml-1 text-blue-500\">✔</span>\r\n\t\t\t\t{/if}\r\n\t\t\t</a>\r\n\r\n\t\t\t<a\r\n\t\t\t\thref={tweet.user.url}\r\n\t\t\t\ttarget=\"_blank\"\r\n\t\t\t\tclass=\"text-muted-foreground text-sm hover:text-foreground\"\r\n\t\t\t>\r\n\t\t\t\t@{tweet.user.screen_name}\r\n\t\t\t</a>\r\n\t\t</div>\r\n\t</div>\r\n\r\n\t<a href={tweet.url} target=\"_blank\">\r\n\t\t<svg viewBox=\"0 0 24 24\" class=\"size-5 text-muted-foreground\">\r\n\t\t\t<path\r\n\t\t\t\tfill=\"currentColor\"\r\n\t\t\t\td=\"M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4...\"\r\n\t\t\t/>\r\n\t\t</svg>\r\n\t</a>\r\n</div>",
+			"type": "registry:file",
+			"target": "ori/tweet-card/tweet-header.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\tlet { tweet }: { tweet: any } = $props();\r\n</script>\r\n\r\n{#if tweet.video || tweet.photos}\r\n\t<div class=\"flex flex-1 items-center justify-center\">\r\n\r\n\t\t{#if tweet.video}\r\n\t\t\t<video\r\n\t\t\t\tposter={tweet.video.poster}\r\n\t\t\t\tautoplay\r\n\t\t\t\tloop\r\n\t\t\t\tmuted\r\n\t\t\t\tplaysinline\r\n\t\t\t\tclass=\"rounded-xl border shadow-sm\"\r\n\t\t\t>\r\n\t\t\t\t<source src={tweet.video.variants[0].src} type=\"video/mp4\" />\r\n\t\t\t</video>\r\n\t\t{/if}\r\n\r\n\t\t{#if tweet.photos}\r\n\t\t\t<div class=\"flex gap-4 overflow-x-auto\">\r\n\t\t\t\t{#each tweet.photos as photo}\r\n\t\t\t\t\t<img\r\n\t\t\t\t\t\tsrc={photo.url}\r\n\t\t\t\t\t\twidth={photo.width}\r\n\t\t\t\t\t\theight={photo.height}\r\n\t\t\t\t\t\talt={tweet.text}\r\n\t\t\t\t\t\tclass=\"h-64 w-5/6 rounded-xl border object-cover\"\r\n\t\t\t\t\t/>\r\n\t\t\t\t{/each}\r\n\t\t\t</div>\r\n\t\t{/if}\r\n\r\n\t</div>\r\n{/if}",
+			"type": "registry:file",
+			"target": "ori/tweet-card/tweet-media.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\tlet { class: className = \"\" }: { class?: string } = $props();\r\n</script>\r\n\r\n<div\r\n\tclass={`flex size-full flex-col items-center justify-center gap-2 rounded-lg border p-4 ${className}`}\r\n>\r\n\t<h3 class=\"text-sm text-muted-foreground\">Tweet not found</h3>\r\n</div>\r\n",
+			"type": "registry:file",
+			"target": "ori/tweet-card/tweet-not-found.svelte"
+		},
+		{
+			"content": "<script lang=\"ts\">\r\n\tlet { class: className = \"\" } = $props();\r\n</script>\r\n\r\n<div class={`flex min-w-72 flex-col gap-2 rounded-xl border p-4 ${className}`}>\r\n\t<div class=\"flex gap-2\">\r\n\t\t<div class=\"size-10 rounded-full bg-primary/10\"></div>\r\n\t\t<div class=\"h-10 w-full rounded-md bg-primary/10\"></div>\r\n\t</div>\r\n\r\n\t<div class=\"h-20 w-full rounded-md bg-primary/10\"></div>\r\n</div>",
+			"type": "registry:file",
+			"target": "ori/tweet-card/tweet-skeleton.svelte"
 		}
 	]
 }

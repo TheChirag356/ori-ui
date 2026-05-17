@@ -1,13 +1,30 @@
 <script lang="ts">
 	import type { Tweet } from "sveltweet";
-	import { getTweet } from "sveltweet/api";
 	import TweetSkeleton from "./tweet-skeleton.svelte";
 	import TweetNotFound from "./tweet-not-found.svelte";
+	import { browser } from "$app/environment";
 
 	let { id, tweet, class: className = "" }: { id?: string; tweet?: Tweet; class?: string } = $props();
 
+	async function fetchTweetData(tweetId: string): Promise<Tweet> {
+		if (browser) {
+			const res = await fetch(`/api/tweet/${tweetId}`);
+			if (!res.ok) {
+				throw new Error("Failed to fetch tweet");
+			}
+			return res.json();
+		} else {
+			const { getTweet } = await import("sveltweet/api");
+			const data = await getTweet(tweetId);
+			if (!data) {
+				throw new Error("Tweet not found");
+			}
+			return data as Tweet;
+		}
+	}
+
 	let tweetPromise = $derived(
-		tweet ? Promise.resolve(tweet) : id ? getTweet(id) : Promise.reject(new Error("No tweet or id provided"))
+		tweet ? Promise.resolve(tweet) : id ? fetchTweetData(id) : Promise.reject(new Error("No tweet or id provided"))
 	);
 </script>
 
