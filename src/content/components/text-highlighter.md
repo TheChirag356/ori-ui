@@ -48,7 +48,7 @@ import Highlighter from "$lib/components/ori/text-highlighter/text-highlighter.s
 
 | Name        | Type                                                                                               | Default                            | Description                            |
 | ----------- | -------------------------------------------------------------------------------------------------- | ---------------------------------- | -------------------------------------- |
-| action      | `underline`, `box`, `circle`, `highlight`, `strike-through`, `crossed-off`, `bracket`, `underline` | The type of annotation to be used. |
+| action      | `underline` \| `box` \| `circle` \| `highlight` \| `strike-through` \| `crossed-off` \| `bracket` | `'underline'` | The type of annotation to be used. |
 | color       | `string`                                                                                           | `#ffd1dc`                          | The color of the annotation.           |
 | strokeWidth | `number`                                                                                           | `1.5`                              | The width of the stroke.               |
 | duration    | `number`                                                                                           | `2000`                             | The duration of the animation.         |

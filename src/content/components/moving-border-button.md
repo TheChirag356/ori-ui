@@ -23,7 +23,7 @@ description: A border that moves around the container. Perfect for making your b
 ### Usage
 
 ```js
-import MovingBorderButton from '$lib/registry/buttons/moving-border-button/moving-border-button.svelte';
+import MovingBorderButton from '$lib/components/ori/moving-border-button';
 ```
 
 ```svelte
@@ -32,11 +32,13 @@ import MovingBorderButton from '$lib/registry/buttons/moving-border-button/movin
 
 ### Props
 
-| Prop      | Type           | Default    | Description                                       |
-| --------- | -------------- | ---------- | ------------------------------------------------- |
-| mainText  | string         | 'Click Me' | The main text displayed on the button             |
-| slideText | string         | 'Slide Me' | The text that appears on hover with slide effect  |
-| class     | string         | ''         | Additional CSS classes for custom styling         |
-| duration  | number         | 300        | Duration of the slide animation in milliseconds   |
-| delay     | number         | 0          | Delay before the animation starts in milliseconds |
-| easing    | EasingFunction | undefined  | Easing function for the animation                 |
+| Prop           | Type     | Default      | Description                                          |
+| -------------- | -------- | ------------ | ---------------------------------------------------- |
+| class          | `string` | `''`         | Additional CSS classes for the inner content area    |
+| containerClass | `string` | `undefined`  | Additional CSS classes for the outer button wrapper  |
+| borderClass    | `string` | `undefined`  | Additional CSS classes for the SVG border rect       |
+| borderRadius   | `string` | `'28'`       | Corner radius of the button (in px as string)        |
+| duration       | `number` | `3000`       | Duration of one full border animation loop (ms)      |
+| borderColor    | `string` | `'#0ea5e9'`  | Color of the animated moving border                  |
+
+Extends all props from [shadcn-svelte Button](https://www.shadcn-svelte.com/docs/components/button).

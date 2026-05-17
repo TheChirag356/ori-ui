@@ -17,3 +17,24 @@ description: A shimmer text component.
         Loading...
     </ShimmerText>
 </CodePreview>
+
+### Installation
+
+<MultiCodeBlock code={scripts} />
+
+### Usage
+
+```js
+import { ShimmerText } from '$lib/components/ori/shimmer-text';
+```
+
+```svelte
+<ShimmerText>Loading...</ShimmerText>
+```
+
+### Props
+
+| Prop     | Type     | Default | Description                               |
+| -------- | -------- | ------- | ----------------------------------------- |
+| duration | `number` | `2`     | Duration of one shimmer cycle in seconds  |
+| class    | `string` | `''`    | Additional CSS classes for custom styling |

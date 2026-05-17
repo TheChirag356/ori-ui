@@ -23,7 +23,7 @@ description: A simple card component with a title, description, and content area
 ### Usage
 
 ```ts
-import SimpleCard from "$lib/components/ori/simple-card.svelte";
+import SimpleCard from "$lib/components/ori/simple-card";
 ```
 
 ```svelte

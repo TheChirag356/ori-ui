@@ -32,11 +32,10 @@ import LiquidButton from '$lib/registry/buttons/liquid-button/liquid-button.svel
 
 ### Props
 
-| Prop      | Type           | Default    | Description                                       |
-| --------- | -------------- | ---------- | ------------------------------------------------- |
-| mainText  | string         | 'Click Me' | The main text displayed on the button             |
-| slideText | string         | 'Slide Me' | The text that appears on hover with slide effect  |
-| class     | string         | ''         | Additional CSS classes for custom styling         |
-| duration  | number         | 300        | Duration of the slide animation in milliseconds   |
-| delay     | number         | 0          | Delay before the animation starts in milliseconds |
-| easing    | EasingFunction | undefined  | Easing function for the animation                 |
+| Prop    | Type     | Default     | Description                               |
+| ------- | -------- | ----------- | ----------------------------------------- |
+| class   | `string` | `''`        | Additional CSS classes for custom styling |
+| variant | `string` | `'default'` | Button variant (default, destructive, outline, secondary, ghost, link) |
+| size    | `string` | `'default'` | Button size (default, sm, lg, icon, icon-sm, icon-lg) |
+
+Extends all props from [shadcn-svelte Button](https://www.shadcn-svelte.com/docs/components/button).

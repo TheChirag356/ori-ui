@@ -36,14 +36,14 @@ import InteractiveHoverButton from '$lib/registry/buttons/interactive-hover-butt
 
 ### Props
 
-| Prop           | Type   | Default                    | Description                               |
-| -------------- | ------ | -------------------------- | ----------------------------------------- |
-| class          | string | `''`                       | Additional CSS classes for custom styling |
-| role           | string | `'button'`                 | The ARIA role of the element              |
-| hoverColor     | string | `'hsl(var(--foreground))'` | Background color of the expanding circle  |
-| textColor      | string | `'hsl(var(--foreground))'` | Text color in default state               |
-| hoverTextColor | string | `'hsl(var(--background))'` | Text color on hover                       |
-| duration       | number | `400`                      | Animation duration in milliseconds        |
+| Prop           | Type     | Default                    | Description                               |
+| -------------- | -------- | -------------------------- | ----------------------------------------- |
+| class          | `string` | `''`                       | Additional CSS classes for custom styling |
+| role           | `string` | `'button'`                 | The ARIA role of the element              |
+| hoverColor     | `string` | `'hsl(var(--foreground))'` | Background color of the expanding circle  |
+| textColor      | `string` | `'hsl(var(--foreground))'` | Text color in default state               |
+| hoverTextColor | `string` | `'hsl(var(--background))'` | Text color on hover                       |
+| duration       | `number` | `400`                      | Animation duration in milliseconds        |
 
 ### Examples
 

@@ -32,11 +32,7 @@ import MorphicNavbar from '$lib/registry/components/morphic-navbar/morphic-navba
 
 ### Props
 
-| Prop      | Type           | Default    | Description                                       |
-| --------- | -------------- | ---------- | ------------------------------------------------- |
-| mainText  | string         | 'Click Me' | The main text displayed on the button             |
-| slideText | string         | 'Slide Me' | The text that appears on hover with slide effect  |
-| class     | string         | ''         | Additional CSS classes for custom styling         |
-| duration  | number         | 300        | Duration of the slide animation in milliseconds   |
-| delay     | number         | 0          | Delay before the animation starts in milliseconds |
-| easing    | EasingFunction | undefined  | Easing function for the animation                 |
+| Prop     | Type                               | Default                             | Description                                  |
+| -------- | ---------------------------------- | ----------------------------------- | -------------------------------------------- |
+| navItems | `{ href: string; name: string }[]` | Default home/works/blog/about links | Array of navigation items with href and name |
+| class    | `string`                           | `''`                                | Additional CSS classes for the nav container |

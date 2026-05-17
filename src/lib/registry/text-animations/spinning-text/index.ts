@@ -1,0 +1,1 @@
+export { default as SpinningText } from './spinning-text.svelte';

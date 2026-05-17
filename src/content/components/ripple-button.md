@@ -1,6 +1,6 @@
 ---
-title: Copy Button
-description: A copy button component with a variety of styles and animations.
+title: Ripple Button
+description: A ripple button component 
 ---
 
 <script>
@@ -32,11 +32,10 @@ import RippleButton from '$lib/registry/buttons/ripple-button/ripple-button.svel
 
 ### Props
 
-| Prop      | Type           | Default    | Description                                       |
-| --------- | -------------- | ---------- | ------------------------------------------------- |
-| mainText  | string         | 'Click Me' | The main text displayed on the button             |
-| slideText | string         | 'Slide Me' | The text that appears on hover with slide effect  |
-| class     | string         | ''         | Additional CSS classes for custom styling         |
-| duration  | number         | 300        | Duration of the slide animation in milliseconds   |
-| delay     | number         | 0          | Delay before the animation starts in milliseconds |
-| easing    | EasingFunction | undefined  | Easing function for the animation                 |
+| Prop        | Type     | Default      | Description                                          |
+| ----------- | -------- | ------------ | ---------------------------------------------------- |
+| rippleColor | `string` | `'#ffffff'`  | Color of the ripple effect                           |
+| duration    | `string` | `'600ms'`    | Duration of the ripple animation (CSS time string)   |
+| class       | `string` | `''`         | Additional CSS classes for custom styling            |
+
+Extends all props from [shadcn-svelte Button](https://www.shadcn-svelte.com/docs/components/button).

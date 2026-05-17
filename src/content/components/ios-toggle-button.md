@@ -32,6 +32,8 @@ import IosToggleButton from '$lib/registry/buttons/ios-toggle-button/ios-toggle-
 
 ### Props
 
-| Prop  | Type   | Default | Description                               |
-| ----- | ------ | ------- | ----------------------------------------- |
-| class | string | ''      | Additional CSS classes for custom styling |
+| Prop  | Type     | Default | Description                               |
+| ----- | -------- | ------- | ----------------------------------------- |
+| class | `string` | `''`    | Additional CSS classes for custom styling |
+
+> **Note:** The component renders a native `<label>` + `<input type="checkbox">` toggle. It does not render slot children.

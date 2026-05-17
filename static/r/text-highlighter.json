@@ -16,6 +16,11 @@
 	},
 	"files": [
 		{
+			"content": "export { default as TextHighlighter } from './text-highlighter.svelte';",
+			"type": "registry:file",
+			"target": "ori/text-highlighter/index.ts"
+		},
+		{
 			"content": "declare module 'svelte-rough-notation';",
 			"type": "registry:file",
 			"target": "ori/text-highlighter/svelte-rough-notation.d.ts"

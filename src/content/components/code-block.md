@@ -31,7 +31,7 @@ description: A beautiful syntax-highlighted code block with tabbed multi-file su
 ### Usage
 
 ```js
-import { MultiCodeBlock } from '$lib/components/ori/code-block';
+import MultiCodeBlock from '$lib/components/ori/code-block';
 ```
 
 ```svelte

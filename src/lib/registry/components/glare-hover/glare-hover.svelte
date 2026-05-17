@@ -14,8 +14,8 @@
 		borderRadius?: string;
 		borderColor?: string;
 		class?: string;
-		style?: Record<string, string>;
-		children?: () => any;
+		style?: string;
+		children?: import('svelte').Snippet;
 	};
 </script>
 
@@ -30,7 +30,7 @@
 		glareColor = '#ffffff',
 		borderColor = "#333",
 		borderRadius = "10px",
-		background = "#000",
+		background = "#121113",
 		height = "500px",
 		width = "500px",
 		playOnce = false,
@@ -53,7 +53,7 @@
 		rgba = `rgba(${r}, ${g}, ${b}, ${glareOpacity})`;
 	}
 
-	const vars = {
+	const vars = Object.entries({
 		'--gh-width': width,
 		'--gh-height': height,
 		'--gh-background': background,
@@ -63,12 +63,17 @@
 		'--gh-glare-size': `${glareSize}%`,
 		'--gh-rgba': rgba,
 		'--gh-border-color': borderColor,
-	};
+	}).map(([k, v]) => `${k}:${v}`).join(';');
 </script>
 
 <div
-	class={cn('glare-hover', playOnce ? 'glare-hover-play-once' : '', "border border-2 rounded-lg", className)}
-	style={{ ...vars, ...style }}
+	class={cn(
+		'glare-hover',
+		playOnce ? 'glare-hover-play-once' : '',
+		'border border-2 rounded-lg',
+		className
+	)}
+	style="{vars}; {style ?? ''}"
 	{...restProps as any}
 >
 	{#if children}

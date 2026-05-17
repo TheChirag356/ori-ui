@@ -45,7 +45,7 @@ const images = [
 | Prop   | Type    | Default | Description                                              |
 | ------ | ------- | ------- | -------------------------------------------------------- |
 | images | Image[] | []      | Array of image objects to render inside the slider       |
-| class  | string  | ''      | Additional Tailwind classes for custom container styling |
+| class  | string  | ''      | Additional CSS classes for custom container styling      |
 
 ### Image Object Props
 

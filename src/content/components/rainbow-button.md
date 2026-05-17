@@ -32,11 +32,8 @@ import RainbowButton from '$lib/registry/buttons/rainbow-button/rainbow-button.s
 
 ### Props
 
-| Prop      | Type           | Default    | Description                                       |
-| --------- | -------------- | ---------- | ------------------------------------------------- |
-| mainText  | string         | 'Click Me' | The main text displayed on the button             |
-| slideText | string         | 'Slide Me' | The text that appears on hover with slide effect  |
-| class     | string         | ''         | Additional CSS classes for custom styling         |
-| duration  | number         | 300        | Duration of the slide animation in milliseconds   |
-| delay     | number         | 0          | Delay before the animation starts in milliseconds |
-| easing    | EasingFunction | undefined  | Easing function for the animation                 |
+| Prop  | Type     | Default | Description                               |
+| ----- | -------- | ------- | ----------------------------------------- |
+| class | `string` | `''`    | Additional CSS classes for custom styling |
+
+Extends all props from [shadcn-svelte Button](https://www.shadcn-svelte.com/docs/components/button).

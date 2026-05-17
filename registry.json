@@ -16,7 +16,8 @@
       "title": "Copy Button",
       "description": "",
       "registryDependencies": [
-        "button"
+        "button",
+        "tooltip"
       ],
       "dependencies": [],
       "files": [
@@ -756,6 +757,11 @@
       "dependencies": [],
       "files": [
         {
+          "path": "src/lib/registry/text-animations/spinning-text/index.ts",
+          "type": "registry:file",
+          "target": "ori/spinning-text/index.ts"
+        },
+        {
           "path": "src/lib/registry/text-animations/spinning-text/spinning-text.svelte",
           "type": "registry:file",
           "target": "ori/spinning-text/spinning-text.svelte"
@@ -779,6 +785,11 @@
         "rough-notation"
       ],
       "files": [
+        {
+          "path": "src/lib/registry/text-animations/text-highlighter/index.ts",
+          "type": "registry:file",
+          "target": "ori/text-highlighter/index.ts"
+        },
         {
           "path": "src/lib/registry/text-animations/text-highlighter/svelte-rough-notation.d.ts",
           "type": "registry:file",
@@ -807,6 +818,11 @@
       "dependencies": [],
       "files": [
         {
+          "path": "src/lib/registry/text-animations/video-text/index.ts",
+          "type": "registry:file",
+          "target": "ori/video-text/index.ts"
+        },
+        {
           "path": "src/lib/registry/text-animations/video-text/video-text.svelte",
           "type": "registry:file",
           "target": "ori/video-text/video-text.svelte"
@@ -828,6 +844,11 @@
       "registryDependencies": [],
       "dependencies": [],
       "files": [
+        {
+          "path": "src/lib/registry/text-animations/word-rotate/index.ts",
+          "type": "registry:file",
+          "target": "ori/word-rotate/index.ts"
+        },
         {
           "path": "src/lib/registry/text-animations/word-rotate/word-rotate.svelte",
           "type": "registry:file",

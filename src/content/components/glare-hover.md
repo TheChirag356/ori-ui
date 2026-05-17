@@ -9,7 +9,7 @@ description: A sleek glare effect on hover.
 
     import MultiCodeBlock from '$lib/registry/components/code-block/multi-code-block.svelte';
     import { multiInstallScriptUtil} from "$lib/utils";
-    const scripts = multiInstallScriptUtil("file-upload");
+    const scripts = multiInstallScriptUtil("glare-hover");
 </script>
 
 <CodePreview>
@@ -55,11 +55,17 @@ import GlareHover from '$lib/components/ori/glare-hover/glare-hover.svelte';
 
 ### Props
 
-| Prop      | Type           | Default    | Description                                       |
-| --------- | -------------- | ---------- | ------------------------------------------------- |
-| mainText  | string         | 'Click Me' | The main text displayed on the button             |
-| slideText | string         | 'Slide Me' | The text that appears on hover with slide effect  |
-| class     | string         | ''         | Additional CSS classes for custom styling         |
-| duration  | number         | 300        | Duration of the slide animation in milliseconds   |
-| delay     | number         | 0          | Delay before the animation starts in milliseconds |
-| easing    | EasingFunction | undefined  | Easing function for the animation                 |
+| Prop               | Type      | Default      | Description                                                          |
+| ------------------ | --------- | ------------ | -------------------------------------------------------------------- |
+| glareColor         | `string`  | `'#ffffff'`  | Color of the glare streak                                            |
+| glareOpacity       | `number`  | `0.5`        | Opacity of the glare effect (0–1)                                    |
+| glareAngle         | `number`  | `-45`        | Angle of the glare streak in degrees                                 |
+| glareSize          | `number`  | `250`        | Size of the glare gradient area as a percentage                      |
+| transitionDuration | `number`  | `650`        | Duration of the glare transition in milliseconds                     |
+| playOnce           | `boolean` | `false`      | If true, the glare plays only once on hover                          |
+| width              | `string`  | `'500px'`    | Width of the container                                               |
+| height             | `string`  | `'500px'`    | Height of the container                                              |
+| background         | `string`  | `'#000'`     | Background color of the container                                    |
+| borderRadius       | `string`  | `'10px'`     | Border radius of the container                                       |
+| borderColor        | `string`  | `'#333'`     | Border color of the container                                        |
+| class              | `string`  | `''`         | Additional CSS classes for custom styling                            |

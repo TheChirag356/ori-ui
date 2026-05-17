@@ -29,3 +29,14 @@ import { PulsatingButton } from '$lib/components/pulsating-button';
 ```svelte
 <PulsatingButton>Click Me</PulsatingButton>
 ```
+
+### Props
+
+| Prop       | Type      | Default                      | Description                                           |
+| ---------- | --------- | ---------------------------- | ----------------------------------------------------- |
+| class      | `string`  | `''`                         | Additional CSS classes for custom styling             |
+| hoverOnly  | `boolean` | `false`                      | If true, the pulse ring only appears on hover         |
+| pulseColor | `string`  | `'var(--color-foreground)'`  | Color of the pulsating ring                           |
+| duration   | `number`  | `1.5`                        | Duration of one pulse cycle in seconds               |
+
+Extends all props from [shadcn-svelte Button](https://www.shadcn-svelte.com/docs/components/button).

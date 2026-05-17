@@ -7,7 +7,8 @@
 		"description": "",
 		"dependencies": [],
 		"registryDependencies": [
-			"button"
+			"button",
+			"tooltip"
 		],
 		"meta": {
 			"author": "TheChirag356",

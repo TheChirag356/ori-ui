@@ -23,20 +23,22 @@ description: A scrolling text marquee component.
 ### Usage
 
 ```js
-import LiquidButton from '$lib/registry/buttons/liquid-button/liquid-button.svelte';
+import Marquee from '$lib/components/ori/marquee/marquee.svelte';
 ```
 
 ```svelte
-<LiquidButton>Hover Me</LiquidButton>
+<Marquee pauseOnHover>
+	<img src="https://example.com/logo1.png" alt="Logo 1" class="h-10" />
+	<img src="https://example.com/logo2.png" alt="Logo 2" class="h-10" />
+</Marquee>
 ```
 
 ### Props
 
-| Prop      | Type           | Default    | Description                                       |
-| --------- | -------------- | ---------- | ------------------------------------------------- |
-| mainText  | string         | 'Click Me' | The main text displayed on the button             |
-| slideText | string         | 'Slide Me' | The text that appears on hover with slide effect  |
-| class     | string         | ''         | Additional CSS classes for custom styling         |
-| duration  | number         | 300        | Duration of the slide animation in milliseconds   |
-| delay     | number         | 0          | Delay before the animation starts in milliseconds |
-| easing    | EasingFunction | undefined  | Easing function for the animation                 |
+| Prop         | Type      | Default | Description                                                |
+| ------------ | --------- | ------- | ---------------------------------------------------------- |
+| pauseOnHover | `boolean` | `false` | Pauses the animation when the user hovers over the marquee |
+| vertical     | `boolean` | `false` | Scrolls vertically instead of horizontally                 |
+| repeat       | `number`  | `4`     | Number of times the slot content is duplicated             |
+| reverse      | `boolean` | `false` | Reverses the direction of the scroll animation             |
+| class        | `string`  | `''`    | Additional CSS classes for the outer container             |

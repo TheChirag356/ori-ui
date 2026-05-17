@@ -1,0 +1,1 @@
+export { default as WordRotate } from './word-rotate.svelte';
