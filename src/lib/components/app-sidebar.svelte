@@ -11,6 +11,8 @@
 
 	let { ref = $bindable(null), ...restProps }: ComponentProps<typeof Sidebar.Root> = $props();
 
+	const sidebar = Sidebar.useSidebar();
+
 	type SidebarItem = {
 		title: string;
 		url: string;
@@ -88,6 +90,9 @@
 										class="hover:text-accent text-foreground active:text-accent hover:bg-transparent active:bg-transparent data-[active=true]:bg-transparent data-[active=true]:font-normal data-[active=true]:text-accent"
 										onclick={() => {
 											updateIsActive(subItem.url);
+											if (sidebar.isMobile) {
+												sidebar.setOpenMobile(false);
+											}
 										}}
 									>
 										{#snippet child({ props })}
